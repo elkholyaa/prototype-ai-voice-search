@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Noto_Kufi_Arabic } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const arabic = Noto_Kufi_Arabic({ subsets: ['arabic'] })
 
 export const metadata: Metadata = {
-  title: 'Property Search',
-  description: 'Search available properties',
+  title: 'بحث العقارات',
+  description: 'البحث في العقارات المتاحة',
 }
 
 export default function RootLayout({
@@ -15,8 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ar" dir="rtl">
+      <body className={arabic.className}>{children}</body>
     </html>
   )
 } 

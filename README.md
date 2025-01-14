@@ -9,9 +9,15 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
 - OpenAI-powered natural language understanding
 - Property listing with images
 - Search properties by title or location
-- Responsive design
-- TypeScript support
-- Tailwind CSS styling
+
+## Tech Stack
+- Next.js 14.0.4 (App Router)
+- React 18.2.0
+- TypeScript 5.3.3
+- Tailwind CSS 3.4.1
+- Radix UI Components
+- OpenAI GPT-4 (upcoming)
+- Web Speech API (upcoming)
 
 ## Quick Start
 
@@ -31,35 +37,30 @@ NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key
 npm run dev
 ```
 
-## Tech Stack
-- Next.js 14 (App Router)
-- TypeScript (strict mode enabled)
-- Tailwind CSS + Shadcn UI
-- OpenAI GPT-4
-- Web Speech API
-
 ## Project Structure
 ```
-src/
-├── app/              # Next.js pages
-├── components/       # UI components
-├── lib/             # Core services
-├── types/           # TypeScript types
-└── data/            # Sample data
+/
+├── app/              # Next.js app directory
+│   ├── page.tsx     # Main page
+│   ├── layout.tsx   # Root layout
+│   └── globals.css  # Global styles
+├── data/            # Sample property data
+├── public/          # Static assets
+├── types.ts         # TypeScript types
+└── utils.ts         # Utility functions
 ```
 
 ## Development Process
-- Single task per iteration
 - Mobile-first approach
 - Server Components by default
 - Error prevention focus
 - Regular testing
 
 ## Browser Support
-- Chrome 33+
-- Edge 79+
-- Safari 14.1+
-- Firefox 85+
+- Chrome 100+
+- Edge 100+
+- Safari 15+
+- Firefox 100+
 
 For more details:
 - See [CHANGELOG.md](./CHANGELOG.md) for version history
