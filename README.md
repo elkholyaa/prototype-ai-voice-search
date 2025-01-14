@@ -1,12 +1,17 @@
 # AI Voice Search for Real Estate (Proof of Concept)
 
-A Next.js application demonstrating Arabic voice search capabilities for real estate listings using OpenAI.
+A simple property search prototype built with Next.js and Tailwind CSS. This prototype serves as a foundation for implementing voice search capabilities for real estate listings.
 
 ## Features
 - Voice search in Arabic
 - Real-time property filtering
 - Responsive design with RTL support
 - OpenAI-powered natural language understanding
+- Property listing with images
+- Search properties by title or location
+- Responsive design
+- TypeScript support
+- Tailwind CSS styling
 
 ## Quick Start
 
