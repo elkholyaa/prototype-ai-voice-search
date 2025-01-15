@@ -4,7 +4,7 @@ export const metadata = {
   title: 'AI Voice Search - Real Estate',
   description: 'Search properties using voice commands in Arabic',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/favicon.svg',
   },
 };
 
