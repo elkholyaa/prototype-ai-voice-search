@@ -1,5 +1,32 @@
 # Changelog
 
+## [Unreleased]
+
+### Changed
+- Reorganized project structure for better maintainability
+  - Moved all source code under `/src` directory
+  - Consolidated app directory to `/src/app`
+  - Moved data files to `/src/data`
+  - Organized types and utilities properly
+- Updated import paths to use `@/` alias for better maintainability
+- Removed redundant directories and files
+  - Removed duplicate `/app` directory
+  - Removed redundant `/data` directory
+  - Cleaned up project root
+- Fixed TypeScript configuration for proper path resolution
+- Enhanced code organization following Next.js 13+ best practices
+
+### Fixed
+- Fixed import paths to use proper `@/` alias
+- Fixed TypeScript configuration for better path resolution
+- Fixed project structure redundancy
+
+### Added
+- Added comprehensive test coverage for Arabic NLP and property search
+- Added proper handling of compound Arabic features
+- Added case-insensitive text matching across all searches
+- Added 50 sample properties with detailed features and images
+
 ## [0.2.1] - 2024-03-XX
 ### Fixed
 - Image container height and positioning issues with Next.js Image component
