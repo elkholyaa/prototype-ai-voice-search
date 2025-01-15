@@ -5,6 +5,7 @@ import Image from "next/image";
 import { properties } from '@/data/properties';
 import { Property } from '@/types';
 import { formatPrice } from '@/utils/format';
+import { searchProperties } from '@/utils/propertySearch';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -14,17 +15,17 @@ export default function Home() {
     maxPrice: '',
   });
 
-  const filteredProperties = properties.filter((property: Property) => {
-    const matchesSearch =
-      property.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      property.location.toLowerCase().includes(searchQuery.toLowerCase());
-
+  const filteredProperties = searchProperties(
+    properties,
+    searchQuery,
+    true
+  ).filter((property: Property) => {
     const matchesType = filters.type ? property.type === filters.type : true;
     const matchesPrice =
       (filters.minPrice ? property.price >= parseInt(filters.minPrice) : true) &&
       (filters.maxPrice ? property.price <= parseInt(filters.maxPrice) : true);
 
-    return matchesSearch && matchesType && matchesPrice;
+    return matchesType && matchesPrice;
   });
 
   return (
