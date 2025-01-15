@@ -7,7 +7,7 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
 - Real-time property filtering
 - Responsive design with RTL support
 - OpenAI-powered natural language understanding
-- Property listing with images
+- Property listing with images and optimized loading
 - Search properties by title or location
 
 ## Tech Stack

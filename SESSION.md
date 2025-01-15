@@ -45,6 +45,7 @@ Proof of concept for Arabic voice search in real estate listings using OpenAI's 
 - RTL and Arabic support with Noto Kufi Arabic font
 - Sample Saudi Arabian property data
 - Latest stable dependencies
+- Optimized image loading with proper container styling
 
 ## Tech Stack
 - Next.js 14.0.4 (App Router)

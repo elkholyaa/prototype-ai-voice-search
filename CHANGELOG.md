@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.2.1] - 2024-03-XX
+### Fixed
+- Image container height and positioning issues with Next.js Image component
+- Optimized image loading with proper container styling
+- Fixed grid layout responsiveness in development environment to match production behavior
+
 ## [0.2.0] - 2024-01-14
 ### Updated
 - Upgraded to Next.js 14.0.4
