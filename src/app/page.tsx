@@ -42,6 +42,8 @@ export default function Home() {
           <div className="mb-6">
             <input
               type="text"
+              id="search"
+              name="search"
               placeholder="ابحث عن العقارات..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
@@ -51,6 +53,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <select
+              id="propertyType"
+              name="propertyType"
               value={filters.type}
               onChange={(e) => setFilters({ ...filters, type: e.target.value })}
               className="w-full p-4 text-right border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -63,6 +67,8 @@ export default function Home() {
             </select>
             <input
               type="number"
+              id="minPrice"
+              name="minPrice"
               placeholder="الحد الأدنى للسعر"
               value={filters.minPrice}
               onChange={(e) => setFilters({ ...filters, minPrice: e.target.value })}
@@ -70,6 +76,8 @@ export default function Home() {
             />
             <input
               type="number"
+              id="maxPrice"
+              name="maxPrice"
               placeholder="الحد الأقصى للسعر"
               value={filters.maxPrice}
               onChange={(e) => setFilters({ ...filters, maxPrice: e.target.value })}
@@ -82,13 +90,13 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProperties.map((property: Property, index: number) => (
             <article key={property.id} className="bg-white rounded-xl shadow overflow-hidden group hover:shadow-lg transition-shadow duration-300">
-              <div style={{ position: 'relative', height: '300px', minHeight: '300px' }} className="w-full">
+              <div className="relative w-full h-[300px]">
                 <Image
                   src={property.images[0] || '/placeholder.jpg'}
                   alt={property.title}
                   fill
-                  priority={index === 0}
-                  className="object-cover rounded-t-xl"
+                  priority={index < 6}
+                  className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
               </div>
