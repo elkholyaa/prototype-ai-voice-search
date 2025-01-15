@@ -7,6 +7,8 @@ const nextConfig = {
         hostname: '**',
       },
     ],
+    dangerouslyAllowSVG: true,
+    domains: ['prototype-ai-voice-search-kr8fok9me-elkholyaas-projects.vercel.app'],
   },
   reactStrictMode: true,
   swcMinify: true,
