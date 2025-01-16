@@ -1,7 +1,7 @@
-import { processArabicQuery } from '../arabicNLP';
+import { processArabicQuery } from '@/utils/arabicNLP';
 
 describe('Arabic NLP Processing', () => {
-  test('processes complete query with all fields', () => {
+  it('processes complete query with all fields', () => {
     const input = 'أريد فيلا مع مسبح وحديقة خاصة في الرياض بميزانية تصل إلى 3 مليون';
     const result = processArabicQuery(input);
     
@@ -11,8 +11,8 @@ describe('Arabic NLP Processing', () => {
     expect(result.query.price).toEqual({ max: 3000000 });
     expect(result.confidence).toBeGreaterThan(0.75);
   });
-
-  test('processes query with missing price', () => {
+  
+  it('processes query with missing price', () => {
     const input = 'أبحث عن فيلا في الرياض مع مسبح';
     const result = processArabicQuery(input);
     
@@ -22,10 +22,10 @@ describe('Arabic NLP Processing', () => {
       features: ['مسبح'],
       price: {}
     });
-    expect(result.confidence).toBeGreaterThan(0.5);
+    expect(result.confidence).toBe(0.75);
   });
-
-  test('processes query with only location and type', () => {
+  
+  it('processes query with only location and type', () => {
     const input = 'شقة في جدة';
     const result = processArabicQuery(input);
     
@@ -37,22 +37,18 @@ describe('Arabic NLP Processing', () => {
     });
     expect(result.confidence).toBe(0.5);
   });
-
-  test('handles minimum price range', () => {
+  
+  it('extracts minimum price correctly', () => {
     const input = 'فيلا في الرياض فوق 2 مليون';
     const result = processArabicQuery(input);
     
-    expect(result.query.price).toEqual({
-      min: 2000000
-    });
+    expect(result.query.price).toEqual({ min: 2000000 });
   });
-
-  test('handles maximum price range', () => {
+  
+  it('extracts maximum price correctly', () => {
     const input = 'فيلا في الرياض أقل من 4 مليون';
     const result = processArabicQuery(input);
     
-    expect(result.query.price).toEqual({
-      max: 4000000
-    });
+    expect(result.query.price).toEqual({ max: 4000000 });
   });
 }); 
