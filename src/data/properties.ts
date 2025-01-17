@@ -1,4 +1,4 @@
 import { Property } from '@/types';
 import staticProperties from './static/properties.json';
 
-export const properties: Property[] = staticProperties; 
+export const properties: Property[] = staticProperties as Property[]; 

@@ -1,15 +1,15 @@
 export interface Property {
   id: number;
   title: string;
-  type: string;
+  type: "فيلا" | "شقة" | "قصر" | "دوبلكس";
   location: string;
   price: number;
   features: string[];
   images: string[];
   description: string;
+  embedding?: number[];  // Optional for backward compatibility
 }
 
-// To be implemented in next task:
-// export interface PropertyWithEmbedding extends Property {
-//   embedding: number[];       // OpenAI text embedding vector
-// } 
+export interface PropertyWithEmbedding extends Property {
+  embedding: number[];  // Required in this interface
+} 

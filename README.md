@@ -101,3 +101,51 @@ Root directory contains:
 For more details:
 - See [CHANGELOG.md](./CHANGELOG.md) for version history
 - See [SESSION.md](./SESSION.md) for development status 
+
+## Data Generation
+
+### Property Data
+Property data is pre-generated and stored in `src/data/static/properties.json`. To regenerate the data:
+
+```bash
+node src/data/generateStaticData.mjs
+```
+
+### OpenAI Embeddings
+To enable semantic search, the application uses OpenAI's text-embedding-ada-002 model to generate embeddings for property descriptions. The embeddings are pre-generated and stored in the repository to avoid unnecessary API costs.
+
+#### Embedding Data
+- Location: `src/data/static/properties-with-embeddings.json`
+- Size: ~1 MB for 150 properties
+- Generated once locally and committed to the repository
+- No need to regenerate unless property data changes
+
+#### Initial Generation
+If you need to regenerate embeddings (usually not necessary):
+
+1. Set up your OpenAI API key in `.env.local`:
+```bash
+OPENAI_API_KEY=your_openai_api_key
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Run the generation script:
+```bash
+npm run embeddings       # Process only new properties
+# or
+npm run embeddings:force # Regenerate all embeddings
+```
+
+The script will:
+- Show size and cost estimates before processing
+- Generate embeddings in batches
+- Save results to the static directory
+- Update metadata with processing details
+
+Note: The embedding files are committed to the repository, so you typically don't need to run this script unless you're updating the property data.
+
+[Rest of the content remains the same...] 

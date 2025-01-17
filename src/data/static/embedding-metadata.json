@@ -1,0 +1,10 @@
+{
+  "lastProcessedId": 150,
+  "lastUpdateTimestamp": "2025-01-17T19:12:17.511Z",
+  "totalProcessed": 150,
+  "binaryFormat": {
+    "dimensions": 1536,
+    "count": 150,
+    "bytesPerFloat": 4
+  }
+}
