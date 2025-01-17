@@ -47,17 +47,9 @@ Proof of concept for Arabic voice search in real estate listings using OpenAI's 
 - Sample Saudi Arabian property data
 - Latest stable dependencies
 - Optimized image loading with proper container styling
-- Basic search implementation
-- Property filtering system
-
-## Tech Stack
-- Next.js 14.0.4 (App Router)
-- React 18.2.0
-- TypeScript 5.3.3
-- Tailwind CSS 3.4.1
-- Radix UI Components
-- OpenAI GPT-4 (upcoming)
-- Web Speech API (upcoming)
+- Test structure in place:
+  - Global tests in src/__tests__/
+  - Component-specific tests in src/utils/__tests__/
 
 ## Active Development Areas
 - Voice recognition implementation
@@ -66,46 +58,35 @@ Proof of concept for Arabic voice search in real estate listings using OpenAI's 
 - Property filtering refinement
 - UI/UX improvements
 
-## Development Guidelines
-- Follow Next.js 14 best practices
-- Use React Server Components by default
-- Maintain TypeScript strict mode
-- Follow mobile-first approach with Tailwind
-- Implement proper error handling
-- Keep documentation updated 
+## Next Steps
+1. Implement OpenAI embeddings-based search
+   - Set up OpenAI API integration
+   - Implement text embedding generation
+   - Create vector similarity search
+2. Add voice input processing
+   - Implement Web Speech API
+   - Add voice-to-text conversion
+3. Enhance property filtering
+   - Combine embeddings with traditional filters
+   - Optimize search performance
+4. Add comprehensive testing
+   - Unit tests for search functionality
+   - Integration tests for API calls
+   - End-to-end testing for voice features
 
-# Development Session Log
-
-## Latest Changes (2024-01-15)
-- Integrated NLP-based search in main page component
-- Enhanced property search with intelligent query processing
-- Fixed property display by consolidating data files
-- Improved Arabic NLP feature extraction for compound features
-- Enhanced property search with case-insensitive matching
-- Fixed import paths to use correct property data source
-- Added comprehensive test coverage
-- Consolidated project structure for better maintainability
-- Reorganized project structure for better maintainability
-- Consolidated type definitions in `src/types/index.ts`
-- Moved utility functions to dedicated files in `src/utils/`
-- Fixed import paths across the project
-- Removed duplicate configuration files
-- Enhanced feature matching logic to better handle compound features:
-  - Added base feature extraction (e.g., "مسبح" from "مسبح للأطفال")
-  - Prioritized base feature matches in search algorithm
-  - Improved handling of compound Arabic features
-  - Added flexible matching for feature variations
-- Fixed district extraction in location matching
-- Added test cases for compound feature matching
-
-## Project Structure
-Proof of concept for Arabic voice search in real estate listings using OpenAI's natural language processing.
-
-## Tech Stack
+## Technical Stack
 - Next.js 14.0.4 (App Router)
 - React 18.2.0
 - TypeScript 5.3.3
 - Tailwind CSS 3.4.1
-- Radix UI Components
-- OpenAI GPT-4 (upcoming)
-- Web Speech API (upcoming) 
+- OpenAI API (upcoming)
+- Web Speech API (upcoming)
+
+## Development Guidelines
+- Follow Next.js best practices
+- Use TypeScript strict mode
+- Implement responsive design
+- Write comprehensive tests
+- Document changes in CHANGELOG.md
+- Mobile-first approach
+- Error prevention focus 

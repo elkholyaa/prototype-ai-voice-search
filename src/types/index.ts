@@ -6,19 +6,10 @@ export interface Property {
   price: number;
   features: string[];
   images: string[];
+  description: string;
 }
 
-export interface PropertySearchQuery {
-  type?: string;
-  location?: string;
-  features?: string[];
-  price?: {
-    min?: number;
-    max?: number;
-  };
-}
-
-export interface NLPResult {
-  query: PropertySearchQuery;
-  confidence: number;
-} 
+// To be implemented in next task:
+// export interface PropertyWithEmbedding extends Property {
+//   embedding: number[];       // OpenAI text embedding vector
+// } 

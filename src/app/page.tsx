@@ -5,7 +5,6 @@ import Image from "next/image";
 import { properties } from '@/data/properties';
 import { Property } from '@/types';
 import { formatPrice } from '@/utils/format';
-import { searchProperties } from '@/utils/propertySearch';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -15,17 +14,43 @@ export default function Home() {
     maxPrice: '',
   });
 
-  const filteredProperties = searchProperties(
-    properties,
-    searchQuery,
-    true
-  ).filter((property: Property) => {
-    const matchesType = filters.type ? property.type === filters.type : true;
-    const matchesPrice =
-      (filters.minPrice ? property.price >= parseInt(filters.minPrice) : true) &&
-      (filters.maxPrice ? property.price <= parseInt(filters.maxPrice) : true);
+  // Enhanced text-based filtering
+  const filteredProperties = properties.filter(property => {
+    if (!searchQuery && !filters.type && !filters.minPrice && !filters.maxPrice) {
+      return true;
+    }
 
-    return matchesType && matchesPrice;
+    const query = searchQuery.toLowerCase();
+    const words = query.split(/\s+/);
+
+    // Check if all words match somewhere in the property data
+    const matchesSearch = !searchQuery || words.every(word => {
+      // Match in title
+      if (property.title.toLowerCase().includes(word)) return true;
+      
+      // Match in location (city or district)
+      if (property.location.toLowerCase().includes(word)) return true;
+      
+      // Match in features
+      if (property.features.some(f => f.toLowerCase().includes(word))) return true;
+
+      // Match room numbers
+      const roomMatch = property.features.find(f => f.includes('غرف'))?.match(/\d+/);
+      if (roomMatch && word === roomMatch[0]) return true;
+
+      // Match property type
+      if (property.type.toLowerCase().includes(word)) return true;
+
+      return false;
+    });
+
+    const matchesType = !filters.type || property.type === filters.type;
+    
+    const matchesPrice =
+      (!filters.minPrice || property.price >= parseInt(filters.minPrice)) &&
+      (!filters.maxPrice || property.price <= parseInt(filters.maxPrice));
+
+    return matchesSearch && matchesType && matchesPrice;
   });
 
   return (
@@ -50,6 +75,11 @@ export default function Home() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full p-4 text-right border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            {(searchQuery || filters.type || filters.minPrice || filters.maxPrice) && (
+              <p className="mt-2 text-sm text-gray-600 text-right">
+                {filteredProperties.length} نتيجة
+              </p>
+            )}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

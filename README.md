@@ -16,7 +16,6 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
 - Real-time property filtering with case-insensitive matching
 - Advanced Arabic NLP processing for compound features
 - Responsive design with RTL support
-- OpenAI-powered natural language understanding (upcoming)
 - Property listing with optimized image loading
 - Search properties by:
   - Natural language queries (e.g., "فيلا مع مسبح في الرياض")
@@ -27,13 +26,21 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
 - Search properties by title, location, type, or features
 - Comprehensive test coverage
 
+## Upcoming Enhancements
+- OpenAI embeddings-based semantic search
+  - Enhanced natural language understanding
+  - Improved semantic matching
+  - Better handling of complex queries
+- Voice command processing with Web Speech API
+- Advanced filtering with vector similarity
+
 ## Tech Stack
 - Next.js 14.0.4 (App Router)
 - React 18.2.0
 - TypeScript 5.3.3
 - Tailwind CSS 3.4.1
 - Radix UI Components
-- OpenAI GPT-4 (upcoming)
+- OpenAI API (upcoming)
 - Web Speech API (upcoming)
 
 ## Quick Start
@@ -59,6 +66,7 @@ The project follows Next.js 13+ best practices with all source code under the `/
 
 ```
 /src
+├── __tests__/              # Global test files
 ├── app/                    # Next.js app directory
 │   ├── page.tsx           # Main page component
 │   ├── layout.tsx         # App layout
@@ -68,6 +76,7 @@ The project follows Next.js 13+ best practices with all source code under the `/
 ├── types/                 # TypeScript types
 │   └── index.ts          # Shared type definitions
 └── utils/                # Utility functions
+    ├── __tests__/        # Utility-specific tests
     └── format.ts         # Formatting utilities
 ```
 
