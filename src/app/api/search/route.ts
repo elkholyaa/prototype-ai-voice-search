@@ -153,7 +153,7 @@ export async function POST(request: Request) {
       id: property.id,
       title: property.title,
       price: property.price,
-      image: property.image,
+      images: property.images,
     }));
 
     const response = {
