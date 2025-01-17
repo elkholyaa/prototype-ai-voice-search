@@ -54,6 +54,18 @@ Proof of concept for Arabic voice search in real estate listings using OpenAI's 
 - Rate-limited and cached search API
 - Swagger API documentation
 
+## Pending Issues
+1. Vercel Deployment Error
+   - Issue: TypeScript compilation error in Map iteration
+   - Current attempts:
+     - Updated TypeScript target to ES2015
+     - Enabled downlevelIteration
+     - Modified Map iteration approach
+   - Next steps:
+     - Consider alternative Map iteration methods
+     - Review Vercel's TypeScript settings
+     - Investigate environment-specific configuration
+
 ## Active Development Areas
 1. Frontend Integration (Task 6)
    - Dynamic search results display
