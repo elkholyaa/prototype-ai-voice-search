@@ -63,9 +63,9 @@ export function cacheResults(query: string, limit: number, results: any) {
  */
 setInterval(() => {
   const now = Date.now();
-  for (const [ip, limit] of rateLimits.entries()) {
+  Array.from(rateLimits.entries()).forEach(([ip, limit]) => {
     if (now > limit.resetTime) {
       rateLimits.delete(ip);
     }
-  }
+  });
 }, RATE_LIMIT_WINDOW); 
