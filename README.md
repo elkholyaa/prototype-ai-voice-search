@@ -13,6 +13,15 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
     - Flexible matching for feature variations
     - Prioritized base feature matches
     - Support for compound Arabic features
+- OpenAI embeddings-based semantic search
+  - Precomputed property embeddings
+  - Real-time query embedding generation
+  - Cosine similarity matching
+- Rate-limited and cached API
+  - 10 requests per minute limit
+  - 5-minute LRU cache for results
+  - Zod input validation
+  - Comprehensive error handling
 - Real-time property filtering with case-insensitive matching
 - Advanced Arabic NLP processing for compound features
 - Responsive design with RTL support
@@ -23,16 +32,7 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
   - Location (with district support)
   - Features (with compound feature support)
   - Price range
-- Search properties by title, location, type, or features
 - Comprehensive test coverage
-
-## Upcoming Enhancements
-- OpenAI embeddings-based semantic search
-  - Enhanced natural language understanding
-  - Improved semantic matching
-  - Better handling of complex queries
-- Voice command processing with Web Speech API
-- Advanced filtering with vector similarity
 
 ## Tech Stack
 - Next.js 14.0.4 (App Router)
@@ -40,8 +40,10 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
 - TypeScript 5.3.3
 - Tailwind CSS 3.4.1
 - Radix UI Components
-- OpenAI API (upcoming)
+- OpenAI API
 - Web Speech API (upcoming)
+- Zod for validation
+- LRU Cache for results
 
 ## Quick Start
 
@@ -53,7 +55,7 @@ npm install
 2. Set up environment:
 ```bash
 # .env.local
-NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key
+OPENAI_API_KEY=your_openai_api_key
 ```
 
 3. Run development server:
@@ -86,6 +88,37 @@ Root directory contains:
 - Package management (package.json, package-lock.json)
 - Static assets (public/)
 
+## API Documentation
+The search API is available at `/api/search` and accepts POST requests with the following format:
+
+```typescript
+{
+  "query": "فيلا مع مسبح وحديقة في الرياض",
+  "limit": 10 // optional, defaults to 10
+}
+```
+
+Response format:
+```typescript
+{
+  "results": [
+    {
+      "type": "فيلا",
+      "city": "الرياض",
+      "district": "حي النرجس",
+      "rooms": 6,
+      "features": ["مسبح", "حديقة"],
+      "similarityScore": 0.92
+    }
+  ],
+  "total": 1,
+  "message": "Found 1 matching properties."
+}
+```
+
+Rate limiting: 10 requests per minute per IP
+Cache duration: 5 minutes
+
 ## Development Process
 - Mobile-first approach
 - Server Components by default
@@ -116,7 +149,8 @@ To enable semantic search, the application uses OpenAI's text-embedding-ada-002 
 
 #### Embedding Data
 - Location: `src/data/static/properties-with-embeddings.json`
-- Size: ~1 MB for 150 properties
+- Size: ~4.4 MB for 150 properties
+- Binary format: ~900 KB for optimized loading
 - Generated once locally and committed to the repository
 - No need to regenerate unless property data changes
 
@@ -128,12 +162,7 @@ If you need to regenerate embeddings (usually not necessary):
 OPENAI_API_KEY=your_openai_api_key
 ```
 
-2. Install dependencies:
-```bash
-npm install
-```
-
-3. Run the generation script:
+2. Run the generation script:
 ```bash
 npm run embeddings       # Process only new properties
 # or
@@ -143,7 +172,7 @@ npm run embeddings:force # Regenerate all embeddings
 The script will:
 - Show size and cost estimates before processing
 - Generate embeddings in batches
-- Save results to the static directory
+- Save results in both JSON and binary formats
 - Update metadata with processing details
 
 Note: The embedding files are committed to the repository, so you typically don't need to run this script unless you're updating the property data.

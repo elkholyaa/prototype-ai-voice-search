@@ -1,6 +1,24 @@
 # Changelog
 
 ## [Unreleased]
+### Added
+- Rate limiting for search API (10 requests/minute)
+- LRU cache for search results with 5-minute TTL
+- Zod input validation for search requests
+- Swagger API documentation
+- Enhanced error handling and response formatting
+
+### Upcoming
+- Frontend integration with search API
+  - Dynamic search results display
+  - Loading states and error handling
+  - Real-time search updates
+- Testing and optimization
+  - Unit tests for core functionality
+  - Integration tests for end-to-end flows
+  - Performance benchmarking
+  - Vector search optimization
+
 ### Changed
 - Preparing for OpenAI embeddings-based search enhancement
 - Updated documentation to reflect upcoming changes

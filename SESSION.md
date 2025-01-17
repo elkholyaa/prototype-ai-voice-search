@@ -29,11 +29,14 @@ Before proceeding with development:
    - Voice input processing (upcoming)
    - Property filtering
    - RTL/Arabic support
+   - OpenAI embeddings integration
+   - Rate-limited search API
+   - Cached search results
 3. Check tech stack compatibility:
    - Next.js 14.0.4 features
    - TypeScript 5.3.3 strict mode
    - React 18.2.0 features
-   - OpenAI API integration (upcoming)
+   - OpenAI API integration
 4. Verify documentation alignment with global rules
 
 ## Project Overview
@@ -47,40 +50,47 @@ Proof of concept for Arabic voice search in real estate listings using OpenAI's 
 - Sample Saudi Arabian property data
 - Latest stable dependencies
 - Optimized image loading with proper container styling
-- Test structure in place:
-  - Global tests in src/__tests__/
-  - Component-specific tests in src/utils/__tests__/
+- OpenAI embeddings integration
+- Rate-limited and cached search API
+- Swagger API documentation
 
 ## Active Development Areas
-- Voice recognition implementation
-- OpenAI integration
-- Search parameter extraction optimization
-- Property filtering refinement
-- UI/UX improvements
+1. Frontend Integration (Task 6)
+   - Dynamic search results display
+   - Loading states
+   - Error handling
+   - Real-time updates
+2. Testing & Optimization (Task 7)
+   - Unit testing
+   - Integration testing
+   - Performance benchmarking
+   - Vector search optimization
 
 ## Next Steps
-1. Implement OpenAI embeddings-based search
-   - Set up OpenAI API integration
-   - Implement text embedding generation
-   - Create vector similarity search
-2. Add voice input processing
+1. Frontend Integration (Task 6)
+   - Implement dynamic search results display
+   - Add loading indicators
+   - Handle error states
+   - Enable real-time search updates
+2. Testing & Optimization (Task 7)
+   - Write unit tests
+   - Create integration tests
+   - Benchmark performance
+   - Optimize vector search
+3. Add voice input processing
    - Implement Web Speech API
    - Add voice-to-text conversion
-3. Enhance property filtering
-   - Combine embeddings with traditional filters
-   - Optimize search performance
-4. Add comprehensive testing
-   - Unit tests for search functionality
-   - Integration tests for API calls
-   - End-to-end testing for voice features
 
 ## Technical Stack
 - Next.js 14.0.4 (App Router)
 - React 18.2.0
 - TypeScript 5.3.3
 - Tailwind CSS 3.4.1
-- OpenAI API (upcoming)
+- OpenAI API
 - Web Speech API (upcoming)
+- Zod for validation
+- LRU Cache for results
+- Rate limiting
 
 ## Development Guidelines
 - Follow Next.js best practices
