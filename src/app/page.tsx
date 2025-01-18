@@ -72,7 +72,11 @@ export default function Home() {
               name="search"
               placeholder="ابحث عن العقارات..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                e.preventDefault();
+                setSearchQuery(e.target.value);
+              }}
+              onKeyDown={(e) => e.stopPropagation()}
               className="w-full p-4 text-right border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             {(searchQuery || filters.type || filters.minPrice || filters.maxPrice) && (
