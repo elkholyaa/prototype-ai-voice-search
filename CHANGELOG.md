@@ -2,11 +2,24 @@
 
 ## [Unreleased]
 ### Added
+- Enhanced test suite for natural language search
+  - Added colloquial Arabic expressions and dialects
+  - Included common spelling mistakes
+  - Added feature description variations
+  - More flexible validation for semantic search
+  - Tests for mixed formal/informal queries
 - Rate limiting for search API (10 requests/minute)
 - LRU cache for search results with 5-minute TTL
 - Zod input validation for search requests
 - Swagger API documentation
 - Enhanced error handling and response formatting
+
+### Changed
+- Updated test validation to better match semantic search behavior
+- Made search validation more flexible for real-world queries
+- Improved natural language processing capabilities
+- Refined semantic search implementation
+- Enhanced Arabic query processing
 
 ### Upcoming
 - Frontend integration with search API
@@ -14,15 +27,9 @@
   - Loading states and error handling
   - Real-time search updates
 - Testing and optimization
-  - Unit tests for core functionality
   - Integration tests for end-to-end flows
   - Performance benchmarking
   - Vector search optimization
-
-### Changed
-- Preparing for OpenAI embeddings-based search enhancement
-- Updated documentation to reflect upcoming changes
-- Maintaining current NLP-based search functionality
 
 ## [0.2.0] - 2024-01-15
 ### Added
