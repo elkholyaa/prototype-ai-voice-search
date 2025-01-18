@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { OpenAI } from 'openai';
 import { Property } from '@/types';
+import { SearchResult } from '@/app/api/search/route';
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
@@ -75,7 +76,7 @@ export async function findSimilarProperties(
   embeddings: Float32Array,
   properties: PropertyWithEmbedding[],
   limit: number = 10
-): Promise<Array<PropertyWithEmbedding & { similarityScore: number }>> {
+): Promise<SearchResult[]> {
   // Get embedding for the query
   const response = await openai.embeddings.create({
     model: "text-embedding-ada-002",
@@ -85,10 +86,22 @@ export async function findSimilarProperties(
   const queryEmbedding = response.data[0].embedding;
 
   // Calculate similarity scores
-  const propertiesWithScores = properties.map(property => ({
-    ...property,
-    similarityScore: cosineSimilarity(queryEmbedding, property.embedding)
-  }));
+  const propertiesWithScores = properties.map(property => {
+    // Extract city and district from location
+    const [city = '', district = ''] = property.location.split('،').map(s => s.trim());
+    
+    // Extract room count from features
+    const roomFeature = property.features.find(f => f.includes('غرف') || f.includes('غرفة'));
+    const rooms = roomFeature ? parseInt(roomFeature.match(/\d+/)?.[0] || '0') : 0;
+
+    return {
+      ...property,
+      city,
+      district,
+      rooms,
+      similarityScore: cosineSimilarity(queryEmbedding, property.embedding)
+    };
+  });
 
   // Sort by similarity score and take top results
   return propertiesWithScores

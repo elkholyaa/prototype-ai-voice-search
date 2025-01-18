@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server';
 import { z } from 'zod';
 import { withApiMiddleware } from '@/utils/api-middleware';
 import { loadEmbeddings, findSimilarProperties } from '@/utils/embeddings';
+import { Property } from '@/types';
 
 // Input validation schema
 const searchSchema = z.object({
@@ -10,12 +11,10 @@ const searchSchema = z.object({
 });
 
 // Types for the response
-export type SearchResult = {
-  type: string;
+export type SearchResult = Property & {
   city: string;
   district: string;
   rooms: number;
-  features: string[];
   similarityScore: number;
 };
 
