@@ -4,7 +4,7 @@
  * @returns The formatted price string
  */
 export function formatPrice(price: number): string {
-  return price.toLocaleString('ar-SA');
+  return new Intl.NumberFormat('ar-SA').format(price);
 }
 
 /**

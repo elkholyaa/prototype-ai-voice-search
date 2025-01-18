@@ -1,27 +1,17 @@
 import { OpenAI } from 'openai';
-import { Property, PropertyWithEmbedding } from '@/types';
-import { loadEmbeddings, findSimilarProperties } from './embeddings';
+import { Property } from '@/types';
+import { findSimilarProperties } from './embeddings';
 
 // Initialize OpenAI client
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-export interface SearchResult {
-  property: Property;
+export interface SearchResult extends Property {
   similarityScore: number;
-}
-
-/**
- * Generates an embedding for the given query text using OpenAI's text-embedding-ada-002 model
- */
-async function generateQueryEmbedding(query: string): Promise<number[]> {
-  const response = await openai.embeddings.create({
-    model: "text-embedding-ada-002",
-    input: query,
-  });
-
-  return response.data[0].embedding;
+  city: string;
+  district: string;
+  rooms: number;
 }
 
 /**
@@ -34,28 +24,7 @@ export async function searchProperties(
   query: string,
   limit: number = 10
 ): Promise<SearchResult[]> {
-  // Load precomputed property embeddings
-  const { properties } = loadEmbeddings();
-  
-  // Generate embedding for the search query
-  const queryEmbedding = await generateQueryEmbedding(query);
-  
-  // Find similar properties using cosine similarity
-  const similarProperties = findSimilarProperties(queryEmbedding, properties, limit);
-  
-  // Format results
-  return similarProperties.map(property => ({
-    property: {
-      id: property.id,
-      type: property.type,
-      title: property.title,
-      price: property.price,
-      location: property.location,
-      features: property.features,
-      image: property.image,
-    },
-    similarityScore: property.similarity || 0,
-  }));
+  return findSimilarProperties(query, limit);
 }
 
 /**

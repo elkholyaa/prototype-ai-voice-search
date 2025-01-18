@@ -1,58 +1,49 @@
-import { NextResponse } from 'next/server';
-import { z } from 'zod';
+import { NextRequest, NextResponse } from 'next/server';
 import { withApiMiddleware } from '@/utils/api-middleware';
-import { loadEmbeddings, findSimilarProperties } from '@/utils/embeddings';
+import { z } from 'zod';
+import { findSimilarProperties } from '@/utils/embeddings';
 import { Property } from '@/types';
+import { SearchResult } from '@/utils/search';
 
-// Input validation schema
+// Define the search request schema
 const searchSchema = z.object({
-  query: z.string().min(1).max(200),
+  query: z.string(),
   limit: z.number().min(1).max(50).optional().default(10),
 });
 
-// Types for the response
-export type SearchResult = Property & {
-  city: string;
-  district: string;
-  rooms: number;
-  similarityScore: number;
-};
-
-export async function POST(req: Request) {
+// Handle POST requests
+async function handlePost(req: NextRequest) {
   try {
-    // Parse and validate request body
     const body = await req.json();
     const { query, limit } = searchSchema.parse(body);
 
-    // Load embeddings and find similar properties
-    const { embeddings, properties } = await loadEmbeddings();
-    const results = await findSimilarProperties(query, embeddings, properties, limit);
+    // Return all properties for empty queries
+    if (!query.trim()) {
+      const results = await findSimilarProperties('', limit);
+      return NextResponse.json({ results });
+    }
 
-    // Format and return results
-    return NextResponse.json({
-      results,
-      query,
-      totalResults: results.length,
-    });
-
+    const results = await findSimilarProperties(query, limit);
+    return NextResponse.json({ results });
   } catch (error) {
-    console.error('Search API error:', error);
-    
     if (error instanceof z.ZodError) {
       return NextResponse.json(
-        { error: 'Invalid request parameters', details: error.errors },
+        { error: 'Invalid request data', details: error.errors },
         { status: 400 }
       );
     }
 
+    console.error('Search error:', error);
     return NextResponse.json(
-      { error: 'Internal server error' },
+      { error: 'Failed to process search request' },
       { status: 500 }
     );
   }
 }
 
 // Apply rate limiting and other middleware
-export const { GET, POST: RawPOST } = withApiMiddleware({
-  POST,
-}); 
+const handler = withApiMiddleware({
+  POST: handlePost,
+});
+
+export const POST = handler.POST; 

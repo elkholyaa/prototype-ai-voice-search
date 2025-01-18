@@ -1,13 +1,12 @@
 export interface Property {
   id: number;
+  type: 'فيلا' | 'شقة' | 'قصر' | 'دوبلكس';
   title: string;
-  type: "فيلا" | "شقة" | "قصر" | "دوبلكس";
-  location: string;
+  description: string;
   price: number;
+  location: string;
   features: string[];
   images: string[];
-  description: string;
-  embedding?: number[];  // Optional for backward compatibility
 }
 
 export interface PropertyWithEmbedding extends Property {

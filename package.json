@@ -9,7 +9,8 @@
     "lint": "next lint",
     "test": "jest",
     "embeddings": "ts-node -O '{\"module\": \"commonjs\"}' scripts/generate-embeddings.ts",
-    "embeddings:force": "ts-node -O '{\"module\": \"commonjs\"}' scripts/generate-embeddings.ts --force"
+    "embeddings:force": "ts-node -O '{\"module\": \"commonjs\"}' scripts/generate-embeddings.ts --force",
+    "test:search": "ts-node -O '{\"module\": \"commonjs\"}' src/tests/search.test.ts"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
