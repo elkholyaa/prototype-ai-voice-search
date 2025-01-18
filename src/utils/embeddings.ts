@@ -1,74 +1,98 @@
 import fs from 'fs';
 import path from 'path';
-import { Property, PropertyWithEmbedding } from '@/types';
+import { OpenAI } from 'openai';
+import { Property } from '@/types';
 
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+// Type for property with embedding
+export interface PropertyWithEmbedding extends Property {
+  embedding: number[];
+}
+
+// Type for metadata
 interface EmbeddingMetadata {
   lastProcessedId: number;
   lastUpdateTimestamp: string;
   totalProcessed: number;
-  binaryFormat: {
-    dimensions: number;
-    count: number;
-    bytesPerFloat: number;
-  };
 }
 
-export function loadEmbeddings() {
-  const staticDir = path.join(process.cwd(), 'src', 'data', 'static');
-  const metadataPath = path.join(staticDir, 'embedding-metadata.json');
-  const binaryPath = path.join(staticDir, 'embeddings.bin');
-  const propertiesPath = path.join(staticDir, 'properties.json');
+// Constants
+const STATIC_DIR = path.join(process.cwd(), 'src', 'data', 'static');
+const EMBEDDINGS_PATH = path.join(STATIC_DIR, 'embeddings.bin');
+const PROPERTIES_PATH = path.join(STATIC_DIR, 'properties-with-embeddings.json');
+const METADATA_PATH = path.join(STATIC_DIR, 'embedding-metadata.json');
 
-  // Load metadata
-  const metadata: EmbeddingMetadata = JSON.parse(fs.readFileSync(metadataPath, 'utf8'));
-  
-  // Load properties
-  const properties: Property[] = JSON.parse(fs.readFileSync(propertiesPath, 'utf8'));
-  
-  // Load binary embeddings
-  const buffer = fs.readFileSync(binaryPath);
-  const embeddings: number[][] = [];
-  
-  // Convert binary data back to embeddings
-  for (let i = 0; i < metadata.binaryFormat.count; i++) {
-    const start = i * metadata.binaryFormat.dimensions * metadata.binaryFormat.bytesPerFloat;
-    const end = start + metadata.binaryFormat.dimensions * metadata.binaryFormat.bytesPerFloat;
-    const slice = buffer.slice(start, end);
-    const embedding = Array.from(new Float32Array(slice.buffer));
-    embeddings.push(embedding);
+/**
+ * Load embeddings and properties from disk
+ */
+export async function loadEmbeddings() {
+  // Read metadata to verify embeddings exist
+  const metadata: EmbeddingMetadata = JSON.parse(
+    fs.readFileSync(METADATA_PATH, 'utf-8')
+  );
+
+  if (!metadata.totalProcessed) {
+    throw new Error('No embeddings found. Please generate embeddings first.');
   }
 
-  // Combine properties with their embeddings
-  const propertiesWithEmbeddings: PropertyWithEmbedding[] = properties.map((property, index) => ({
+  // Load properties with embeddings
+  const properties: PropertyWithEmbedding[] = JSON.parse(
+    fs.readFileSync(PROPERTIES_PATH, 'utf-8')
+  );
+
+  // Load binary embeddings for faster processing
+  const embeddingsBuffer = fs.readFileSync(EMBEDDINGS_PATH);
+  const embeddings = new Float32Array(embeddingsBuffer.buffer);
+
+  return { embeddings, properties, metadata };
+}
+
+/**
+ * Calculate cosine similarity between two vectors
+ */
+function cosineSimilarity(a: number[], b: number[]): number {
+  let dotProduct = 0;
+  let normA = 0;
+  let normB = 0;
+  
+  for (let i = 0; i < a.length; i++) {
+    dotProduct += a[i] * b[i];
+    normA += a[i] * a[i];
+    normB += b[i] * b[i];
+  }
+  
+  return dotProduct / (Math.sqrt(normA) * Math.sqrt(normB));
+}
+
+/**
+ * Find similar properties based on query
+ */
+export async function findSimilarProperties(
+  query: string,
+  embeddings: Float32Array,
+  properties: PropertyWithEmbedding[],
+  limit: number = 10
+): Promise<Array<PropertyWithEmbedding & { similarityScore: number }>> {
+  // Get embedding for the query
+  const response = await openai.embeddings.create({
+    model: "text-embedding-ada-002",
+    input: query,
+  });
+  
+  const queryEmbedding = response.data[0].embedding;
+
+  // Calculate similarity scores
+  const propertiesWithScores = properties.map(property => ({
     ...property,
-    embedding: embeddings[index]
+    similarityScore: cosineSimilarity(queryEmbedding, property.embedding)
   }));
 
-  return {
-    properties: propertiesWithEmbeddings,
-    metadata
-  };
-}
-
-// Calculate cosine similarity between two vectors
-export function cosineSimilarity(a: number[], b: number[]): number {
-  const dotProduct = a.reduce((sum, val, i) => sum + val * b[i], 0);
-  const magnitudeA = Math.sqrt(a.reduce((sum, val) => sum + val * val, 0));
-  const magnitudeB = Math.sqrt(b.reduce((sum, val) => sum + val * val, 0));
-  return dotProduct / (magnitudeA * magnitudeB);
-}
-
-// Find similar properties by embedding
-export function findSimilarProperties(
-  queryEmbedding: number[],
-  properties: PropertyWithEmbedding[],
-  limit: number = 5
-): PropertyWithEmbedding[] {
-  return properties
-    .map(property => ({
-      ...property,
-      similarity: cosineSimilarity(queryEmbedding, property.embedding)
-    }))
-    .sort((a, b) => b.similarity - a.similarity)
-    .slice(0, limit);
+  // Sort by similarity score and take top results
+  return propertiesWithScores
+    .sort((a, b) => b.similarityScore - a.similarityScore)
+    .slice(0, limit)
+    .map(({ embedding, ...rest }) => rest); // Remove embedding from response
 } 
