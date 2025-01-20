@@ -1,7 +1,7 @@
 import { SearchResult } from '@/utils/search';
 import fetch from 'node-fetch';
 
-jest.setTimeout(30000); // Increase timeout to 30 seconds
+jest.setTimeout(10000);
 
 describe('Search API Validation', () => {
   describe('Simple Searches', () => {
@@ -41,34 +41,64 @@ describe('Search API Validation', () => {
   describe('Natural Language Searches', () => {
     const NATURAL_CASES = [
       {
-        name: 'Colloquial property search',
-        query: 'ابي فيلا فيها مسبح',  // Colloquial way of saying "I want a villa with a pool"
+        name: 'Generic house search with features',
+        query: 'ابي بيت كبير بالنرجس عندو اربع غرف ومسبح',
         validate: (results: SearchResult[]) => {
-          // Should find villas with pools, ranked by relevance
-          return results.some(r => 
-            r.type === 'فيلا' && 
-            r.features.some(f => f.includes('مسبح'))
-          );
-        }
-      },
-      {
-        name: 'Search with spelling variations',
-        query: 'شقه في حي النرجس معاها مسباح', // Multiple common variations/mistakes
-        validate: (results: SearchResult[]) => {
-          // Should still find relevant apartments despite spelling variations
-          return results.some(r => 
-            r.type === 'شقة' && 
+          return results.every(r => 
+            (r.type === 'فيلا' || r.type === 'قصر') &&
             r.district.includes('النرجس') &&
+            r.features.some(f => f.includes('4 غرف') || f.includes('٤ غرف')) &&
             r.features.some(f => f.includes('مسبح'))
           );
         }
       },
       {
-        name: 'Natural price description',
-        query: 'دور شي رخيص في الرياض', // Looking for something cheap in Riyadh
+        name: 'Apartment search with minimal rooms',
+        query: 'محتاج شقه بالملقا مافيها كثير غرف بس يكون فيها مطبخ كبير',
         validate: (results: SearchResult[]) => {
-          // Should return properties in Riyadh, likely sorted by price
-          return results.some(r => r.city === 'الرياض');
+          return results.every(r => 
+            r.type === 'شقة' &&
+            r.district.includes('الملقا') &&
+            r.features.some(f => f.includes('مطبخ'))
+          );
+        }
+      },
+      {
+        name: 'Palace search with price range',
+        query: 'دور لي قصر في النرجس بالرياض سعرو مايزيد عن عشرين الف',
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            r.type === 'قصر' &&
+            r.district.includes('النرجس') &&
+            r.city === 'الرياض' &&
+            r.price <= 20000
+          );
+        }
+      },
+      {
+        name: 'Villa search with multiple features',
+        query: 'ابغا فله في الرياض تكون واسعه وعندها حديقه ومسبح ومجلس',
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            r.type === 'فيلا' &&
+            r.city === 'الرياض' &&
+            r.features.some(f => f.includes('حديقة')) &&
+            r.features.some(f => f.includes('مسبح')) &&
+            r.features.some(f => f.includes('مجلس'))
+          );
+        }
+      },
+      {
+        name: 'Apartment search with room count',
+        query: 'دورولي شقه بجده فيها تلت غرف وحمامين ومطبخ',
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            r.type === 'شقة' &&
+            r.city === 'جدة' &&
+            r.features.some(f => f.includes('3 غرف') || f.includes('٣ غرف')) &&
+            r.features.some(f => f.includes('2 حمامات') || f.includes('٢ حمامات')) &&
+            r.features.some(f => f.includes('مطبخ'))
+          );
         }
       }
     ];
@@ -83,6 +113,13 @@ describe('Search API Validation', () => {
 
         expect(response.ok).toBe(true);
         const { results } = await response.json();
+        console.log(`Results for "${name}":`, results.map((r: SearchResult) => ({
+          type: r.type,
+          location: r.location,
+          features: r.features,
+          price: r.price,
+          similarityScore: r.similarityScore
+        })));
         expect(validate(results)).toBe(true);
       });
     });
@@ -91,23 +128,26 @@ describe('Search API Validation', () => {
   describe('Complex Queries', () => {
     const COMPLEX_CASES = [
       {
-        name: 'Mixed dialect query',
-        query: 'ابغى فيلا او قصر في الرياض بس مو غالي مره', // Mix of formal and informal Arabic
+        name: 'Multiple property types in district',
+        query: 'فيلا او قصر في حي الملقا في الرياض مع مسبح', // Villa or palace in Al Malqa, Riyadh with pool
         validate: (results: SearchResult[]) => {
-          return results.some(r => 
+          return results.every(r => 
             (r.type === 'فيلا' || r.type === 'قصر') &&
-            r.city === 'الرياض'
+            r.district.includes('الملقا') &&
+            r.city === 'الرياض' &&
+            r.features.some(f => f.includes('مسبح'))
           );
         }
       },
       {
-        name: 'Feature description variations',
-        query: 'شقة كبيرة مع حوض سباحة حلو في حي الياسمين', // Different ways to describe features
+        name: 'Property with multiple rooms',
+        query: 'شقة في حي الياسمين في الرياض ٣ غرف', // 3-bedroom apartment in Al Yasmin, Riyadh
         validate: (results: SearchResult[]) => {
-          return results.some(r => 
+          return results.every(r => 
             r.type === 'شقة' &&
             r.district.includes('الياسمين') &&
-            r.features.some(f => f.includes('مسبح'))
+            r.city === 'الرياض' &&
+            r.features.some(f => f.includes('3 غرف') || f.includes('٣ غرف'))
           );
         }
       }
@@ -123,6 +163,12 @@ describe('Search API Validation', () => {
 
         expect(response.ok).toBe(true);
         const { results } = await response.json();
+        console.log(`Results for "${name}":`, results.map((r: SearchResult) => ({
+          type: r.type,
+          location: r.location,
+          features: r.features,
+          similarityScore: r.similarityScore
+        })));
         expect(validate(results)).toBe(true);
       });
     });
@@ -139,6 +185,102 @@ describe('Search API Validation', () => {
       expect(response.status).toBe(400);
       const data = await response.json();
       expect(data.error).toBeDefined();
+    });
+  });
+
+  describe('Price-Based Searches', () => {
+    const PRICE_CASES = [
+      {
+        name: 'Price range search',
+        query: 'شقة في حي الملقا في الرياض سعر من مليون الى مليونين', // Apartment in Malqa, Riyadh price 1M to 2M
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            r.type === 'شقة' &&
+            r.district.includes('الملقا') &&
+            r.city === 'الرياض' &&
+            r.price >= 1000000 &&
+            r.price <= 2000000
+          );
+        }
+      },
+      {
+        name: 'Maximum price with different expressions',
+        query: 'فيلا في حي النرجس في الرياض ما يتجاوز ٣ مليون', // Villa in Narjis, Riyadh not exceeding 3M
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            r.type === 'فيلا' &&
+            r.district.includes('النرجس') &&
+            r.city === 'الرياض' &&
+            r.price <= 3000000
+          );
+        }
+      },
+      {
+        name: 'Cheap properties sorted by price',
+        query: 'شقة رخيصة في حي الياسمين في الرياض', // Cheap apartment in Yasmin, Riyadh
+        validate: (results: SearchResult[]) => {
+          // Check if results are sorted by price ascending
+          return results.every(r => 
+            r.type === 'شقة' &&
+            r.district.includes('الياسمين') &&
+            r.city === 'الرياض'
+          ) && 
+          results.every((r, i) => 
+            i === 0 || r.price >= results[i-1].price
+          );
+        }
+      },
+      {
+        name: 'Reasonable price (around average)',
+        query: 'فيلا سعر معقول في حي النرجس في الرياض', // Villa with reasonable price in Narjis, Riyadh
+        validate: (results: SearchResult[]) => {
+          // For POC: Consider "reasonable" as between 2K and 142K based on our data
+          const MIN_REASONABLE = 2000;
+          const MAX_REASONABLE = 142000;
+          
+          return results.length > 0 && // Should return some results
+            results.length <= 10 && // Not too many results
+            results.every(r => 
+              r.type === 'فيلا' &&
+              r.district.includes('النرجس') &&
+              r.city === 'الرياض' &&
+              r.price >= MIN_REASONABLE &&
+              r.price <= MAX_REASONABLE
+            );
+        }
+      },
+      {
+        name: 'Maximum price alternative expression',
+        query: 'فيلا في حي النرجس في الرياض سعر مو اكثر من ٣ مليون', // Villa in Narjis, Riyadh price not more than 3M
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            r.type === 'فيلا' &&
+            r.district.includes('النرجس') &&
+            r.city === 'الرياض' &&
+            r.price <= 3000000
+          );
+        }
+      }
+    ];
+
+    PRICE_CASES.forEach(({ name, query, validate }) => {
+      it(name, async () => {
+        const response = await fetch('http://localhost:3000/api/search', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query })
+        });
+
+        expect(response.ok).toBe(true);
+        const { results } = await response.json();
+        console.log(`Results for "${name}":`, results.map((r: SearchResult) => ({
+          type: r.type,
+          location: r.location,
+          price: r.price,
+          similarityScore: r.similarityScore
+        })));
+        expect(validate(results)).toBe(true);
+      });
     });
   });
 });

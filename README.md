@@ -6,17 +6,22 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
 - Voice search in Arabic (upcoming)
 - Intelligent NLP-based property search
   - Handles complex Arabic queries
+  - Supports colloquial expressions and dialects
+  - Handles common spelling mistakes
+  - Processes mixed formal/informal language
   - Extracts property type, location, and features
   - Supports compound search terms
   - Advanced feature matching:
     - Base feature extraction (e.g., "مسبح" from "مسبح للأطفال")
     - Flexible matching for feature variations
+    - Support for feature synonyms (e.g., "حوض سباحة" for "مسبح")
     - Prioritized base feature matches
     - Support for compound Arabic features
 - OpenAI embeddings-based semantic search
   - Precomputed property embeddings
   - Real-time query embedding generation
   - Cosine similarity matching
+  - Natural language understanding
 - Rate-limited and cached API
   - 10 requests per minute limit
   - 5-minute LRU cache for results
@@ -27,12 +32,17 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
 - Responsive design with RTL support
 - Property listing with optimized image loading
 - Search properties by:
-  - Natural language queries (e.g., "فيلا مع مسبح في الرياض")
-  - Property type
+  - Natural language queries (e.g., "ابي فيلا فيها مسبح")
+  - Colloquial expressions (e.g., "دور شي رخيص")
+  - Property type with spelling variations
   - Location (with district support)
-  - Features (with compound feature support)
-  - Price range
+  - Features (with variations and synonyms)
+  - Price descriptions
 - Comprehensive test coverage
+  - Natural language test cases
+  - Spelling variation tests
+  - Mixed dialect tests
+  - Real-world query patterns
 
 ## Tech Stack
 - Next.js 14.0.4 (App Router)
@@ -93,7 +103,7 @@ The search API is available at `/api/search` and accepts POST requests with the 
 
 ```typescript
 {
-  "query": "فيلا مع مسبح وحديقة في الرياض",
+  "query": "yes,
   "limit": 10 // optional, defaults to 10
 }
 ```

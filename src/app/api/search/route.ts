@@ -4,6 +4,7 @@ import { z } from 'zod';
 import { findSimilarProperties } from '@/utils/embeddings';
 import { Property } from '@/types';
 import { SearchResult } from '@/utils/search';
+import { properties } from '@/data/properties';
 
 // Define the search request schema
 const searchSchema = z.object({
@@ -17,14 +18,37 @@ async function handlePost(req: NextRequest) {
     const body = await req.json();
     const { query, limit } = searchSchema.parse(body);
 
-    // Return all properties for empty queries
+    // Empty query: just return all properties directly (no search processing)
     if (!query.trim()) {
-      const results = await findSimilarProperties('', limit);
-      return NextResponse.json({ results });
+      return NextResponse.json({ 
+        results: properties.map(p => ({ ...p, similarityScore: 1 }))
+      });
     }
 
+    // Only do search for non-empty queries
     const results = await findSimilarProperties(query, limit);
-    return NextResponse.json({ results });
+    
+    // Extract city and district from query (simple exact match for POC)
+    const cities = ['الرياض', 'جدة', 'الدمام'].filter(city => query.includes(city));
+    const districts = ['حي النرجس', 'حي الياسمين', 'حي الملقا', 'حي العليا'].filter(district => query.includes(district));
+    
+    // Filter results based on city and district if mentioned in query
+    let filteredResults = results;
+    if (cities.length > 0) {
+      filteredResults = filteredResults.filter(r => {
+        const [propertyCity] = r.location.split('،').map(s => s.trim());
+        return cities.some(city => propertyCity === city);
+      });
+    }
+    
+    if (districts.length > 0) {
+      filteredResults = filteredResults.filter(r => {
+        const [, propertyDistrict = ''] = r.location.split('،').map(s => s.trim());
+        return districts.some(district => propertyDistrict === district);
+      });
+    }
+
+    return NextResponse.json({ results: filteredResults });
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
