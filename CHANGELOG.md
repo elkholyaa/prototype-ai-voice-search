@@ -20,6 +20,7 @@
 - Improved natural language processing capabilities
 - Refined semantic search implementation
 - Enhanced Arabic query processing
+- testing from hossam laptop
 
 ### Upcoming
 - Frontend integration with search API
