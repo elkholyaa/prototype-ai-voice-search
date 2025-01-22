@@ -8,6 +8,11 @@
   - Added feature description variations
   - More flexible validation for semantic search
   - Tests for mixed formal/informal queries
+  - Advanced dialect-specific test cases:
+    - Gulf dialect with price negotiations
+    - Egyptian dialect with family-focused queries
+    - Levantine dialect with lifestyle preferences
+    - Mixed dialect expressions
 - Rate limiting for search API (10 requests/minute)
 - LRU cache for search results with 5-minute TTL
 - Zod input validation for search requests

@@ -49,6 +49,11 @@ Proof of concept for Arabic voice search in real estate listings using OpenAI's 
   - Common spelling mistakes and variations
   - Mixed formal/informal language
   - Feature synonyms and variations
+  - Multiple Arabic dialect variations:
+    - Gulf dialect expressions
+    - Egyptian dialect terms
+    - Levantine dialect phrases
+    - Mixed dialect support
 - Property filtering system
 - RTL and Arabic support with Noto Kufi Arabic font
 - Sample Saudi Arabian property data
@@ -58,6 +63,20 @@ Proof of concept for Arabic voice search in real estate listings using OpenAI's 
 - Rate-limited and cached search API
 - Swagger API documentation
 - Comprehensive test suite with real-world query patterns
+
+### Current Test Improvements
+- Natural language variations in test queries
+- Support for spelling mistakes and variations
+- Mixed formal/informal Arabic expressions
+- Flexible validation for semantic search results
+- Real-world feature descriptions
+- Dialect-specific test cases:
+  - Gulf dialect with price negotiations
+  - Egyptian dialect with family requirements
+  - Levantine dialect with modern lifestyle needs
+  - Mixed dialect expressions and variations
+- Complex search criteria combinations
+- Price range and feature matching validation
 
 ## Pending Issues
 1. Vercel Deployment Error

@@ -6,7 +6,11 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
 - Voice search in Arabic (upcoming)
 - Intelligent NLP-based property search
   - Handles complex Arabic queries
-  - Supports colloquial expressions and dialects
+  - Supports colloquial expressions and dialects:
+    - Gulf dialect (e.g., "ودي", "ابغى")
+    - Egyptian dialect (e.g., "عايز", "اوض")
+    - Levantine dialect (e.g., "بدي", "حلوة")
+    - Mixed dialect expressions
   - Handles common spelling mistakes
   - Processes mixed formal/informal language
   - Extracts property type, location, and features
@@ -17,6 +21,7 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
     - Support for feature synonyms (e.g., "حوض سباحة" for "مسبح")
     - Prioritized base feature matches
     - Support for compound Arabic features
+    - Dialect-specific feature terms (e.g., "جنينة" for "حديقة")
 - OpenAI embeddings-based semantic search
   - Precomputed property embeddings
   - Real-time query embedding generation
@@ -43,6 +48,7 @@ A simple property search prototype built with Next.js and Tailwind CSS. This pro
   - Spelling variation tests
   - Mixed dialect tests
   - Real-world query patterns
+  - Dialect-specific test scenarios
 
 ## Tech Stack
 - Next.js 14.0.4 (App Router)
