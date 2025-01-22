@@ -10,7 +10,10 @@
     "test": "jest",
     "embeddings": "ts-node -O '{\"module\": \"commonjs\"}' scripts/generate-embeddings.ts",
     "embeddings:force": "ts-node -O '{\"module\": \"commonjs\"}' scripts/generate-embeddings.ts --force",
-    "test:search": "ts-node -O '{\"module\": \"commonjs\"}' src/tests/search.test.ts"
+    "test:search": "ts-node -O '{\"module\": \"commonjs\"}' src/tests/search.test.ts",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "test:e2e": "cypress run --browser chrome"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",

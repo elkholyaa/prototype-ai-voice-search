@@ -30,7 +30,10 @@ async function handlePost(req: NextRequest) {
     
     // Extract city and district from query (simple exact match for POC)
     const cities = ['الرياض', 'جدة', 'الدمام'].filter(city => query.includes(city));
-    const districts = ['حي النرجس', 'حي الياسمين', 'حي الملقا', 'حي العليا'].filter(district => query.includes(district));
+    const districtNames = ['النرجس', 'الياسمين', 'الملقا', 'العليا'];
+    const districts = districtNames.filter(district => 
+      query.includes(`حي ${district}`) || query.includes(district)
+    );
     
     // Filter results based on city and district if mentioned in query
     let filteredResults = results;
@@ -44,7 +47,9 @@ async function handlePost(req: NextRequest) {
     if (districts.length > 0) {
       filteredResults = filteredResults.filter(r => {
         const [, propertyDistrict = ''] = r.location.split('،').map(s => s.trim());
-        return districts.some(district => propertyDistrict === district);
+        return districts.some(district => 
+          propertyDistrict === `حي ${district}` || propertyDistrict.endsWith(district)
+        );
       });
     }
 
