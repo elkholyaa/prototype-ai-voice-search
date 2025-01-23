@@ -12,8 +12,8 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
     <article className="bg-white rounded-xl shadow overflow-hidden group hover:shadow-lg transition-shadow duration-300">
       <div className="relative w-full h-[300px]">
         <Image
-          src={property.images[0] || '/placeholder.jpg'}
-          alt={property.title}
+          src={property.images?.[0] || '/images/placeholder.jpg'}
+          alt={property.title || 'Property Image'}
           fill
           priority={priority}
           className="object-cover"
@@ -36,7 +36,7 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
           </p>
         </div>
         <div className="flex flex-wrap gap-2 justify-end mt-4">
-          {property.features.map((feature: string, index: number) => (
+          {property.features?.map((feature: string, index: number) => (
             <span
               key={index}
               className="inline-flex items-center px-3 py-1 text-sm font-medium rounded-full bg-gray-100 text-gray-800"

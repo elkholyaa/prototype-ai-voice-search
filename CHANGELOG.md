@@ -26,6 +26,11 @@
 - Refined semantic search implementation
 - Enhanced Arabic query processing
 - testing from hossam laptop
+- Temporarily disabled AI-powered search functionality
+- Switched to text-based search implementation
+- Removed search result limits
+- Updated location display format to "city، حي district"
+- Added fallback handling for undefined values
 
 ### Upcoming
 - Frontend integration with search API
@@ -74,3 +79,8 @@
 ### Changed
 - Updated project structure for better organization
 - Refined development guidelines 
+
+### Preserved (Currently Disabled)
+- OpenAI embeddings search
+- API middleware
+- Rate limiting 

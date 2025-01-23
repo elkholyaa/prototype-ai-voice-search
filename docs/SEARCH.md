@@ -258,3 +258,75 @@ Each test validates:
 2. Add caching for common queries
 3. Support more location variations
 4. Add fuzzy matching for typos 
+
+# Search Implementation Changes
+
+## Changes Made
+- Disabled API middleware temporarily
+- Commented out AI embeddings-based search
+- Switched to local text-based search implementation
+- Removed redundant POST export
+- Using direct search function without middleware wrapper
+
+## How to Revert
+1. Uncomment the API middleware import and usage:
+   ```typescript
+   import { withApiMiddleware } from '@/utils/api-middleware';
+   ```
+2. Uncomment the embeddings search:
+   ```typescript
+   import { findSimilarProperties } from '@/utils/embeddings';
+   ```
+3. Replace `searchProperties` with `findSimilarProperties`
+4. Restore the middleware wrapper:
+   ```typescript
+   const handler = withApiMiddleware({
+     POST: handlePost,
+   });
+   export const POST = handler.POST;
+   ```
+
+## Files Affected
+- src/app/api/search/route.ts
+- src/utils/search.ts (using existing implementation) 
+
+## Temporary Implementation (2024 Updates)
+
+### Current Search Flow
+While maintaining the original AI-powered search system (currently commented out), we've added a simpler text-based search:
+
+1. Original AI Search (Temporarily Disabled):
+   - Embedding generation
+   - Semantic similarity
+   - API middleware
+   - Result limits
+
+2. Current Text-Based Search:
+   - Simple string matching
+   - Scoring system:
+     - Title match: 0.5 points
+     - Type match: 0.3 points
+     - Location match: 0.3 points
+     - Features match: 0.2 points
+   - No result limits
+   - Direct property matching
+
+### Location Display Updates
+Format standardized to: "city، حي district"
+Example: "الرياض، حي النرجس"
+Fallback: "غير محدد" for undefined values
+
+### Files Modified (Not Replaced)
+1. src/app/api/search/route.ts
+   - API middleware commented out
+   - Removed result limits
+   - Using direct search function
+
+2. src/utils/search.ts
+   - Added text-based search
+   - Updated location formatting
+   - Added undefined handling
+
+### How to Switch Back
+The original implementation remains in the codebase (commented out) for easy reversion.
+See the original documentation above for full AI search implementation details. 

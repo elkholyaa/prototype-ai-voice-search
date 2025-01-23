@@ -99,3 +99,21 @@
 - Browser: Chrome latest
 - Screen size: Desktop & Mobile
 - Network: Regular speed 
+
+## Current Test Cases (Text-Based Search)
+1. Basic Property Search
+   - Search by type (فيلا، شقة، etc.)
+   - Search by location
+   - Search by features
+   
+2. Location Display
+   - Verify format: "city، حي district"
+   - Check undefined handling
+   - Test district variations
+
+3. Result Ordering
+   - Verify scoring system
+   - Check unlimited results
+   - Test feature matching
+
+[Original test cases remain below for reference when reverting] 

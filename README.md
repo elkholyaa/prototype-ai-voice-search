@@ -193,4 +193,13 @@ The script will:
 
 Note: The embedding files are committed to the repository, so you typically don't need to run this script unless you're updating the property data.
 
+## Current Implementation Note
+The search system is temporarily using a text-based implementation while preserving the AI-powered search code (currently disabled). See `docs/SEARCH.md` for detailed documentation of both implementations.
+
+Key features:
+- Simple text matching with scoring
+- No result limits
+- Standardized location format
+- Fallback handling for missing data
+
 [Rest of the content remains the same...] 

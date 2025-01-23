@@ -1,30 +1,50 @@
-import { OpenAI } from 'openai';
 import { Property } from '@/types';
-import { findSimilarProperties } from './embeddings';
-
-// Initialize OpenAI client
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
+import { properties } from '@/data/properties';
 
 export interface SearchResult extends Property {
   similarityScore: number;
-  city: string;
-  district: string;
-  rooms: number;
 }
 
-/**
- * Searches for properties using natural language queries
- * @param query Natural language query (e.g., "فيلا مع مسبح وحديقة في الرياض")
- * @param limit Maximum number of results to return (default: 10)
- * @returns Array of properties with their similarity scores
- */
-export async function searchProperties(
-  query: string,
-  limit: number = 10
-): Promise<SearchResult[]> {
-  return findSimilarProperties(query, limit);
+export function searchProperties(query: string): SearchResult[] {
+  // Helper function to format location as "city، حي district"
+  const formatLocation = (location: string) => {
+    const parts = location?.split('،') || [];
+    const city = parts[0]?.trim() || 'غير محدد';
+    const district = parts[1]?.trim().replace('حي ', '') || 'غير محدد';
+    return `${city}، حي ${district}`;
+  };
+
+  // Empty query: return all properties
+  if (!query.trim()) {
+    return properties.map(p => ({
+      ...p,
+      similarityScore: 1,
+      location: formatLocation(p.location),
+      features: p.features || [],
+      images: p.images || [],
+    }));
+  }
+
+  const normalizedQuery = query.toLowerCase().trim();
+  
+  return properties
+    .map(property => {
+      let score = 0;
+      if (property.title?.toLowerCase().includes(normalizedQuery)) score += 0.5;
+      if (property.type?.toLowerCase().includes(normalizedQuery)) score += 0.3;
+      if (property.location?.toLowerCase().includes(normalizedQuery)) score += 0.3;
+      if (property.features?.some(f => f?.toLowerCase().includes(normalizedQuery))) score += 0.2;
+      
+      return {
+        ...property,
+        similarityScore: score,
+        location: formatLocation(property.location),
+        features: property.features || [],
+        images: property.images || [],
+      };
+    })
+    .filter(result => result.similarityScore > 0)
+    .sort((a, b) => b.similarityScore - a.similarityScore);
 }
 
 /**
@@ -36,7 +56,7 @@ export async function handleSearchRequest(
   limit?: number
 ): Promise<{ results: SearchResult[]; error?: string }> {
   try {
-    const results = await searchProperties(query, limit);
+    const results = searchProperties(query);
     return { results };
   } catch (error) {
     console.error('Search error:', error);
