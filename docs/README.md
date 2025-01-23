@@ -8,6 +8,11 @@
 - Fixed image fallbacks
 
 ## Features
+- Verified Natural Language Search
+  - Multiple location support
+  - Feature combinations
+  - Price range understanding
+  - Dialect and typo handling
 - Advanced property search with feature combinations
 - Price ranges:
   - Apartments: 750,000 - 1,500,000 SAR

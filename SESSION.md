@@ -75,6 +75,18 @@ Proof of concept for Arabic voice search in real estate listings using OpenAI's 
 - Comprehensive test suite with real-world query patterns
 
 ### Current Test Improvements
+- Test Case: Natural Language Query
+  ![Search Test Pass](./images/tests/search-test-pass-2024-03.png)
+  ```
+  Query: "ودي اشوف فله حلوه في النرجس او الياسمين، يكون فيها مسبح ومجلس كبير وما تطلع فوق ٣ مليون ونص"
+  Status: ✓ PASS
+  Results: 1 matching property
+  Criteria Matched:
+    - Property Type: فيلا/فله
+    - Location: النرجس/الياسمين
+    - Features: مسبح + مجلس
+    - Price: Under 3.5M SAR
+  ```
 - Natural language variations in test queries
 - Support for spelling mistakes and variations
 - Mixed formal/informal Arabic expressions

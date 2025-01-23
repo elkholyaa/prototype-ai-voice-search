@@ -352,6 +352,17 @@ See the original documentation above for full AI search implementation details.
 
 ## Search Features
 
+### Verified Search Capabilities
+![Verified Search Test](../images/tests/search-test-pass-2024-03.png)
+- Natural language query processing
+- Multiple location search (e.g., "النرجس او الياسمين")
+- Feature combinations (e.g., "مسبح ومجلس")
+- Price range understanding (e.g., "ما تطلع فوق ٣ مليون ونص")
+- Dialect/typo handling:
+  - Property types: فيلا، فله، فلة، فيلة، فلل
+  - Locations: النرجس، نرجس، الترجس
+  - Features: مسبح، حمام سباحة، حمام السباحة
+
 ### Property Types
 - فيلا (Villa): 2,500,000 - 4,000,000 SAR
 - شقة (Apartment): 750,000 - 1,500,000 SAR

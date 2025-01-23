@@ -88,9 +88,11 @@
 ## [2.1.0] - 2024-03-XX
 
 ### Added
-- Enhanced natural language search capabilities
-- Proper price formatting with English numerals
-- Fallback image system for property cards
+- Verified natural language search capabilities
+- Support for multiple location search
+- Feature combination matching
+- Price range understanding
+- Comprehensive synonym handling
 
 ### Changed
 - Updated property price ranges to realistic values

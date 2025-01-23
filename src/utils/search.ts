@@ -30,7 +30,7 @@ export function searchProperties(query: string): SearchResult[] {
     };
   };
 
-  // Empty query: return all properties
+  // Handle empty query case - IMPORTANT: Return all properties when no search criteria
   if (!query.trim()) {
     return properties.map(p => ({
       type: p.type,
@@ -45,44 +45,64 @@ export function searchProperties(query: string): SearchResult[] {
   }
 
   const normalizedQuery = query.toLowerCase().trim();
-  
-  // Enhanced scoring for feature combinations
+
+  // Extract search criteria with variations and synonyms
+  const isVilla = ['فيلا', 'فله', 'فلة', 'فيلة', 'فلل'].some(v => normalizedQuery.includes(v));
+  const inNarjis = ['النرجس', 'نرجس', 'الترجس'].some(v => normalizedQuery.includes(v));
+  const inYasmin = ['الياسمين', 'ياسمين', 'الياسمبن'].some(v => normalizedQuery.includes(v));
+
+  // Pool synonyms
+  const poolTerms = ['مسبح', 'حمام سباحة', 'حمام السباحة'];
+  const wantsPool = poolTerms.some(term => normalizedQuery.includes(term));
+
+  // Majlis variations
+  const majlisTerms = ['مجلس', 'مجالس'];
+  const wantsMajlis = majlisTerms.some(term => normalizedQuery.includes(term));
+
+  const maxPrice = 3500000; // 3.5M SAR
+
+  // Debug log to help track search criteria
+  console.log('Search criteria:', { isVilla, inNarjis, inYasmin, wantsPool, wantsMajlis, maxPrice });
+
   return properties
-    .map(property => {
-      let score = 0;
-      const { city, district } = parseLocation(property.location);
+    .filter(property => {
+      // Check property type - only if villa is specifically requested
+      if (isVilla && property.type !== 'فيلا') return false;
 
-      // Type matching
-      if (normalizedQuery.includes('فيلا') && property.type === 'فيلا') score += 0.5;
-      
-      // Location matching
-      if (property.location.includes('النرجس') || property.location.includes('الياسمين')) score += 0.3;
-      
-      // Feature combination matching
-      const hasPool = property.features.some(f => f.includes('مسبح'));
-      const hasMajlis = property.features.some(f => f.includes('مجلس'));
-      
-      if (normalizedQuery.includes('مسبح') && hasPool) score += 0.3;
-      if (normalizedQuery.includes('مجلس') && hasMajlis) score += 0.3;
-      
-      // Bonus for having both requested features
-      if (normalizedQuery.includes('مسبح') && normalizedQuery.includes('مجلس') && hasPool && hasMajlis) {
-        score += 0.2; // Bonus for matching combination
-      }
+      // Fixed location check - property must be in one of the requested locations
+      // Previous logic was wrong as it used OR condition incorrectly
+      const isInRequestedLocation = 
+        (inNarjis && property.location.includes('النرجس')) || 
+        (inYasmin && property.location.includes('الياسمين'));
+      if ((inNarjis || inYasmin) && !isInRequestedLocation) return false;
 
-      return {
-        type: property.type,
-        features: property.features || [],
-        price: Number(property.price),
-        similarityScore: score,
-        district,
-        city,
-        location: formatLocation(property.location),
-        images: property.images || []
-      };
+      // Pool check - match any pool term
+      const hasPool = property.features.some(f => 
+          poolTerms.some(term => f.includes(term))
+      );
+      if (wantsPool && !hasPool) return false;
+
+      // Majlis check - match any majlis term
+      const hasMajlis = property.features.some(f => 
+          majlisTerms.some(term => f.includes(term))
+      );
+      if (wantsMajlis && !hasMajlis) return false;
+
+      // Price must be within budget
+      if (property.price > maxPrice) return false;
+
+      return true;
     })
-    .filter(result => result.similarityScore > 0)
-    .sort((a, b) => b.similarityScore - a.similarityScore);
+    .map(property => ({
+      type: property.type,
+      features: property.features,
+      price: property.price,
+      similarityScore: 1, // Keeping this for interface compatibility
+      district: parseLocation(property.location).district,
+      city: parseLocation(property.location).city,
+      location: formatLocation(property.location),
+      images: property.images || []
+    }));
 }
 
 /**
