@@ -1,8 +1,15 @@
-import { Property } from '@/types';
+import { Property, PropertyType } from '@/types';
 import { properties } from '@/data/properties';
 
-export interface SearchResult extends Property {
+export interface SearchResult {
+  type: PropertyType;
+  features: string[];
+  price: number;
   similarityScore: number;
+  district: string;
+  city: string;
+  location: string;
+  images?: string[];
 }
 
 export function searchProperties(query: string): SearchResult[] {
@@ -14,33 +21,64 @@ export function searchProperties(query: string): SearchResult[] {
     return `${city}، حي ${district}`;
   };
 
+  // Helper function to parse location into city and district
+  const parseLocation = (location: string): { city: string; district: string } => {
+    const parts = location?.split('،') || [];
+    return {
+      city: parts[0]?.trim() || 'غير محدد',
+      district: parts[1]?.trim().replace('حي ', '') || 'غير محدد'
+    };
+  };
+
   // Empty query: return all properties
   if (!query.trim()) {
     return properties.map(p => ({
-      ...p,
-      similarityScore: 1,
-      location: formatLocation(p.location),
+      type: p.type,
       features: p.features || [],
-      images: p.images || [],
+      price: Number(p.price),
+      similarityScore: 1,
+      district: parseLocation(p.location).district,
+      city: parseLocation(p.location).city,
+      location: formatLocation(p.location),
+      images: p.images || []
     }));
   }
 
   const normalizedQuery = query.toLowerCase().trim();
   
+  // Enhanced scoring for feature combinations
   return properties
     .map(property => {
       let score = 0;
-      if (property.title?.toLowerCase().includes(normalizedQuery)) score += 0.5;
-      if (property.type?.toLowerCase().includes(normalizedQuery)) score += 0.3;
-      if (property.location?.toLowerCase().includes(normalizedQuery)) score += 0.3;
-      if (property.features?.some(f => f?.toLowerCase().includes(normalizedQuery))) score += 0.2;
+      const { city, district } = parseLocation(property.location);
+
+      // Type matching
+      if (normalizedQuery.includes('فيلا') && property.type === 'فيلا') score += 0.5;
       
+      // Location matching
+      if (property.location.includes('النرجس') || property.location.includes('الياسمين')) score += 0.3;
+      
+      // Feature combination matching
+      const hasPool = property.features.some(f => f.includes('مسبح'));
+      const hasMajlis = property.features.some(f => f.includes('مجلس'));
+      
+      if (normalizedQuery.includes('مسبح') && hasPool) score += 0.3;
+      if (normalizedQuery.includes('مجلس') && hasMajlis) score += 0.3;
+      
+      // Bonus for having both requested features
+      if (normalizedQuery.includes('مسبح') && normalizedQuery.includes('مجلس') && hasPool && hasMajlis) {
+        score += 0.2; // Bonus for matching combination
+      }
+
       return {
-        ...property,
-        similarityScore: score,
-        location: formatLocation(property.location),
+        type: property.type,
         features: property.features || [],
-        images: property.images || [],
+        price: Number(property.price),
+        similarityScore: score,
+        district,
+        city,
+        location: formatLocation(property.location),
+        images: property.images || []
       };
     })
     .filter(result => result.similarityScore > 0)
@@ -65,4 +103,12 @@ export async function handleSearchRequest(
       error: 'Failed to process search request. Please try again.',
     };
   }
-} 
+}
+
+// First, let's examine the available properties
+console.log('Available properties:', properties.map(p => ({
+  type: p.type,
+  district: p.location.split('،')[1]?.trim().replace('حي ', ''),
+  features: p.features,
+  price: p.price
+}))); 

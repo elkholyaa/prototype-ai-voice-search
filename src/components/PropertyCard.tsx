@@ -7,12 +7,15 @@ interface PropertyCardProps {
   priority?: boolean;
 }
 
+// Add a fallback image
+const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800';
+
 export default function PropertyCard({ property, priority = false }: PropertyCardProps) {
   return (
     <article className="bg-white rounded-xl shadow overflow-hidden group hover:shadow-lg transition-shadow duration-300">
       <div className="relative w-full h-[300px]">
         <Image
-          src={property.images?.[0] || '/images/placeholder.jpg'}
+          src={property.images?.[0] || FALLBACK_IMAGE}
           alt={property.title || 'Property Image'}
           fill
           priority={priority}

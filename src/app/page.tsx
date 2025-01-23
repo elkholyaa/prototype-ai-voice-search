@@ -3,7 +3,7 @@
 import { useState, useCallback, Suspense, useEffect } from 'react';
 import dynamic from 'next/dynamic';
 import { Property } from '@/types';
-import { SearchResult } from '@/utils/search';
+import { searchProperties, SearchResult } from '@/utils/search';
 import { properties } from '@/data/properties';
 
 const PropertyCard = dynamic(() => import('@/components/PropertyCard'), {
@@ -23,7 +23,11 @@ export default function Home() {
 
   // Load initial properties
   useEffect(() => {
-    // Convert properties to SearchResult format
+    // Temporarily using direct search while API is disabled
+    const results = searchProperties('');
+    setSearchResults(results);
+    
+    /* API-based implementation - temporarily disabled
     const initialProperties = properties.map(property => {
       const [city = '', district = ''] = property.location.split('،').map(s => s.trim());
       const roomFeature = property.features.find(f => f.includes('غرف') || f.includes('غرفة'));
@@ -38,38 +42,22 @@ export default function Home() {
       };
     });
     setSearchResults(initialProperties);
+    */
   }, []);
 
-  // Handle search API call
-  const handleSearch = useCallback(async (query: string) => {
-    if (!query.trim()) {
-      // Show all properties when search is cleared
-      const initialProperties = properties.map(property => {
-        const [city = '', district = ''] = property.location.split('،').map(s => s.trim());
-        const roomFeature = property.features.find(f => f.includes('غرف') || f.includes('غرفة'));
-        const rooms = roomFeature ? parseInt(roomFeature.match(/\d+/)?.[0] || '0') : 0;
-        
-        return {
-          ...property,
-          city,
-          district,
-          rooms,
-          similarityScore: 1
-        };
-      });
-      setSearchResults(initialProperties);
-      return;
-    }
-
+  const handleSearch = useCallback((query: string) => {
     setIsLoading(true);
     setError(null);
 
     try {
+      // Temporarily using direct search while API is disabled
+      const results = searchProperties(query);
+      setSearchResults(results);
+
+      /* API-based implementation - temporarily disabled
       const response = await fetch('/api/search', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query }),
       });
 
@@ -80,6 +68,7 @@ export default function Home() {
 
       const data = await response.json();
       setSearchResults(data.results);
+      */
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred while searching');
       setSearchResults([]);
@@ -119,11 +108,11 @@ export default function Home() {
     if (filters.type && property.type.toLowerCase() !== filters.type.toLowerCase()) {
       return false;
     }
-    const price = property.price || 0;
-    if (filters.minPrice && price < parseInt(filters.minPrice)) {
+    const price = Number(property.price);
+    if (filters.minPrice && price < Number(filters.minPrice)) {
       return false;
     }
-    if (filters.maxPrice && price > parseInt(filters.maxPrice)) {
+    if (filters.maxPrice && price > Number(filters.maxPrice)) {
       return false;
     }
     return true;
@@ -223,9 +212,14 @@ export default function Home() {
               <PropertyCard
                 key={index}
                 property={{
-                  ...property,
-                  location: `${property.district}، ${property.city}`,
-                  images: property.images || [],
+                  id: `search-result-${index}`,
+                  title: `${property.city} - حي ${property.district}`,
+                  description: property.features.join('، '),
+                  type: property.type,
+                  features: property.features,
+                  price: Number(property.price),
+                  location: '',
+                  images: property.images || []
                 }}
                 priority={index < 6}
               />

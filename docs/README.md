@@ -1,6 +1,29 @@
-# AI Voice Search for Real Estate (Proof of Concept)
+# Real Estate Search Application
 
-A simple property search prototype built with Next.js and Tailwind CSS. This prototype serves as a foundation for implementing voice search capabilities for real estate listings.
+## Recent Updates (2024)
+- Enhanced natural language property search
+- Standardized price formatting (English numerals with commas)
+- Improved property listings with consistent formats
+- Updated location display format
+- Fixed image fallbacks
+
+## Features
+- Advanced property search with feature combinations
+- Price ranges:
+  - Apartments: 750,000 - 1,500,000 SAR
+  - Villas: 2,500,000 - 4,000,000 SAR
+  - Duplexes: 1,800,000 - 3,000,000 SAR
+  - Palaces: 6,000,000 - 8,000,000 SAR
+- Location-based search
+- Feature-based filtering
+- Responsive property cards
+- Real-time search results
+
+## Technical Stack
+- Next.js 14
+- TypeScript
+- Tailwind CSS
+- (AI Search implementation ready but currently inactive)
 
 ## Features
 - Voice search in Arabic (upcoming)

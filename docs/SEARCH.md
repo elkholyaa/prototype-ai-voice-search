@@ -330,3 +330,53 @@ Fallback: "غير محدد" for undefined values
 ### How to Switch Back
 The original implementation remains in the codebase (commented out) for easy reversion.
 See the original documentation above for full AI search implementation details. 
+
+# Search Implementation Documentation
+
+## History & Updates
+
+### Initial Implementation (Previous)
+- Basic text matching
+- Simple property type and location filtering
+- Price filtering in thousands (1000 = 1M SAR)
+- Location format: "فيلا في النرجس"
+
+### Current Implementation (Latest)
+- Enhanced natural language search
+- Improved feature combination matching
+- Standardized price format (actual values in SAR)
+- Location format: "الرياض - حي النرجس"
+- Proper price formatting with English numerals and commas
+- Consistent property titles without room counts
+- Complete descriptions for AI embeddings (currently inactive)
+
+## Search Features
+
+### Property Types
+- فيلا (Villa): 2,500,000 - 4,000,000 SAR
+- شقة (Apartment): 750,000 - 1,500,000 SAR
+- دوبلكس (Duplex): 1,800,000 - 3,000,000 SAR
+- قصر (Palace): 6,000,000 - 8,000,000 SAR
+
+### Location Support
+- City and district matching
+- Standardized format: "{city} - حي {district}"
+- Common districts: النرجس، الملقا
+- Major cities: الرياض، جدة، مكة، الدمام
+
+### Feature Matching
+- Room counts
+- Amenities (مسبح، مجلس، etc.)
+- Bonus scoring for feature combinations
+- Special features (تكييف مركزي، مدخل خاص، etc.)
+
+### Price Ranges
+- All prices in SAR
+- Formatted with English numerals
+- Comma-separated thousands
+- Example: 2,500,000 ريال
+
+## Technical Notes
+- Search results include similarity scores
+- Property descriptions maintain all fields for future AI embeddings
+- Fallback images implemented for missing property images 

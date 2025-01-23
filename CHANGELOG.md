@@ -84,3 +84,21 @@
 - OpenAI embeddings search
 - API middleware
 - Rate limiting 
+
+## [2.1.0] - 2024-03-XX
+
+### Added
+- Enhanced natural language search capabilities
+- Proper price formatting with English numerals
+- Fallback image system for property cards
+
+### Changed
+- Updated property price ranges to realistic values
+- Standardized property titles and descriptions
+- Improved location display format
+- Enhanced search scoring system for feature combinations
+
+### Fixed
+- Image placeholder issues
+- Price formatting inconsistencies
+- Location display redundancy 

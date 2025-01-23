@@ -4,7 +4,10 @@
  * @returns The formatted price string
  */
 export function formatPrice(price: number): string {
-  return new Intl.NumberFormat('ar-SA').format(price);
+  return price.toLocaleString('en-US', {
+    maximumFractionDigits: 0,
+    useGrouping: true
+  });
 }
 
 /**
