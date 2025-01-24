@@ -17,20 +17,18 @@ export function formatPrice(price: number): string {
  */
 export function generatePropertyDescription(property: {
   type: string;
-  location: string;
+  city: string;
+  district: string;
   features: string[];
 }): string {
-  // Extract city and district from location
-  const [city, district] = property.location.split('،').map(s => s.trim());
-  
   // Start with property type and location
   let description = `${property.type} في `;
   
   // Add location details
-  if (district && district !== city) {
-    description += `${district}، ${city}`;
+  if (property.district && property.district !== property.city) {
+    description += `${property.district}، ${property.city}`;
   } else {
-    description += city;
+    description += property.city;
   }
   
   // Add features if present

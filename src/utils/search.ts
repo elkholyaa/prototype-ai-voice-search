@@ -8,88 +8,136 @@ export interface SearchResult {
   similarityScore: number;
   district: string;
   city: string;
-  location: string;
   images?: string[];
 }
 
+interface PropertyCriteria {
+  type?: string;
+  city?: string;
+  district?: string;
+  features?: string[];
+  maxPrice?: number;
+}
+
+function extractSearchCriteria(query: string): PropertyCriteria {
+  const normalizedQuery = query.toLowerCase().trim();
+  const criteria: PropertyCriteria = {};
+
+  // Property Type variations - keeping all existing variations
+  const typeVariations = {
+    'فيلا': ['فيلا', 'فله', 'فلة', 'فيلة', 'فلل', 'بيت'],
+    'شقة': ['شقة', 'شقه', 'شقق', 'شقت'],
+    'دوبلكس': ['دوبلكس', 'دوبلكسات', 'دبلكس', 'دبلكسات'],
+    'قصر': ['قصر', 'قصور', 'قصور', 'قصر']
+  };
+
+  // City variations
+  const cityVariations = {
+    'الرياض': ['الرياض', 'رياض'],
+    'جدة': ['جدة', 'جده', 'جدة'],
+    'مكة': ['مكة', 'مكه', 'مكة المكرمة'],
+    'الدمام': ['الدمام', 'دمام']
+  };
+
+  // District variations
+  const districtVariations = {
+    'النرجس': ['النرجس', 'حي النرجس'],
+    'الملقا': ['الملقا', 'حي الملقا'],
+    'الياسمين': ['الياسمين', 'حي الياسمين'],
+    'الورود': ['الورود', 'حي الورود']
+  };
+
+  // Feature variations - keeping all existing variations
+  const featureVariations = {
+    'مسبح': ['مسبح', 'حوض سباحة', 'حمام سباحة'],
+    'مجلس': ['مجلس', 'مجالس', 'صالة استقبال'],
+    'مصعد': ['مصعد', 'اسانسير', 'ليفت'],
+    'حديقة': ['حديقة', 'حديقه', 'جنينة']
+  };
+
+  // Extract property type from query
+  for (const [type, variations] of Object.entries(typeVariations)) {
+    if (variations.some(v => normalizedQuery.includes(v))) {
+      criteria.type = type;
+      break;
+    }
+  }
+
+  // Extract city
+  for (const [city, variations] of Object.entries(cityVariations)) {
+    if (variations.some(v => normalizedQuery.includes(v))) {
+      criteria.city = city;
+      break;
+    }
+  }
+
+  // Extract district
+  for (const [district, variations] of Object.entries(districtVariations)) {
+    if (variations.some(v => normalizedQuery.includes(v))) {
+      criteria.district = district;
+      break;
+    }
+  }
+
+  // Extract features
+  criteria.features = Object.entries(featureVariations)
+    .filter(([_, variations]) => 
+      variations.some(v => normalizedQuery.includes(v))
+    )
+    .map(([feature, _]) => feature);
+
+  // Extract price if mentioned (looking for numbers followed by variations of million)
+  const priceMatch = normalizedQuery.match(/(\d+(\.\d+)?)\s*(مليون|م)/);
+  if (priceMatch) {
+    const price = parseFloat(priceMatch[1]);
+    if (!isNaN(price)) {
+      criteria.maxPrice = price * 1000000; // Convert to actual number
+    }
+  }
+
+  console.log('Extracted criteria:', criteria);
+  return criteria;
+}
+
 export function searchProperties(query: string): SearchResult[] {
-  // Helper function to format location as "city، حي district"
-  const formatLocation = (location: string) => {
-    const parts = location?.split('،') || [];
-    const city = parts[0]?.trim() || 'غير محدد';
-    const district = parts[1]?.trim().replace('حي ', '') || 'غير محدد';
-    return `${city}، حي ${district}`;
-  };
-
-  // Helper function to parse location into city and district
-  const parseLocation = (location: string): { city: string; district: string } => {
-    const parts = location?.split('،') || [];
-    return {
-      city: parts[0]?.trim() || 'غير محدد',
-      district: parts[1]?.trim().replace('حي ', '') || 'غير محدد'
-    };
-  };
-
-  // Handle empty query case - IMPORTANT: Return all properties when no search criteria
+  // Handle empty query case - Return all properties directly
   if (!query.trim()) {
-    return properties.map(p => ({
-      type: p.type,
-      features: p.features || [],
-      price: Number(p.price),
+    return properties.map(property => ({
+      type: property.type,
+      features: property.features,
+      price: property.price,
       similarityScore: 1,
-      district: parseLocation(p.location).district,
-      city: parseLocation(p.location).city,
-      location: formatLocation(p.location),
-      images: p.images || []
+      district: property.district,
+      city: property.city,
+      images: property.images || []
     }));
   }
 
-  const normalizedQuery = query.toLowerCase().trim();
-
-  // Extract search criteria with variations and synonyms
-  const isVilla = ['فيلا', 'فله', 'فلة', 'فيلة', 'فلل'].some(v => normalizedQuery.includes(v));
-  const inNarjis = ['النرجس', 'نرجس', 'الترجس'].some(v => normalizedQuery.includes(v));
-  const inYasmin = ['الياسمين', 'ياسمين', 'الياسمبن'].some(v => normalizedQuery.includes(v));
-
-  // Pool synonyms
-  const poolTerms = ['مسبح', 'حمام سباحة', 'حمام السباحة'];
-  const wantsPool = poolTerms.some(term => normalizedQuery.includes(term));
-
-  // Majlis variations
-  const majlisTerms = ['مجلس', 'مجالس'];
-  const wantsMajlis = majlisTerms.some(term => normalizedQuery.includes(term));
-
-  const maxPrice = 3500000; // 3.5M SAR
-
-  // Debug log to help track search criteria
-  console.log('Search criteria:', { isVilla, inNarjis, inYasmin, wantsPool, wantsMajlis, maxPrice });
+  // Only extract search criteria if we have a query
+  const criteria = extractSearchCriteria(query);
+  console.log('Extracted criteria:', criteria);
 
   return properties
     .filter(property => {
-      // Check property type - only if villa is specifically requested
-      if (isVilla && property.type !== 'فيلا') return false;
+      // Type check
+      if (criteria.type && property.type !== criteria.type) return false;
 
-      // Fixed location check - property must be in one of the requested locations
-      // Previous logic was wrong as it used OR condition incorrectly
-      const isInRequestedLocation = 
-        (inNarjis && property.location.includes('النرجس')) || 
-        (inYasmin && property.location.includes('الياسمين'));
-      if ((inNarjis || inYasmin) && !isInRequestedLocation) return false;
+      // City check
+      if (criteria.city && property.city !== criteria.city) return false;
 
-      // Pool check - match any pool term
-      const hasPool = property.features.some(f => 
-          poolTerms.some(term => f.includes(term))
-      );
-      if (wantsPool && !hasPool) return false;
+      // District check
+      if (criteria.district && property.district !== criteria.district) return false;
 
-      // Majlis check - match any majlis term
-      const hasMajlis = property.features.some(f => 
-          majlisTerms.some(term => f.includes(term))
-      );
-      if (wantsMajlis && !hasMajlis) return false;
+      // Features check - must have ALL requested features
+      if (criteria.features?.length) {
+        for (const feature of criteria.features) {
+          const hasFeature = property.features.some(f => f.includes(feature));
+          if (!hasFeature) return false;
+        }
+      }
 
-      // Price must be within budget
-      if (property.price > maxPrice) return false;
+      // Price check
+      if (criteria.maxPrice && property.price > criteria.maxPrice) return false;
 
       return true;
     })
@@ -97,10 +145,9 @@ export function searchProperties(query: string): SearchResult[] {
       type: property.type,
       features: property.features,
       price: property.price,
-      similarityScore: 1, // Keeping this for interface compatibility
-      district: parseLocation(property.location).district,
-      city: parseLocation(property.location).city,
-      location: formatLocation(property.location),
+      similarityScore: 1,
+      district: property.district,
+      city: property.city,
       images: property.images || []
     }));
 }
@@ -125,10 +172,10 @@ export async function handleSearchRequest(
   }
 }
 
-// First, let's examine the available properties
+// Debug logging for available properties
 console.log('Available properties:', properties.map(p => ({
   type: p.type,
-  district: p.location.split('،')[1]?.trim().replace('حي ', ''),
+  district: p.district,
   features: p.features,
   price: p.price
-}))); 
+})));

@@ -47,8 +47,21 @@ export async function handleSearchRequest()
 ### `src/types/index.ts`
 Type definitions:
 ```typescript
-export interface Property
-export interface PropertyWithEmbedding
+export interface Property {
+  id: string;
+  type: 'فيلا' | 'شقة' | 'قصر' | 'دوبلكس';
+  title: string;
+  description: string;
+  price: number;
+  city: string;
+  district: string;
+  features: string[];
+  images: string[];
+}
+
+export interface PropertyWithEmbedding extends Property {
+  embedding: number[];
+}
 ```
 
 ### `src/app/api/search/route.ts`
@@ -95,8 +108,14 @@ const propertyTypes = {
 - Matches any variation to the standardized type
 
 #### Location Matching
-- **Cities**: الرياض, جدة, الدمام
-- **Districts**: 
+- **Cities and Districts**: Direct matching with standardized fields
+  ```typescript
+  interface LocationCriteria {
+    city?: string;    // e.g., الرياض, جدة, الدمام
+    district?: string; // e.g., النرجس, الياسمين, الملقا
+  }
+  ```
+- District variations supported:
   ```typescript
   {
     'النرجس': ['النرجس', 'نرجس', 'الترجس', 'نارجس'],
@@ -105,7 +124,10 @@ const propertyTypes = {
     'العليا': ['العليا', 'عليا', 'العلية']
   }
   ```
-- Supports prefixes: حي, في, ب, بحي, في حي, منطقة, منطقه
+- Supports location prefixes: حي, في, ب, بحي, في حي, منطقة, منطقه
+- Direct city and district search in property filtering
+- Empty query handling returns all properties
+- Improved search result mapping with separate city and district fields
 
 #### Room Counting
 Patterns supported:
@@ -151,12 +173,13 @@ Supports:
 Location: `src/types/index.ts`
 ```typescript
 export interface Property {
-  id: number;
+  id: string;
   type: 'فيلا' | 'شقة' | 'قصر' | 'دوبلكس';
   title: string;
   description: string;
   price: number;
-  location: string;
+  city: string;
+  district: string;
   features: string[];
   images: string[];
 }

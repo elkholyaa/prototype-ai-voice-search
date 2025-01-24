@@ -7,10 +7,9 @@ export interface Property {
   type: PropertyType;
   features: string[];
   price: number;
-  location: string;
+  city: string;
+  district: string;
   images?: string[];
-  city?: string;
-  district?: string;
 }
 
 export interface PropertyWithEmbedding extends Property {

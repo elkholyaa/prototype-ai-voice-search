@@ -33,7 +33,7 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
           </span>
         </div>
         <div className="space-y-3 text-right">
-          <p className="text-gray-600">{property.location}</p>
+          <p className="text-gray-600">{property.city}، حي {property.district}</p>
           <p className="text-2xl font-bold text-blue-600">
             {formatPrice(property.price)} ريال
           </p>

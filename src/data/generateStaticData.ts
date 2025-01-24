@@ -20,7 +20,7 @@ const properties: Property[] = Array.from({ length: 150 }, (_, i) => {
 
   // Simple city and district selection
   const cities = ["الرياض", "جدة", "الدمام", "مكة"];
-  const districts = ["حي النرجس", "حي الياسمين", "حي الملقا", "حي الورود"];
+  const districts = ["النرجس", "الياسمين", "الملقا", "الورود"];
   const city = cities[i % cities.length];
   const district = districts[(i * 2) % districts.length];
 
@@ -72,23 +72,34 @@ const properties: Property[] = Array.from({ length: 150 }, (_, i) => {
     "دوبلكس": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750"
   };
 
+  // Generate a property object that matches our Property interface
   return {
-    id: i + 1,
+    id: String(i + 1), // Convert to string to match the interface
     title: `${type} ${rooms} غرف في ${city}`,
     type,
-    location: `${city}، ${district}`,
+    city,
+    district,
     price,
     features: Array.from(new Set(features)),
     images: [`${images[type]}?q=80&w=800`],
     description: generatePropertyDescription({
       type,
-      location: `${city}، ${district}`,
+      city,
+      district,
       features: Array.from(new Set(features))
     })
   };
 });
 
-// Write the generated data to a JSON file
-const outputPath = path.join(process.cwd(), 'src', 'data', 'static', 'properties.json');
-fs.writeFileSync(outputPath, JSON.stringify(properties, null, 2), 'utf8');
-console.log(`Generated ${properties.length} properties and saved to ${outputPath}`); 
+// Write the properties to a JSON file
+const outputDir = path.join(process.cwd(), 'src', 'data', 'static');
+if (!fs.existsSync(outputDir)) {
+  fs.mkdirSync(outputDir, { recursive: true });
+}
+
+fs.writeFileSync(
+  path.join(outputDir, 'properties.json'),
+  JSON.stringify(properties, null, 2)
+);
+
+console.log('Generated properties data successfully!');

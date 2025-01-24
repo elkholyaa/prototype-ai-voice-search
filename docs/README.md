@@ -2,14 +2,16 @@
 
 ## Recent Updates (2024)
 - Enhanced natural language property search
+- Updated property structure with separate city and district fields
 - Standardized price formatting (English numerals with commas)
 - Improved property listings with consistent formats
-- Updated location display format
+- Fixed empty query handling to return all properties
+- Improved search result mapping
 - Fixed image fallbacks
 
 ## Features
 - Verified Natural Language Search
-  - Multiple location support
+  - Direct city and district search
   - Feature combinations
   - Price range understanding
   - Dialect and typo handling
@@ -19,7 +21,10 @@
   - Villas: 2,500,000 - 4,000,000 SAR
   - Duplexes: 1,800,000 - 3,000,000 SAR
   - Palaces: 6,000,000 - 8,000,000 SAR
-- Location-based search
+- Location-based search with:
+  - Separate city and district fields
+  - District variation support
+  - Empty query handling
 - Feature-based filtering
 - Responsive property cards
 - Real-time search results
@@ -137,7 +142,7 @@ The search API is available at `/api/search` and accepts POST requests with the 
 
 ```typescript
 {
-  "query": "yes,
+  "query": string,
   "limit": 10 // optional, defaults to 10
 }
 ```
@@ -149,7 +154,7 @@ Response format:
     {
       "type": "فيلا",
       "city": "الرياض",
-      "district": "حي النرجس",
+      "district": "النرجس",
       "rooms": 6,
       "features": ["مسبح", "حديقة"],
       "similarityScore": 0.92

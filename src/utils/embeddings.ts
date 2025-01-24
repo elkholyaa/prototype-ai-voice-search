@@ -166,13 +166,10 @@ function extractExactCriteria(query: string): ExactCriteria {
 }
 
 function propertyMatchesCriteria(property: Property & { similarityScore: number }, criteria: ExactCriteria): boolean {
-  // Extract city and district from location
-  const [city, district] = property.location.split('،').map(s => s.trim());
-
   // Check each criteria
   if (criteria.type && property.type !== criteria.type) return false;
-  if (criteria.city && city !== criteria.city) return false;
-  if (criteria.districts && criteria.districts.length > 0 && !criteria.districts.includes(district)) return false;
+  if (criteria.city && property.city !== criteria.city) return false;
+  if (criteria.districts && criteria.districts.length > 0 && !criteria.districts.includes(property.district)) return false;
   if (criteria.rooms && !property.features.some(f => f.includes(`${criteria.rooms} غرف`))) return false;
   if (criteria.bathrooms && !property.features.some(f => f.includes(`${criteria.bathrooms} حمامات`))) return false;
   if (criteria.minPrice && property.price < criteria.minPrice) return false;
@@ -218,10 +215,10 @@ export async function findSimilarProperties(query: string, limit: number = 10): 
       .map((property, index) => {
         const propertyEmbedding = Array.from(embeddings.slice(index * 1536, (index + 1) * 1536));
         const similarityScore = cosineSimilarity(queryEmbedding, propertyEmbedding);
-        const [city = '', district = ''] = property.location.split('،').map(s => s.trim());
         const roomFeature = property.features.find(f => f.includes('غرف') || f.includes('غرفة'));
         const rooms = roomFeature ? parseInt(roomFeature.match(/\d+/)?.[0] || '0') : 0;
-        return { ...property, similarityScore, city, district, rooms };
+
+        return { ...property, similarityScore, rooms };
       })
       .filter(property => propertyMatchesCriteria(property, criteria))
       .sort((a, b) => b.similarityScore - a.similarityScore)

@@ -29,14 +29,11 @@ export default function Home() {
     
     /* API-based implementation - temporarily disabled
     const initialProperties = properties.map(property => {
-      const [city = '', district = ''] = property.location.split('،').map(s => s.trim());
       const roomFeature = property.features.find(f => f.includes('غرف') || f.includes('غرفة'));
       const rooms = roomFeature ? parseInt(roomFeature.match(/\d+/)?.[0] || '0') : 0;
       
       return {
         ...property,
-        city,
-        district,
         rooms,
         similarityScore: 1 // Default score for initial properties
       };
@@ -218,7 +215,8 @@ export default function Home() {
                   type: property.type,
                   features: property.features,
                   price: Number(property.price),
-                  location: '',
+                  city: property.city,
+                  district: property.district,
                   images: property.images || []
                 }}
                 priority={index < 6}
