@@ -276,6 +276,32 @@ describe('Search Functionality', () => {
             r.price <= 2000000
           );
         }
+      },
+      {
+        name: 'Duplex search with typos and noise characters',
+        query: 'عاوز دوبلكس فى جدههناا فيها 6 غرف لاى @@ اقل من 2 مليون وحوش كبير',
+        validate: (results: SearchResult[]) => {
+          return results.length > 0 && results.every(r => 
+            r.type === 'دوبلكس' &&
+            r.city === 'جدة' &&
+            r.features.includes('6 غرف') &&
+            r.features.some(f => f.includes('حديقة')) &&
+            r.price <= 2000000
+          );
+        }
+      },
+      {
+        name: 'Semantically equivalent duplex search with different dialect',
+        query: 'محتاجين دبلوكس ف مدينه جده يكون سته غرف نوم و#سعره معقول تحت ٢ مليوون ريال سعودى && يكون معاه حديقه واسعه',
+        validate: (results: SearchResult[]) => {
+          return results.length > 0 && results.every(r => 
+            r.type === 'دوبلكس' &&
+            r.city === 'جدة' &&
+            r.features.includes('6 غرف') &&
+            r.features.some(f => f.includes('حديقة')) &&
+            r.price <= 2000000
+          );
+        }
       }
     ];
 

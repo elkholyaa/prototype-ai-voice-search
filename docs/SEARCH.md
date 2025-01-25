@@ -430,3 +430,88 @@ See the original documentation above for full AI search implementation details.
 - Search results include similarity scores
 - Property descriptions maintain all fields for future AI embeddings
 - Fallback images implemented for missing property images 
+
+## Advanced Natural Language Searches
+
+### Test Cases and Validation
+The search system includes comprehensive test cases for natural language queries, ensuring consistent results across different phrasings. Examples include:
+
+#### Property Type and Location
+```typescript
+// Duplex in Jeddah with specific features
+{
+  query1: "عاوز دوبلكس فى جدههناا فيها 6 غرف لاى @@ اقل من 2 مليون وحوش كبير",
+  query2: "محتاجين دبلوكس ف مدينه جده يكون سته غرف نوم و#سعره معقول تحت ٢ مليوون ريال سعودى && يكون معاه حديقه واسعه",
+  expectedResults: {
+    type: "دوبلكس",
+    city: "جدة",
+    features: ["6 غرف", "حديقة"],
+    maxPrice: 2000000
+  }
+}
+```
+
+### Search Capabilities
+The natural language search system supports:
+
+1. **Dialect Variations**
+   - Gulf dialect (ابغى, ودي)
+   - Egyptian dialect (عاوز, عايز)
+   - Levantine dialect (بدي)
+   - Mixed dialect expressions
+
+2. **Number Formats**
+   - Arabic numerals (٦ غرف)
+   - English numerals (6 غرف)
+   - Written numbers (ست غرف)
+   - Price variations (مليونين, ٢ مليون)
+
+3. **Feature Recognition**
+   - Base features (مسبح, حديقة)
+   - Compound features (مسبح كبير, حديقة واسعة)
+   - Feature variations (حوش = حديقة)
+   - Location-specific terms
+
+4. **Price Understanding**
+   - Exact amounts (2 مليون)
+   - Range expressions (اقل من مليونين)
+   - Informal terms (مليون ونص)
+   - Currency variations (ريال, SAR)
+
+### Implementation Details
+
+#### Query Processing
+```typescript
+interface ProcessedQuery {
+  type?: string;
+  city?: string;
+  district?: string;
+  features: string[];
+  priceRange?: {
+    min?: number;
+    max?: number;
+  };
+  rooms?: number;
+}
+```
+
+The search system processes queries through multiple stages:
+1. Dialect normalization
+2. Feature extraction
+3. Price parsing
+4. Location identification
+5. Room count extraction
+
+#### Result Validation
+Each search result is validated against:
+- Property type match
+- Location accuracy
+- Feature presence
+- Price constraints
+- Room count match
+
+### Performance Considerations
+- Caching: 5-minute LRU cache for frequent queries
+- Rate limiting: 10 requests per minute
+- Response time: Average < 200ms
+- Result limit: Default 10, configurable up to 50 

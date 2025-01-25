@@ -23,23 +23,52 @@
   - Villas: 2,500,000 - 4,000,000 SAR
   - Duplexes: 1,800,000 - 3,000,000 SAR
   - Palaces: 6,000,000 - 8,000,000 SAR
+- Advanced Natural Language Search
+  - Multi-dialect support (Gulf, Egyptian, Levantine)
+  - Complex query understanding
+  - Feature combinations and variations
+  - Price range parsing with informal terms
+  - Room-specific filtering with number variations
 - Location-based search with:
-  - Separate city and district fields
+  - City and district precision
   - District variation support
-  - Empty query handling
+   - Empty query handling
 - Feature-based filtering
 - Responsive property cards
 - Real-time search results
+  - Flexible location matching
+- Feature-based filtering with:
+  - Base feature recognition
+  - Compound feature understanding
+  - Dialect-specific terms
+  - Synonym matching
+- Performance optimizations:
+  - 5-minute LRU cache
+  - Rate limiting (10 req/min)
+  - Fast response times (<200ms)
+  - Configurable result limits
 
 ### Search Capabilities
-- Room-specific filtering
-  - Exact room count matching (e.g., "6 غرف", "٦ غرف")
-  - Support for written numbers (e.g., "ست غرف")
-  - Integration with price and location filters
-- Price filtering with natural language
-  - Support for "مليون ونص" (3.5 million)
-  - Accurate price range parsing
-  - Multiple price formats supported
+- Comprehensive dialect support:
+  - Gulf: ابغى, ودي
+  - Egyptian: عاوز, عايز
+  - Levantine: بدي
+  - Mixed expressions
+- Number format handling:
+  - Arabic numerals (٦ غرف)
+  - English numerals (6 غرف)
+  - Written numbers (ست غرف)
+  - Price variations (مليونين, ٢ مليون)
+- Advanced feature matching:
+  - Base features (مسبح, حديقة)
+  - Compound features (مسبح كبير)
+  - Feature variations (حوش = حديقة)
+  - Location-specific terms
+- Price understanding:
+  - Exact amounts
+  - Range expressions
+  - Informal terms (مليون ونص)
+  - Currency variations
 
 ## Technical Stack
 - Next.js 14

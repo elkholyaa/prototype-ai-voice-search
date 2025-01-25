@@ -114,3 +114,24 @@
 - Image placeholder issues
 - Price formatting inconsistencies
 - Location display redundancy 
+
+## [Latest] - 2024-01-25
+### Added
+- Comprehensive documentation for Advanced Natural Language Searches
+- Detailed test cases for complex property queries
+- Multi-dialect support documentation
+- Feature recognition and variation handling
+- Price understanding with informal terms
+- Performance metrics and optimization details
+
+### Enhanced
+- Search capabilities documentation with detailed examples
+- README structure with clearer feature organization
+- Technical documentation with implementation details
+- Test case documentation with expected results
+
+### Updated
+- Property search interface documentation
+- Query processing documentation
+- Result validation criteria
+- Performance considerations 
