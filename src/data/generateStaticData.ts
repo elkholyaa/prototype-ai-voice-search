@@ -56,10 +56,10 @@ const properties: Property[] = Array.from({ length: 150 }, (_, i) => {
 
   // Price ranges (in thousands)
   const priceRanges: Record<PropertyType, [number, number]> = {
-    "فيلا": [2000, 5000],
-    "شقة": [500, 2000],
-    "قصر": [8000, 15000],
-    "دوبلكس": [2000, 4000]
+    "فيلا": [2500000, 4000000],     // 2.5M to 4M SAR
+    "شقة": [750000, 1500000],       // 750K to 1.5M SAR
+    "قصر": [6000000, 8000000],      // 6M to 8M SAR
+    "دوبلكس": [1800000, 3000000]    // 1.8M to 3M SAR
   };
   const [minPrice, maxPrice] = priceRanges[type];
   const price = minPrice + (i % (maxPrice - minPrice)) * 1000;

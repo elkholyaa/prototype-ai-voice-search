@@ -1,13 +1,15 @@
 # Real Estate Search Application
 
 ## Recent Updates (2024)
-- Enhanced natural language property search
+- Enhanced natural language property search with room-specific filtering
 - Updated property structure with separate city and district fields
 - Standardized price formatting (English numerals with commas)
 - Improved property listings with consistent formats
 - Fixed empty query handling to return all properties
 - Improved search result mapping
 - Fixed image fallbacks
+- Added specific room count filtering in search queries
+- Enhanced test cases for room-specific searches
 
 ## Features
 - Verified Natural Language Search
@@ -28,6 +30,16 @@
 - Feature-based filtering
 - Responsive property cards
 - Real-time search results
+
+### Search Capabilities
+- Room-specific filtering
+  - Exact room count matching (e.g., "6 غرف", "٦ غرف")
+  - Support for written numbers (e.g., "ست غرف")
+  - Integration with price and location filters
+- Price filtering with natural language
+  - Support for "مليون ونص" (3.5 million)
+  - Accurate price range parsing
+  - Multiple price formats supported
 
 ## Technical Stack
 - Next.js 14

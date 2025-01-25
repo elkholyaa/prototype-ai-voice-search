@@ -191,6 +191,102 @@ describe('Search Functionality', () => {
     });
   });
 
+  describe('Advanced Natural Language Searches', () => {
+    const ADVANCED_CASES = [
+      {
+        name: 'Luxury house search with specific criteria',
+        query: 'ودني اشوف بيوت فخمه بالنرجس بشرت تكون نضيفه وفيها حوض سباحه ومجلس كبير للعايله وما تطلع فوق 3 مليون وست غرف',
+        validate: (results: SearchResult[]) => {
+          return results.length > 0 && results.every(r => 
+            r.district === 'النرجس' &&
+            r.type === 'فيلا' &&
+            r.features.includes('6 غرف') &&
+            r.features.some(f => f.includes('مسبح')) &&
+            r.features.some(f => f.includes('مجلس')) &&
+            r.price <= 3000000
+          );
+        }
+      },
+      {
+        name: 'Colloquial search with semantically equivalent criteria',
+        query: 'ابي فله في النرجس، يكون عندها مسبح ومجلس واسع وما يزيد سعرها عن ٣ مليون و٦ غرف',
+        validate: (results: SearchResult[]) => {
+          return results.length > 0 && results.every(r => 
+            r.district === 'النرجس' &&
+            r.type === 'فيلا' &&
+            r.features.includes('6 غرف') &&
+            r.features.some(f => f.includes('مسبح')) &&
+            r.features.some(f => f.includes('مجلس')) &&
+            r.price <= 3000000
+          );
+        }
+      },
+      {
+        name: 'Gulf dialect with room specifications and modern amenities',
+        query: 'ابغى شقة بالملقا فيها ٣ غرف نوم و٢ حمام وتكييف مركزي ومطبخ راقي، بس ما تكون غالية يعني بحدود المليون',
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            r.type === 'شقة' &&
+            r.district.includes('الملقا') &&
+            r.features.some(f => f.includes('3 غرف') || f.includes('٣ غرف')) &&
+            r.features.some(f => f.includes('2 حمام') || f.includes('٢ حمام')) &&
+            r.features.some(f => f.includes('تكييف مركزي')) &&
+            r.price <= 1000000
+          );
+        }
+      },
+      {
+        name: 'Mixed formal/informal with location preferences and feature requirements',
+        query: 'محتاج بيت اما فيلا او دوبلكس بحي العليا، لازم يكون فيه ٤ غرف و٣ حمامات مع مصعد وحديقة، والسعر معقول يعني بين ٢ ل ٣ مليون',
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            (r.type === 'فيلا' || r.type === 'دوبلكس') &&
+            r.district.includes('العليا') &&
+            r.features.some(f => f.includes('4 غرف') || f.includes('٤ غرف')) &&
+            r.features.some(f => f.includes('3 حمام') || f.includes('٣ حمام')) &&
+            r.features.some(f => f.includes('مصعد')) &&
+            r.features.some(f => f.includes('حديقة')) &&
+            r.price >= 2000000 && r.price <= 3000000
+          );
+        }
+      },
+      {
+        name: 'Egyptian dialect with luxury features and specific district',
+        query: 'عايز فيلا في النرجس عشان العيلة، تكون واسعة وفيها ٥ اوض و٤ حمام ومسبح وجنينة كبيرة، والسعر مش مشكلة',
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            r.type === 'فيلا' &&
+            r.district.includes('النرجس') &&
+            r.features.some(f => f.includes('5 غرف') || f.includes('٥ غرف')) &&
+            r.features.some(f => f.includes('4 حمام') || f.includes('٤ حمام')) &&
+            r.features.some(f => f.includes('مسبح')) &&
+            r.features.some(f => f.includes('حديقة'))
+          );
+        }
+      },
+      {
+        name: 'Levantine dialect with modern lifestyle requirements',
+        query: 'بدي شقة بالملقا كبيرة وحلوة، تكون مرتبة وفيها ٣ غرف نوم وصالة كبيرة وبلكونة، وما تبعد عن الخدمات، يعني بحدود المليونين',
+        validate: (results: SearchResult[]) => {
+          return results.every(r => 
+            r.type === 'شقة' &&
+            r.district.includes('الملقا') &&
+            r.features.some(f => f.includes('3 غرف') || f.includes('٣ غرف')) &&
+            r.features.some(f => f.includes('شرفة') || f.includes('بلكونة')) &&
+            r.price <= 2000000
+          );
+        }
+      }
+    ];
+
+    ADVANCED_CASES.forEach(({ name, query, validate }) => {
+      it(name, () => {
+        const results = searchProperties(query);
+        expect(validate(results)).toBe(true);
+      });
+    });
+  });
+
   describe('Error Handling', () => {
     it('should handle invalid requests gracefully', () => {
       // Temporarily using direct search while API is disabled
@@ -287,106 +383,6 @@ describe('Search Functionality', () => {
     ];
 
     PRICE_CASES.forEach(({ name, query, validate }) => {
-      it(name, () => {
-        // Temporarily using direct search while API is disabled
-        const results = searchProperties(query);
-        expect(validate(results)).toBe(true);
-
-        /* API-based implementation - temporarily disabled
-        const response = await fetch('http://localhost:3000/api/search', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ query })
-        });
-
-        expect(response.ok).toBe(true);
-        const { results } = await response.json();
-        console.log(`Results for "${name}":`, results.map((r: SearchResult) => ({
-          type: r.type,
-          location: r.location,
-          price: r.price,
-          similarityScore: r.similarityScore
-        })));
-        expect(validate(results)).toBe(true);
-        */
-      });
-    });
-  });
-
-  describe('Advanced Natural Language Searches', () => {
-    const ADVANCED_CASES = [
-      {
-        name: 'Colloquial search with multiple features and price negotiation',
-        query: 'ودي اشوف فله حلوه في النرجس او الياسمين، يكون فيها مسبح ومجلس كبير وما تطلع فوق ٣ مليون ونص',
-        validate: (results: SearchResult[]) => {
-          return results.every(r => 
-            r.type === 'فيلا' &&
-            (r.district.includes('النرجس') || r.district.includes('الياسمين')) &&
-            r.features.some(f => f.includes('مسبح')) &&
-            r.features.some(f => f.includes('مجلس')) &&
-            r.price <= 3500000
-          );
-        }
-      },
-      {
-        name: 'Gulf dialect with room specifications and modern amenities',
-        query: 'ابغى شقة بالملقا فيها ٣ غرف نوم و٢ حمام وتكييف مركزي ومطبخ راقي، بس ما تكون غالية يعني بحدود المليون',
-        validate: (results: SearchResult[]) => {
-          return results.every(r => 
-            r.type === 'شقة' &&
-            r.district.includes('الملقا') &&
-            r.features.some(f => f.includes('3 غرف') || f.includes('٣ غرف')) &&
-            r.features.some(f => f.includes('2 حمام') || f.includes('٢ حمام')) &&
-            r.features.some(f => f.includes('تكييف مركزي')) &&
-            r.price <= 1000000
-          );
-        }
-      },
-      {
-        name: 'Mixed formal/informal with location preferences and feature requirements',
-        query: 'محتاج بيت اما فيلا او دوبلكس بحي العليا، لازم يكون فيه ٤ غرف و٣ حمامات مع مصعد وحديقة، والسعر معقول يعني بين ٢ ل ٣ مليون',
-        validate: (results: SearchResult[]) => {
-          return results.every(r => 
-            (r.type === 'فيلا' || r.type === 'دوبلكس') &&
-            r.district.includes('العليا') &&
-            r.features.some(f => f.includes('4 غرف') || f.includes('٤ غرف')) &&
-            r.features.some(f => f.includes('3 حمام') || f.includes('٣ حمام')) &&
-            r.features.some(f => f.includes('مصعد')) &&
-            r.features.some(f => f.includes('حديقة')) &&
-            r.price >= 2000000 && r.price <= 3000000
-          );
-        }
-      },
-      {
-        name: 'Egyptian dialect with luxury features and specific district',
-        query: 'عايز فيلا في النرجس عشان العيلة، تكون واسعة وفيها ٥ اوض و٤ حمام ومسبح وجنينة كبيرة، والسعر مش مشكلة',
-        validate: (results: SearchResult[]) => {
-          return results.every(r => 
-            r.type === 'فيلا' &&
-            r.district.includes('النرجس') &&
-            r.features.some(f => f.includes('5 غرف') || f.includes('٥ غرف')) &&
-            r.features.some(f => f.includes('4 حمام') || f.includes('٤ حمام')) &&
-            r.features.some(f => f.includes('مسبح')) &&
-            r.features.some(f => f.includes('حديقة'))
-          );
-        }
-      },
-      {
-        name: 'Levantine dialect with modern lifestyle requirements',
-        query: 'بدي شقة بالملقا كبيرة وحلوة، تكون مرتبة وفيها ٣ غرف نوم وصالة كبيرة وبلكونة، وما تبعد عن الخدمات، يعني بحدود المليونين',
-        validate: (results: SearchResult[]) => {
-          return results.every(r => 
-            r.type === 'شقة' &&
-            r.district.includes('الملقا') &&
-            r.features.some(f => f.includes('3 غرف') || f.includes('٣ غرف')) &&
-            r.features.some(f => f.includes('شرفة') || f.includes('بلكونة')) &&
-            r.price <= 2000000
-          );
-        }
-      }
-    ];
-
-    ADVANCED_CASES.forEach(({ name, query, validate }) => {
       it(name, () => {
         // Temporarily using direct search while API is disabled
         const results = searchProperties(query);

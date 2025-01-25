@@ -12,9 +12,9 @@ export interface SearchResult {
 }
 
 interface PropertyCriteria {
-  type?: string;
+  type?: string[];
   city?: string;
-  district?: string;
+  districts?: string[];
   features?: string[];
   maxPrice?: number;
 }
@@ -41,25 +41,32 @@ function extractSearchCriteria(query: string): PropertyCriteria {
 
   // District variations
   const districtVariations = {
-    'النرجس': ['النرجس', 'حي النرجس'],
-    'الملقا': ['الملقا', 'حي الملقا'],
-    'الياسمين': ['الياسمين', 'حي الياسمين'],
-    'الورود': ['الورود', 'حي الورود']
+    'النرجس': ['النرجس', 'حي النرجس', 'نرجس'],
+    'الملقا': ['الملقا', 'حي الملقا', 'ملقا'],
+    'الياسمين': ['الياسمين', 'حي الياسمين', 'ياسمين'],
+    'الورود': ['الورود', 'حي الورود', 'ورود']
   };
 
   // Feature variations - keeping all existing variations
   const featureVariations = {
-    'مسبح': ['مسبح', 'حوض سباحة', 'حمام سباحة'],
-    'مجلس': ['مجلس', 'مجالس', 'صالة استقبال'],
-    'مصعد': ['مصعد', 'اسانسير', 'ليفت'],
-    'حديقة': ['حديقة', 'حديقه', 'جنينة']
+    'مسبح': ['مسبح', 'حوض سباحة', 'حمام سباحة', 'حوض سباحه', 'حمام سباحه'],
+    'مجلس': ['مجلس', 'مجالس', 'صالة استقبال', 'صاله استقبال', 'مجلس كبير', 'مجلس للعايله', 'مجلس عائلي', 'مجلس واسع'],
+    'مصعد': ['مصعد', 'اسانسير', 'ليفت', 'مصعد كهربائي'],
+    'مدخلين': ['مدخلين', 'بابين', 'مدخل رئيسي ومدخل خدمة', 'مدخل رجال ومدخل نساء'],
+    'حديقة': ['حديقة', 'حديقه', 'جنينة'],
+    '6 غرف': ['6 غرف', '٦ غرف', 'ست غرف', 'ستة غرف', '6 غرف نوم', '٦ غرف نوم', 'ست غرف نوم', 'ستة غرف نوم'],
+    '4 غرف': ['4 غرف', '٤ غرف', 'اربع غرف', 'اربعة غرف', '4 غرف نوم', '٤ غرف نوم', 'اربع غرف نوم', 'اربعة غرف نوم']
   };
 
-  // Extract property type from query
-  for (const [type, variations] of Object.entries(typeVariations)) {
-    if (variations.some(v => normalizedQuery.includes(v))) {
-      criteria.type = type;
-      break;
+  // Extract property types - now handles luxury homes as villa only
+  if (normalizedQuery.includes('بيوت فخمه') || normalizedQuery.includes('بيوت فخمة')) {
+    criteria.type = ['فيلا'];
+  } else {
+    for (const [type, variations] of Object.entries(typeVariations)) {
+      if (variations.some(v => normalizedQuery.includes(v))) {
+        criteria.type = [type];
+        break;
+      }
     }
   }
 
@@ -71,27 +78,70 @@ function extractSearchCriteria(query: string): PropertyCriteria {
     }
   }
 
-  // Extract district
-  for (const [district, variations] of Object.entries(districtVariations)) {
-    if (variations.some(v => normalizedQuery.includes(v))) {
-      criteria.district = district;
-      break;
-    }
+  // Extract districts - now handles multiple with 'او' (or)
+  const districts = Object.entries(districtVariations)
+    .filter(([_, variations]) => 
+      variations.some(v => normalizedQuery.includes(v))
+    )
+    .map(([district, _]) => district);
+
+  if (districts.length > 0) {
+    criteria.districts = districts;
   }
 
-  // Extract features
+  // Extract features - now handles all variations
   criteria.features = Object.entries(featureVariations)
     .filter(([_, variations]) => 
       variations.some(v => normalizedQuery.includes(v))
     )
     .map(([feature, _]) => feature);
 
-  // Extract price if mentioned (looking for numbers followed by variations of million)
-  const priceMatch = normalizedQuery.match(/(\d+(\.\d+)?)\s*(مليون|م)/);
-  if (priceMatch) {
-    const price = parseFloat(priceMatch[1]);
-    if (!isNaN(price)) {
-      criteria.maxPrice = price * 1000000; // Convert to actual number
+  // Price patterns
+  const pricePatterns = [
+    {
+      pattern: /ما تطلع فوق ([٠-٩\d]+)(?:\s*مليون\s*ونص|\s*مليون\s*ونصف)/,
+      multiplier: 1000000,
+      addHalf: true
+    },
+    {
+      pattern: /ما تطلع فوق ([٠-٩\d]+)(?:\s*مليون|\s*م)/,
+      multiplier: 1000000,
+      addHalf: false
+    },
+    {
+      pattern: /([٠-٩\d]+(?:\\.\\d+)?)(?:\s*مليون\s*ونص|\s*مليون\s*ونصف)/,
+      multiplier: 1000000,
+      addHalf: true
+    },
+    {
+      pattern: /([٠-٩\d]+(?:\\.\\d+)?)(?:\s*مليون|\s*م)/,
+      multiplier: 1000000,
+      addHalf: false
+    }
+  ];
+
+  // Extract price
+  console.log('Searching for price in query:', normalizedQuery);
+  for (const { pattern, multiplier, addHalf } of pricePatterns) {
+    const match = normalizedQuery.match(pattern);
+    if (match) {
+      console.log('Price match found:', { pattern: pattern.toString(), matched: match[0], number: match[1], multiplier, addHalf });
+      
+      // Convert Arabic numerals to English
+      const number = match[1].replace(/[٠-٩]/g, d => String.fromCharCode(d.charCodeAt(0) - 1632 + 48));
+      const baseNumber = parseFloat(number);
+      console.log('Number conversion:', { original: match[1], converted: number, baseNumber });
+
+      // Calculate final price
+      let finalPrice = baseNumber * multiplier;
+      if (addHalf) {
+        finalPrice += 0.5 * multiplier;
+      }
+      console.log('Price calculation:', { baseNumber, multiplier, addHalf, finalPrice });
+
+      criteria.maxPrice = finalPrice;
+      console.log('Set maxPrice to:', criteria.maxPrice);
+      break;
     }
   }
 
@@ -113,43 +163,76 @@ export function searchProperties(query: string): SearchResult[] {
     }));
   }
 
-  // Only extract search criteria if we have a query
+  // Extract search criteria
   const criteria = extractSearchCriteria(query);
-  console.log('Extracted criteria:', criteria);
+  console.log('Search criteria:', criteria);
 
-  return properties
-    .filter(property => {
-      // Type check
-      if (criteria.type && property.type !== criteria.type) return false;
+  let filtered = properties.filter(property => {
+    // Type check
+    if (criteria.type?.length && !criteria.type.includes(property.type)) {
+      console.log('Filtered out by type:', property.type);
+      return false;
+    }
 
-      // City check
-      if (criteria.city && property.city !== criteria.city) return false;
+    // City check
+    if (criteria.city && property.city !== criteria.city) {
+      console.log('Filtered out by city:', property.city);
+      return false;
+    }
 
-      // District check
-      if (criteria.district && property.district !== criteria.district) return false;
+    // District check
+    if (criteria.districts?.length && !criteria.districts.includes(property.district)) {
+      console.log('Filtered out by district:', property.district);
+      return false;
+    }
 
-      // Features check - must have ALL requested features
-      if (criteria.features?.length) {
-        for (const feature of criteria.features) {
+    // Features check
+    if (criteria.features?.length) {
+      for (const feature of criteria.features) {
+        // Special handling for room numbers
+        if (feature.includes('غرف')) {
+          const roomCount = feature.split(' ')[0];
+          const hasExactRooms = property.features.some(f => f.startsWith(roomCount));
+          if (!hasExactRooms) {
+            console.log('Filtered out by room count:', feature);
+            return false;
+          }
+        } else {
           const hasFeature = property.features.some(f => f.includes(feature));
-          if (!hasFeature) return false;
+          if (!hasFeature) {
+            console.log('Filtered out by missing feature:', feature);
+            return false;
+          }
         }
       }
+    }
 
-      // Price check
-      if (criteria.maxPrice && property.price > criteria.maxPrice) return false;
+    // Price check
+    if (criteria.maxPrice && property.price > criteria.maxPrice) {
+      console.log(`Filtered out by price: ${property.price} > ${criteria.maxPrice}`);
+      return false;
+    }
 
-      return true;
-    })
-    .map(property => ({
-      type: property.type,
-      features: property.features,
-      price: property.price,
-      similarityScore: 1,
-      district: property.district,
-      city: property.city,
-      images: property.images || []
-    }));
+    return true;
+  });
+
+  console.log('Filtered results count: ' + filtered.length);
+  console.log('First few results: ' + JSON.stringify(filtered.map(p => ({
+    price: p.price,
+    district: p.district,
+    type: p.type,
+    features: p.features
+  })), null, 2));
+
+  return filtered.map(property => ({
+    type: property.type,
+    features: property.features,
+    price: property.price,
+    similarityScore: 1,
+    district: property.district,
+    city: property.city,
+    images: property.images || []
+  }));
 }
 
 /**
@@ -167,7 +250,7 @@ export async function handleSearchRequest(
     console.error('Search error:', error);
     return {
       results: [],
-      error: 'Failed to process search request. Please try again.',
+      error: 'حدث خطأ في البحث. الرجاء المحاولة مرة أخرى.',
     };
   }
 }
@@ -179,3 +262,40 @@ console.log('Available properties:', properties.map(p => ({
   features: p.features,
   price: p.price
 })));
+
+// Test both queries
+const queries = [
+  'ودني اشوف بيوت فخمه بالنرجس بشرت تكون نضيفه وفيها حوض سباحه ومجلس كبير للعايله وما تطلع فوق 3 مليون ونص وست غرف وحديقه',
+  'ابي فله في النرجس، يكون عندها مسبح ومجلس واسع وما يزيد سعرها عن ٣ مليون ونص و٦ غرف وحديقه'
+];
+
+console.log('\n=== TESTING BOTH QUERIES ===');
+for (const query of queries) {
+  console.log('\nQuery:', query);
+  const results = searchProperties(query);
+  console.log('Total results:', results.length);
+  
+  // Count results with 6 rooms
+  const sixRoomResults = results.filter(r => r.features.includes('6 غرف'));
+  console.log('Results with 6 rooms:', sixRoomResults.length);
+  
+  // Count results under 3.5M
+  const underPriceResults = results.filter(r => r.price <= 3500000);
+  console.log('Results under 3.5M:', underPriceResults.length);
+  
+  // Count results meeting both conditions
+  const matchingResults = results.filter(r => 
+    r.features.includes('6 غرف') && 
+    r.price <= 3500000 &&
+    r.features.includes('حديقة')
+  );
+  console.log('Results meeting all conditions:', matchingResults.length);
+  
+  // Log matching properties
+  console.log('\nMatching properties:');
+  matchingResults.forEach(p => {
+    console.log(`- Price: ${p.price.toLocaleString()} SAR`);
+    console.log(`  Features: ${p.features.join(', ')}`);
+    console.log('---');
+  });
+}

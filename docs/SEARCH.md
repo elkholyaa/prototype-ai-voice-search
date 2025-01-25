@@ -85,9 +85,10 @@ The search system combines two approaches:
 2. **Semantic Search**: AI-powered similarity matching using OpenAI embeddings
 
 ## Search Flow
-1. Extract exact criteria from query
+1. Extract exact criteria from query (type, location, rooms, price)
 2. Filter properties based on exact criteria
-3. Use embeddings to rank filtered results by semantic similarity
+3. Apply room-specific filtering when specified
+4. Use embeddings to rank filtered results by semantic similarity
 
 ## Components
 
@@ -130,11 +131,26 @@ const propertyTypes = {
 - Improved search result mapping with separate city and district fields
 
 #### Room Counting
+Location: `src/utils/search.ts`
+```typescript
+const roomVariations = {
+  '6 غرف': ['6 غرف', '٦ غرف', 'ست غرف', 'ستة غرف', 'ست غرف نوم', 'ستة غرف نوم'],
+  '4 غرف': ['4 غرف', '٤ غرف', 'اربع غرف', 'أربع غرف', 'اربعة غرف', 'أربعة غرف']
+}
+```
+
 Patterns supported:
-1. Direct numbers: "3 غرف"
-2. Arabic numerals: "٣ غرف"
-3. Written numbers: "ثلاث غرف"
-4. Special cases: "غرفتين", "غرفتان"
+1. Direct numbers: "6 غرف", "4 غرف"
+2. Arabic numerals: "٦ غرف", "٤ غرف"
+3. Written numbers: "ست غرف", "اربع غرف"
+4. With نوم: "ست غرف نوم", "اربع غرف نوم"
+5. Variations in spelling: "ستة", "اربعة", "أربع"
+
+Implementation details:
+- Exact matching against room variations
+- Integration with price and location filters
+- Support for multiple room formats in the same query
+- Validation of room counts against property data
 
 #### Bathroom Counting
 Similar to rooms, with patterns:

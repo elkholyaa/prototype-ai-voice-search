@@ -78,29 +78,34 @@ Proof of concept for Arabic voice search in real estate listings using OpenAI's 
 - Comprehensive test suite with real-world query patterns
 
 ### Current Test Improvements
-- Test Case: Natural Language Query
+- Test Case: Natural Language Query with Room Specification
   ```
-  Query: "ودي اشوف فله حلوه في النرجس او الياسمين، يكون فيها مسبح ومجلس كبير وما تطلع فوق ٣ مليون ونص"
+  Query: "ودني اشوف بيوت فخمه بالنرجس بشرت تكون نضيفه وفيها حوض سباحه ومجلس كبير للعايله وما تطلع فوق 3 مليون وست غرف"
   Status: ✓ PASS
-  Results: 1 matching property
+  Results: Matching properties with exact criteria
   Criteria Matched:
     - Property Type: فيلا/فله
-    - Location: النرجس/الياسمين
+    - Location: النرجس
     - Features: مسبح + مجلس
-    - Price: Under 3.5M SAR
+    - Price: Under 3M SAR
+    - Rooms: Exactly 6 rooms
   ```
-- Natural language variations in test queries
-- Support for spelling mistakes and variations
-- Mixed formal/informal Arabic expressions
-- Flexible validation for semantic search results
-- Real-world feature descriptions
-- Dialect-specific test cases:
-  - Gulf dialect with price negotiations
-  - Egyptian dialect with family requirements
-  - Levantine dialect with modern lifestyle needs
-  - Mixed dialect expressions and variations
-- Complex search criteria combinations
-- Price range and feature matching validation
+- Test Case: Colloquial Search with Room Count
+  ```
+  Query: "ابي فله في النرجس، يكون عندها مسبح ومجلس واسع وما يزيد سعرها عن ٣ مليون و٦ غرف"
+  Status: ✓ PASS
+  Results: Matching properties with exact criteria
+  Criteria Matched:
+    - Property Type: فيلا
+    - Location: النرجس
+    - Features: مسبح + مجلس
+    - Price: Under 3M SAR
+    - Rooms: Exactly 6 rooms
+  ```
+- Enhanced room count validation in test cases
+- Support for multiple room number formats
+- Integration of room filtering with other criteria
+- Validation of exact room matches
 
 ## Recent Changes
 1. Property Data Structure Update

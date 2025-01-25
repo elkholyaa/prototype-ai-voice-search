@@ -128,7 +128,7 @@ async function processProperties(forceRegenerate: boolean = false) {
 
   // Update metadata
   metadata = {
-    lastProcessedId: Math.max(...finalEmbeddings.map(p => p.id)),
+    lastProcessedId: Math.max(...finalEmbeddings.map(p => Number(p.id))),
     lastUpdateTimestamp: new Date().toISOString(),
     totalProcessed: finalEmbeddings.length
   };

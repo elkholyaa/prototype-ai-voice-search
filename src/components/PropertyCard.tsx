@@ -26,15 +26,14 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
       <div className="p-6">
         <div className="flex flex-row-reverse justify-between items-start mb-4">
           <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
-            {property.title}
+            {property.city} - حي {property.district}
           </h3>
           <span className="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
             {property.type}
           </span>
         </div>
         <div className="space-y-3 text-right">
-          <p className="text-gray-600">{property.city}، حي {property.district}</p>
-          <p className="text-2xl font-bold text-blue-600">
+          <p className="text-2xl font-bold text-blue-600 mt-2">
             {formatPrice(property.price)} ريال
           </p>
         </div>
