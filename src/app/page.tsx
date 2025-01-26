@@ -119,48 +119,55 @@ export default function Home() {
   const getStructuredQuery = (query: string): string => {
     const parts: string[] = [];
     
-    // Property Type
+    // Property Type and Location (Column 1)
     if (query.includes('فيلا') || query.includes('فله') || query.includes('بيوت فخمه')) {
-      parts.push('<span class="text-red-500">النوع</span>: <span class="text-blue-500">فيلا</span>');
+      parts.push('<div><span class="text-red-500">النوع</span>: <span class="text-blue-500">فيلا</span></div>');
     } else if (query.includes('دوبلكس') || query.includes('دبلوكس')) {
-      parts.push('<span class="text-red-500">النوع</span>: <span class="text-blue-500">دوبلكس</span>');
+      parts.push('<div><span class="text-red-500">النوع</span>: <span class="text-blue-500">دوبلكس</span></div>');
     }
 
-    // City (not district)
     if (query.includes('النرجس') || query.includes('بالنرجس')) {
-      parts.push('<span class="text-red-500">الحي</span>: <span class="text-blue-500">النرجس</span>');
+      parts.push('<div><span class="text-red-500">الحي</span>: <span class="text-blue-500">النرجس</span></div>');
     } else if (query.includes('جده') || query.includes('جدة')) {
-      parts.push('<span class="text-red-500">المدينة</span>: <span class="text-blue-500">جدة</span>');
+      parts.push('<div><span class="text-red-500">المدينة</span>: <span class="text-blue-500">جدة</span></div>');
     }
 
-    // Rooms
+    // Features and Price (Column 2)
     if (query.includes('6 غرف') || query.includes('٦ غرف') || 
         query.includes('ست غرف') || query.includes('سته غرف') || 
         query.includes('و6 غرف') || query.includes('و٦ غرف')) {
-      parts.push('<span class="text-red-500">ميزة</span>: <span class="text-blue-500">6 غرف</span>');
+      parts.push('<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">6 غرف</span></div>');
     }
 
-    // Features
     if (query.includes('مسبح') || query.includes('حوض سباح')) {
-      parts.push('<span class="text-red-500">ميزة</span>: <span class="text-blue-500">مسبح</span>');
+      parts.push('<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">مسبح</span></div>');
     }
     if (query.includes('مجلس')) {
-      parts.push('<span class="text-red-500">ميزة</span>: <span class="text-blue-500">مجلس</span>');
+      parts.push('<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">مجلس</span></div>');
     }
     if (query.includes('حديقه') || query.includes('حديقة') || query.includes('حوش')) {
-      parts.push('<span class="text-red-500">ميزة</span>: <span class="text-blue-500">حديقة</span>');
+      parts.push('<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">حديقة</span></div>');
     }
 
-    // Price
     const priceMatch = query.match(/([٢٣]|2|3)\s*مليون/);
     if (priceMatch) {
       const price = priceMatch[1].replace('٢', '2').replace('٣', '3');
       if (query.match(/(اقل من|تحت|ما تطلع فوق|ما يزيد|لا يزيد)/)) {
-        parts.push(`<span class="text-red-500">الحد الأقصى للسعر</span>: <span class="text-blue-500">${price} مليون</span>`);
+        parts.push(`<div><span class="text-red-500">الحد الأقصى للسعر</span>: <span class="text-blue-500">${price} مليون</span></div>`);
       }
     }
 
-    return parts.join(' - ');
+    // Split parts into two columns
+    const midPoint = Math.ceil(parts.length / 2);
+    const column1 = parts.slice(0, midPoint);
+    const column2 = parts.slice(midPoint);
+
+    return `
+      <div class="grid grid-cols-2 gap-2 text-right">
+        <div>${column1.join('')}</div>
+        <div>${column2.join('')}</div>
+      </div>
+    `;
   };
 
   return (
@@ -188,7 +195,7 @@ export default function Home() {
             />
             {searchQuery && (
               <div 
-                className="mt-2 text-sm text-right" 
+                className="mt-2 text-sm" 
                 dir="rtl"
                 dangerouslySetInnerHTML={{ __html: getStructuredQuery(searchQuery) }}
               />
