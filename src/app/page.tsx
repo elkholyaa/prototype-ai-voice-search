@@ -115,11 +115,61 @@ export default function Home() {
     return true;
   });
 
+  // Function to structure the query
+  const getStructuredQuery = (query: string): string => {
+    const parts: string[] = [];
+    
+    // Property Type
+    if (query.includes('فيلا') || query.includes('فله') || query.includes('بيوت فخمه')) {
+      parts.push('<span class="text-red-500">النوع</span>: <span class="text-blue-500">فيلا</span>');
+    } else if (query.includes('دوبلكس') || query.includes('دبلوكس')) {
+      parts.push('<span class="text-red-500">النوع</span>: <span class="text-blue-500">دوبلكس</span>');
+    }
+
+    // City (not district)
+    if (query.includes('النرجس') || query.includes('بالنرجس')) {
+      parts.push('<span class="text-red-500">الحي</span>: <span class="text-blue-500">النرجس</span>');
+    } else if (query.includes('جده') || query.includes('جدة')) {
+      parts.push('<span class="text-red-500">المدينة</span>: <span class="text-blue-500">جدة</span>');
+    }
+
+    // Rooms
+    if (query.includes('6 غرف') || query.includes('٦ غرف') || 
+        query.includes('ست غرف') || query.includes('سته غرف') || 
+        query.includes('و6 غرف') || query.includes('و٦ غرف')) {
+      parts.push('<span class="text-red-500">ميزة</span>: <span class="text-blue-500">6 غرف</span>');
+    }
+
+    // Features
+    if (query.includes('مسبح') || query.includes('حوض سباح')) {
+      parts.push('<span class="text-red-500">ميزة</span>: <span class="text-blue-500">مسبح</span>');
+    }
+    if (query.includes('مجلس')) {
+      parts.push('<span class="text-red-500">ميزة</span>: <span class="text-blue-500">مجلس</span>');
+    }
+    if (query.includes('حديقه') || query.includes('حديقة') || query.includes('حوش')) {
+      parts.push('<span class="text-red-500">ميزة</span>: <span class="text-blue-500">حديقة</span>');
+    }
+
+    // Price
+    const priceMatch = query.match(/([٢٣]|2|3)\s*مليون/);
+    if (priceMatch) {
+      const price = priceMatch[1].replace('٢', '2').replace('٣', '3');
+      if (query.match(/(اقل من|تحت|ما تطلع فوق|ما يزيد|لا يزيد)/)) {
+        parts.push(`<span class="text-red-500">الحد الأقصى للسعر</span>: <span class="text-blue-500">${price} مليون</span>`);
+      }
+    }
+
+    return parts.join(' - ');
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-6">
-          <h1 className="text-3xl font-bold text-right">العقارات المتاحة</h1>
+          <h1 className="text-3xl font-bold text-right">
+            عقاري
+          </h1>
         </div>
       </div>
 
@@ -136,6 +186,13 @@ export default function Home() {
               onKeyDown={(e) => e.stopPropagation()}
               className="w-full p-4 text-right border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            {searchQuery && (
+              <div 
+                className="mt-2 text-sm text-right" 
+                dir="rtl"
+                dangerouslySetInnerHTML={{ __html: getStructuredQuery(searchQuery) }}
+              />
+            )}
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

@@ -22,6 +22,14 @@
 - Zod input validation for search requests
 - Swagger API documentation
 - Enhanced error handling and response formatting
+- Structured query display under search box
+  - Color-coded field labels (red) and values (blue)
+  - Support for Arabic numerals (٢, ٣) and text variations
+  - RTL text display with dash separators
+  - Multiple room number formats (6/٦/ست غرف)
+  - Various price limit phrases
+  - Property type variations (فيلا/فله, دوبلكس/دبلوكس)
+  - City vs district labeling
 
 ### Changed
 - Updated property structure with separate city and district fields
