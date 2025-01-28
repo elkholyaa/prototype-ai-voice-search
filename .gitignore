@@ -37,3 +37,6 @@ next-env.d.ts
 
 # Keep test screenshots
 !docs/images/tests/*.png 
+
+# execlude presntation video 
+PRESENTATON/
