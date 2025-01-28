@@ -149,10 +149,11 @@ export default function Home() {
       parts.push('<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">حديقة</span></div>');
     }
 
-    const priceMatch = query.match(/([٢٣]|2|3)\s*مليون/);
+    // Price - ensure consistent label
+    const priceMatch = query.match(/([٢٣]|2|3)\s*مليو[وn]?/);
     if (priceMatch) {
       const price = priceMatch[1].replace('٢', '2').replace('٣', '3');
-      if (query.match(/(اقل من|تحت|ما تطلع فوق|ما يزيد|لا يزيد)/)) {
+      if (query.match(/(اقل من|تحت|ما تطلع فوق|ما يزيد|لا يزيد|معقول)/)) {
         parts.push(`<div><span class="text-red-500">الحد الأقصى للسعر</span>: <span class="text-blue-500">${price} مليون</span></div>`);
       }
     }

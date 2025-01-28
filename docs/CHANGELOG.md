@@ -23,13 +23,18 @@
 - Swagger API documentation
 - Enhanced error handling and response formatting
 - Structured query display under search box
+  - Two-column layout for better organization
   - Color-coded field labels (red) and values (blue)
   - Support for Arabic numerals (٢, ٣) and text variations
-  - RTL text display with dash separators
+  - RTL text display
   - Multiple room number formats (6/٦/ست غرف)
   - Various price limit phrases
   - Property type variations (فيلا/فله, دوبلكس/دبلوكس)
   - City vs district labeling
+  - Maximum price display in millions (e.g., "3 مليون")
+- Updated query display format from single line to two columns
+- Improved visual separation of search criteria
+- Enhanced readability with color-coded labels and values
 
 ### Changed
 - Updated property structure with separate city and district fields
