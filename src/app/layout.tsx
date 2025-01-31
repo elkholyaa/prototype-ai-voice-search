@@ -1,21 +1,22 @@
-import './globals.css';
+import { useLanguage } from '@/context/LanguageContext';
 
-export const metadata = {
-  title: 'AI Voice Search - Real Estate',
-  description: 'Search properties using voice commands in Arabic',
-  icons: {
-    icon: '/favicon.svg',
-  },
-};
+/**
+ * 📌 Root Layout Component
+ * -------------------------------------
+ * - Dynamically sets the **`lang` attribute** for correct RTL/LTR handling.
+ * - Ensures UI updates automatically when **language toggles**.
+ * - Wraps the entire application structure.
+ * 
+ * 🔹 Used in:
+ * - `LanguageContext.tsx` → Fetches the current language state.
+ * - `page.tsx` → Ensures bilingual UI adjustments.
+ */
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const { language } = useLanguage();
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
   return (
-    <html lang="ar" dir="rtl">
+    <html lang={language}>
       <body>{children}</body>
     </html>
   );
-} 
+}

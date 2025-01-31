@@ -1,0 +1,3602 @@
+[
+    {
+        "id": 1,
+        "title": "Condo in Miami",
+        "type": "Condo",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 1368404,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/condo1.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Hyde Park",
+        "price": 5085889,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful condo located in Hyde Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo2.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 4258744,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse3.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Condo in New York",
+        "type": "Condo",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 1973539,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/condo4.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Duplex in Los Angeles",
+        "type": "Duplex",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 7857184,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex5.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 4247972,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse6.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Apartment in Los Angeles",
+        "type": "Apartment",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 7402299,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful apartment located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment7.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 5246733,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful condo located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo8.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 3287400,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse9.jpg"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Duplex in Dallas",
+        "type": "Duplex",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 4757012,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex10.jpg"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Apartment in New York",
+        "type": "Apartment",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 2520544,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful apartment located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment11.jpg"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Apartment in Dallas",
+        "type": "Apartment",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 3677550,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful apartment located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment12.jpg"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Apartment in Los Angeles",
+        "type": "Apartment",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 5065504,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful apartment located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment13.jpg"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Condo in New York",
+        "type": "Condo",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 1246532,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful condo located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/condo14.jpg"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 5703353,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo15.jpg"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Apartment in Chicago",
+        "type": "Apartment",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 2306273,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful apartment located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment16.jpg"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 3252689,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful villa located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa17.jpg"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Penthouse in Los Angeles",
+        "type": "Penthouse",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 4963611,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful penthouse located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse18.jpg"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Apartment in Dallas",
+        "type": "Apartment",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 2758089,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful apartment located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment19.jpg"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Apartment in Chicago",
+        "type": "Apartment",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 1305925,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful apartment located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment20.jpg"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 613847,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex21.jpg"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Duplex in Los Angeles",
+        "type": "Duplex",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 5364143,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex22.jpg"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Villa in Los Angeles",
+        "type": "Villa",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 5154057,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/villa23.jpg"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Villa in Dallas",
+        "type": "Villa",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 7164999,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful villa located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/villa24.jpg"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Apartment in Miami",
+        "type": "Apartment",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 6617168,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful apartment located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment25.jpg"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 3513199,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex26.jpg"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 4887836,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful penthouse located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse27.jpg"
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Penthouse in Miami",
+        "type": "Penthouse",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 7209990,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse28.jpg"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 832067,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful penthouse located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse29.jpg"
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 6548478,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful villa located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa30.jpg"
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Penthouse in Dallas",
+        "type": "Penthouse",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 5456092,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse31.jpg"
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 6435562,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo32.jpg"
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Apartment in Los Angeles",
+        "type": "Apartment",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 7038411,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful apartment located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment33.jpg"
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Villa in Chicago",
+        "type": "Villa",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 7230961,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/villa34.jpg"
+        ]
+    },
+    {
+        "id": 35,
+        "title": "Apartment in Los Angeles",
+        "type": "Apartment",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 5048000,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful apartment located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment35.jpg"
+        ]
+    },
+    {
+        "id": 36,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 5802994,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex36.jpg"
+        ]
+    },
+    {
+        "id": 37,
+        "title": "Apartment in Dallas",
+        "type": "Apartment",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 6878464,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful apartment located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment37.jpg"
+        ]
+    },
+    {
+        "id": 38,
+        "title": "Duplex in Chicago",
+        "type": "Duplex",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 4026037,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful duplex located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex38.jpg"
+        ]
+    },
+    {
+        "id": 39,
+        "title": "Duplex in Chicago",
+        "type": "Duplex",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 6748177,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful duplex located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex39.jpg"
+        ]
+    },
+    {
+        "id": 40,
+        "title": "Villa in Chicago",
+        "type": "Villa",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 4053573,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful villa located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/villa40.jpg"
+        ]
+    },
+    {
+        "id": 41,
+        "title": "Duplex in Los Angeles",
+        "type": "Duplex",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 3295446,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex41.jpg"
+        ]
+    },
+    {
+        "id": 42,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Hyde Park",
+        "price": 7416731,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful penthouse located in Hyde Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse42.jpg"
+        ]
+    },
+    {
+        "id": 43,
+        "title": "Penthouse in Dallas",
+        "type": "Penthouse",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 5082077,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse43.jpg"
+        ]
+    },
+    {
+        "id": 44,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 4849637,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse44.jpg"
+        ]
+    },
+    {
+        "id": 45,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 2534521,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse45.jpg"
+        ]
+    },
+    {
+        "id": 46,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 5241536,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful condo located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo46.jpg"
+        ]
+    },
+    {
+        "id": 47,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 6787829,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa47.jpg"
+        ]
+    },
+    {
+        "id": 48,
+        "title": "Villa in Los Angeles",
+        "type": "Villa",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 1523440,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/villa48.jpg"
+        ]
+    },
+    {
+        "id": 49,
+        "title": "Penthouse in Dallas",
+        "type": "Penthouse",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 2351949,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse49.jpg"
+        ]
+    },
+    {
+        "id": 50,
+        "title": "Penthouse in Los Angeles",
+        "type": "Penthouse",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 5207300,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful penthouse located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse50.jpg"
+        ]
+    },
+    {
+        "id": 51,
+        "title": "Apartment in Miami",
+        "type": "Apartment",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 5879730,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful apartment located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment51.jpg"
+        ]
+    },
+    {
+        "id": 52,
+        "title": "Apartment in New York",
+        "type": "Apartment",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 3157509,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful apartment located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment52.jpg"
+        ]
+    },
+    {
+        "id": 53,
+        "title": "Villa in Chicago",
+        "type": "Villa",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Hyde Park",
+        "price": 6555780,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful villa located in Hyde Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/villa53.jpg"
+        ]
+    },
+    {
+        "id": 54,
+        "title": "Condo in Los Angeles",
+        "type": "Condo",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Hollywood",
+        "price": 4156804,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Hollywood, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/condo54.jpg"
+        ]
+    },
+    {
+        "id": 55,
+        "title": "Apartment in New York",
+        "type": "Apartment",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 3164234,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful apartment located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment55.jpg"
+        ]
+    },
+    {
+        "id": 56,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 7511612,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse56.jpg"
+        ]
+    },
+    {
+        "id": 57,
+        "title": "Duplex in Dallas",
+        "type": "Duplex",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 4888557,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex57.jpg"
+        ]
+    },
+    {
+        "id": 58,
+        "title": "Condo in Los Angeles",
+        "type": "Condo",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 3569948,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/condo58.jpg"
+        ]
+    },
+    {
+        "id": 59,
+        "title": "Condo in Los Angeles",
+        "type": "Condo",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Hollywood",
+        "price": 568226,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Hollywood, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/condo59.jpg"
+        ]
+    },
+    {
+        "id": 60,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 7831894,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful condo located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo60.jpg"
+        ]
+    },
+    {
+        "id": 61,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 3835162,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex61.jpg"
+        ]
+    },
+    {
+        "id": 62,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 6839397,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful condo located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo62.jpg"
+        ]
+    },
+    {
+        "id": 63,
+        "title": "Penthouse in Miami",
+        "type": "Penthouse",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 5940641,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse63.jpg"
+        ]
+    },
+    {
+        "id": 64,
+        "title": "Duplex in Chicago",
+        "type": "Duplex",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 7624562,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex64.jpg"
+        ]
+    },
+    {
+        "id": 65,
+        "title": "Apartment in Miami",
+        "type": "Apartment",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 4458214,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful apartment located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment65.jpg"
+        ]
+    },
+    {
+        "id": 66,
+        "title": "Condo in Los Angeles",
+        "type": "Condo",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Hollywood",
+        "price": 1513967,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Hollywood, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/condo66.jpg"
+        ]
+    },
+    {
+        "id": 67,
+        "title": "Villa in Dallas",
+        "type": "Villa",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 7552240,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful villa located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/villa67.jpg"
+        ]
+    },
+    {
+        "id": 68,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 1463521,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo68.jpg"
+        ]
+    },
+    {
+        "id": 69,
+        "title": "Apartment in Dallas",
+        "type": "Apartment",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 3649887,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful apartment located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment69.jpg"
+        ]
+    },
+    {
+        "id": 70,
+        "title": "Penthouse in Miami",
+        "type": "Penthouse",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 3871929,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse70.jpg"
+        ]
+    },
+    {
+        "id": 71,
+        "title": "Villa in New York",
+        "type": "Villa",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 4013975,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/villa71.jpg"
+        ]
+    },
+    {
+        "id": 72,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 4261919,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo72.jpg"
+        ]
+    },
+    {
+        "id": 73,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 3813206,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo73.jpg"
+        ]
+    },
+    {
+        "id": 74,
+        "title": "Condo in Miami",
+        "type": "Condo",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 5379800,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/condo74.jpg"
+        ]
+    },
+    {
+        "id": 75,
+        "title": "Duplex in Dallas",
+        "type": "Duplex",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 3645156,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex75.jpg"
+        ]
+    },
+    {
+        "id": 76,
+        "title": "Villa in Los Angeles",
+        "type": "Villa",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 3346337,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/villa76.jpg"
+        ]
+    },
+    {
+        "id": 77,
+        "title": "Condo in New York",
+        "type": "Condo",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 6040094,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful condo located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/condo77.jpg"
+        ]
+    },
+    {
+        "id": 78,
+        "title": "Penthouse in Miami",
+        "type": "Penthouse",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 2252557,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse78.jpg"
+        ]
+    },
+    {
+        "id": 79,
+        "title": "Villa in Dallas",
+        "type": "Villa",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 5761812,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/villa79.jpg"
+        ]
+    },
+    {
+        "id": 80,
+        "title": "Apartment in Chicago",
+        "type": "Apartment",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Hyde Park",
+        "price": 4926418,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful apartment located in Hyde Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment80.jpg"
+        ]
+    },
+    {
+        "id": 81,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 6735230,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo81.jpg"
+        ]
+    },
+    {
+        "id": 82,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 3898038,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful condo located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo82.jpg"
+        ]
+    },
+    {
+        "id": 83,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 6386836,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex83.jpg"
+        ]
+    },
+    {
+        "id": 84,
+        "title": "Villa in Dallas",
+        "type": "Villa",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 1866359,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful villa located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/villa84.jpg"
+        ]
+    },
+    {
+        "id": 85,
+        "title": "Villa in Los Angeles",
+        "type": "Villa",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 4555404,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful villa located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/villa85.jpg"
+        ]
+    },
+    {
+        "id": 86,
+        "title": "Condo in Miami",
+        "type": "Condo",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 6393956,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/condo86.jpg"
+        ]
+    },
+    {
+        "id": 87,
+        "title": "Duplex in New York",
+        "type": "Duplex",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 2308397,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex87.jpg"
+        ]
+    },
+    {
+        "id": 88,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 4236566,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo88.jpg"
+        ]
+    },
+    {
+        "id": 89,
+        "title": "Penthouse in Los Angeles",
+        "type": "Penthouse",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Hollywood",
+        "price": 1424002,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Hollywood, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse89.jpg"
+        ]
+    },
+    {
+        "id": 90,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 7528374,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse90.jpg"
+        ]
+    },
+    {
+        "id": 91,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 1395699,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex91.jpg"
+        ]
+    },
+    {
+        "id": 92,
+        "title": "Penthouse in Los Angeles",
+        "type": "Penthouse",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 4301150,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse92.jpg"
+        ]
+    },
+    {
+        "id": 93,
+        "title": "Condo in Los Angeles",
+        "type": "Condo",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Hollywood",
+        "price": 3617581,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Hollywood, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/condo93.jpg"
+        ]
+    },
+    {
+        "id": 94,
+        "title": "Duplex in New York",
+        "type": "Duplex",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 4996271,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex94.jpg"
+        ]
+    },
+    {
+        "id": 95,
+        "title": "Duplex in Dallas",
+        "type": "Duplex",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 3904089,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex95.jpg"
+        ]
+    },
+    {
+        "id": 96,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 3364386,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful villa located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa96.jpg"
+        ]
+    },
+    {
+        "id": 97,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Hyde Park",
+        "price": 610965,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Hyde Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo97.jpg"
+        ]
+    },
+    {
+        "id": 98,
+        "title": "Duplex in New York",
+        "type": "Duplex",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 2558682,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex98.jpg"
+        ]
+    },
+    {
+        "id": 99,
+        "title": "Apartment in New York",
+        "type": "Apartment",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 3995458,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful apartment located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment99.jpg"
+        ]
+    },
+    {
+        "id": 100,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 4478509,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse100.jpg"
+        ]
+    },
+    {
+        "id": 101,
+        "title": "Penthouse in Miami",
+        "type": "Penthouse",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 2107238,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse101.jpg"
+        ]
+    },
+    {
+        "id": 102,
+        "title": "Condo in New York",
+        "type": "Condo",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 5990246,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful condo located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/condo102.jpg"
+        ]
+    },
+    {
+        "id": 103,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 7893595,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa103.jpg"
+        ]
+    },
+    {
+        "id": 104,
+        "title": "Duplex in Los Angeles",
+        "type": "Duplex",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 3579964,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex104.jpg"
+        ]
+    },
+    {
+        "id": 105,
+        "title": "Duplex in New York",
+        "type": "Duplex",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 3934439,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex105.jpg"
+        ]
+    },
+    {
+        "id": 106,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 5779407,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo106.jpg"
+        ]
+    },
+    {
+        "id": 107,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 2859856,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse107.jpg"
+        ]
+    },
+    {
+        "id": 108,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 3109575,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo108.jpg"
+        ]
+    },
+    {
+        "id": 109,
+        "title": "Condo in New York",
+        "type": "Condo",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 4008842,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful condo located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/condo109.jpg"
+        ]
+    },
+    {
+        "id": 110,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 5981956,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex110.jpg"
+        ]
+    },
+    {
+        "id": 111,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 5364336,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful condo located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo111.jpg"
+        ]
+    },
+    {
+        "id": 112,
+        "title": "Duplex in Dallas",
+        "type": "Duplex",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 3735540,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex112.jpg"
+        ]
+    },
+    {
+        "id": 113,
+        "title": "Duplex in Chicago",
+        "type": "Duplex",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Hyde Park",
+        "price": 4981526,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Hyde Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex113.jpg"
+        ]
+    },
+    {
+        "id": 114,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 4421076,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful villa located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa114.jpg"
+        ]
+    },
+    {
+        "id": 115,
+        "title": "Villa in New York",
+        "type": "Villa",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 3015590,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/villa115.jpg"
+        ]
+    },
+    {
+        "id": 116,
+        "title": "Condo in New York",
+        "type": "Condo",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 4074528,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful condo located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/condo116.jpg"
+        ]
+    },
+    {
+        "id": 117,
+        "title": "Condo in Miami",
+        "type": "Condo",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 3156736,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful condo located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/condo117.jpg"
+        ]
+    },
+    {
+        "id": 118,
+        "title": "Villa in New York",
+        "type": "Villa",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 6427224,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/villa118.jpg"
+        ]
+    },
+    {
+        "id": 119,
+        "title": "Condo in Los Angeles",
+        "type": "Condo",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 5787824,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful condo located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/condo119.jpg"
+        ]
+    },
+    {
+        "id": 120,
+        "title": "Duplex in Los Angeles",
+        "type": "Duplex",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 1868435,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex120.jpg"
+        ]
+    },
+    {
+        "id": 121,
+        "title": "Villa in Chicago",
+        "type": "Villa",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 5171059,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful villa located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/villa121.jpg"
+        ]
+    },
+    {
+        "id": 122,
+        "title": "Duplex in New York",
+        "type": "Duplex",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 6105233,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful duplex located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex122.jpg"
+        ]
+    },
+    {
+        "id": 123,
+        "title": "Apartment in Dallas",
+        "type": "Apartment",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 2287604,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful apartment located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment123.jpg"
+        ]
+    },
+    {
+        "id": 124,
+        "title": "Apartment in New York",
+        "type": "Apartment",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 2170888,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful apartment located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment124.jpg"
+        ]
+    },
+    {
+        "id": 125,
+        "title": "Villa in Chicago",
+        "type": "Villa",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 4331447,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/villa125.jpg"
+        ]
+    },
+    {
+        "id": 126,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 6354131,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse126.jpg"
+        ]
+    },
+    {
+        "id": 127,
+        "title": "Villa in New York",
+        "type": "Villa",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 3105493,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/villa127.jpg"
+        ]
+    },
+    {
+        "id": 128,
+        "title": "Duplex in Chicago",
+        "type": "Duplex",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 5694334,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex128.jpg"
+        ]
+    },
+    {
+        "id": 129,
+        "title": "Apartment in New York",
+        "type": "Apartment",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 1492698,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful apartment located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment129.jpg"
+        ]
+    },
+    {
+        "id": 130,
+        "title": "Duplex in Los Angeles",
+        "type": "Duplex",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Hollywood",
+        "price": 1857314,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in Hollywood, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex130.jpg"
+        ]
+    },
+    {
+        "id": 131,
+        "title": "Villa in Chicago",
+        "type": "Villa",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 5054083,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/villa131.jpg"
+        ]
+    },
+    {
+        "id": 132,
+        "title": "Condo in Los Angeles",
+        "type": "Condo",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 3884658,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/condo132.jpg"
+        ]
+    },
+    {
+        "id": 133,
+        "title": "Duplex in Chicago",
+        "type": "Duplex",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 2816931,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex133.jpg"
+        ]
+    },
+    {
+        "id": 134,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 4456041,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful penthouse located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse134.jpg"
+        ]
+    },
+    {
+        "id": 135,
+        "title": "Villa in New York",
+        "type": "Villa",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 5220301,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/villa135.jpg"
+        ]
+    },
+    {
+        "id": 136,
+        "title": "Duplex in Dallas",
+        "type": "Duplex",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 5334592,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex136.jpg"
+        ]
+    },
+    {
+        "id": 137,
+        "title": "Villa in Los Angeles",
+        "type": "Villa",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 4076545,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/villa137.jpg"
+        ]
+    },
+    {
+        "id": 138,
+        "title": "Villa in Chicago",
+        "type": "Villa",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 7498608,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/villa138.jpg"
+        ]
+    },
+    {
+        "id": 139,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 2923584,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo139.jpg"
+        ]
+    },
+    {
+        "id": 140,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 4685212,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex140.jpg"
+        ]
+    },
+    {
+        "id": 141,
+        "title": "Duplex in Dallas",
+        "type": "Duplex",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 4628897,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex141.jpg"
+        ]
+    },
+    {
+        "id": 142,
+        "title": "Apartment in Dallas",
+        "type": "Apartment",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 689813,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful apartment located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment142.jpg"
+        ]
+    },
+    {
+        "id": 143,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 2183646,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful villa located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa143.jpg"
+        ]
+    },
+    {
+        "id": 144,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 7061942,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse144.jpg"
+        ]
+    },
+    {
+        "id": 145,
+        "title": "Apartment in Dallas",
+        "type": "Apartment",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 1996450,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful apartment located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment145.jpg"
+        ]
+    },
+    {
+        "id": 146,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 4541117,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex146.jpg"
+        ]
+    },
+    {
+        "id": 147,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 952901,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful penthouse located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse147.jpg"
+        ]
+    },
+    {
+        "id": 148,
+        "title": "Penthouse in Dallas",
+        "type": "Penthouse",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 1411347,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse148.jpg"
+        ]
+    },
+    {
+        "id": 149,
+        "title": "Duplex in Los Angeles",
+        "type": "Duplex",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 7701535,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex149.jpg"
+        ]
+    },
+    {
+        "id": 150,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 2477420,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa150.jpg"
+        ]
+    },
+    {
+        "id": 151,
+        "title": "Penthouse in Dallas",
+        "type": "Penthouse",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 6361658,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse151.jpg"
+        ]
+    },
+    {
+        "id": 152,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 834533,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse152.jpg"
+        ]
+    },
+    {
+        "id": 153,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Hyde Park",
+        "price": 7377629,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in Hyde Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse153.jpg"
+        ]
+    },
+    {
+        "id": 154,
+        "title": "Penthouse in Los Angeles",
+        "type": "Penthouse",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 2275228,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse154.jpg"
+        ]
+    },
+    {
+        "id": 155,
+        "title": "Apartment in Los Angeles",
+        "type": "Apartment",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 4467146,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful apartment located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment155.jpg"
+        ]
+    },
+    {
+        "id": 156,
+        "title": "Villa in Dallas",
+        "type": "Villa",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 1434336,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/villa156.jpg"
+        ]
+    },
+    {
+        "id": 157,
+        "title": "Condo in Los Angeles",
+        "type": "Condo",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 4259903,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/condo157.jpg"
+        ]
+    },
+    {
+        "id": 158,
+        "title": "Duplex in New York",
+        "type": "Duplex",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 6676503,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex158.jpg"
+        ]
+    },
+    {
+        "id": 159,
+        "title": "Villa in Dallas",
+        "type": "Villa",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Bishop Arts District",
+        "price": 5739718,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Bishop Arts District, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/villa159.jpg"
+        ]
+    },
+    {
+        "id": 160,
+        "title": "Penthouse in Miami",
+        "type": "Penthouse",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 2661565,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful penthouse located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse160.jpg"
+        ]
+    },
+    {
+        "id": 161,
+        "title": "Condo in New York",
+        "type": "Condo",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 4248722,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/condo161.jpg"
+        ]
+    },
+    {
+        "id": 162,
+        "title": "Apartment in Chicago",
+        "type": "Apartment",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Hyde Park",
+        "price": 1872199,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful apartment located in Hyde Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment162.jpg"
+        ]
+    },
+    {
+        "id": 163,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Hyde Park",
+        "price": 6225340,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Hyde Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo163.jpg"
+        ]
+    },
+    {
+        "id": 164,
+        "title": "Duplex in New York",
+        "type": "Duplex",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 6833764,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex164.jpg"
+        ]
+    },
+    {
+        "id": 165,
+        "title": "Apartment in Los Angeles",
+        "type": "Apartment",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Hollywood",
+        "price": 2334733,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful apartment located in Hollywood, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment165.jpg"
+        ]
+    },
+    {
+        "id": 166,
+        "title": "Apartment in Los Angeles",
+        "type": "Apartment",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 7228182,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful apartment located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment166.jpg"
+        ]
+    },
+    {
+        "id": 167,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 5601127,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse167.jpg"
+        ]
+    },
+    {
+        "id": 168,
+        "title": "Condo in Chicago",
+        "type": "Condo",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 840520,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/condo168.jpg"
+        ]
+    },
+    {
+        "id": 169,
+        "title": "Penthouse in Miami",
+        "type": "Penthouse",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 4312064,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful penthouse located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse169.jpg"
+        ]
+    },
+    {
+        "id": 170,
+        "title": "Duplex in New York",
+        "type": "Duplex",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 7763816,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful duplex located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex170.jpg"
+        ]
+    },
+    {
+        "id": 171,
+        "title": "Apartment in Miami",
+        "type": "Apartment",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 7556580,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful apartment located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment171.jpg"
+        ]
+    },
+    {
+        "id": 172,
+        "title": "Villa in Dallas",
+        "type": "Villa",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 4207473,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful villa located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/villa172.jpg"
+        ]
+    },
+    {
+        "id": 173,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 2351652,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful duplex located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex173.jpg"
+        ]
+    },
+    {
+        "id": 174,
+        "title": "Penthouse in Dallas",
+        "type": "Penthouse",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 7356894,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse174.jpg"
+        ]
+    },
+    {
+        "id": 175,
+        "title": "Duplex in Miami",
+        "type": "Duplex",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 6448927,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful duplex located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex175.jpg"
+        ]
+    },
+    {
+        "id": 176,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 2345519,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa176.jpg"
+        ]
+    },
+    {
+        "id": 177,
+        "title": "Penthouse in Miami",
+        "type": "Penthouse",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 3369833,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse177.jpg"
+        ]
+    },
+    {
+        "id": 178,
+        "title": "Condo in New York",
+        "type": "Condo",
+        "city": "New York",
+        "state": "New York",
+        "district": "Queens",
+        "price": 2626927,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Queens, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/condo178.jpg"
+        ]
+    },
+    {
+        "id": 179,
+        "title": "Duplex in Dallas",
+        "type": "Duplex",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 1032373,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful duplex located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex179.jpg"
+        ]
+    },
+    {
+        "id": 180,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 6384902,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa180.jpg"
+        ]
+    },
+    {
+        "id": 181,
+        "title": "Duplex in Chicago",
+        "type": "Duplex",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 2565263,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex181.jpg"
+        ]
+    },
+    {
+        "id": 182,
+        "title": "Villa in Los Angeles",
+        "type": "Villa",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 1053874,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful villa located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/villa182.jpg"
+        ]
+    },
+    {
+        "id": 183,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "South Beach",
+        "price": 5224762,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in South Beach, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa183.jpg"
+        ]
+    },
+    {
+        "id": 184,
+        "title": "Condo in Miami",
+        "type": "Condo",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 6210790,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/condo184.jpg"
+        ]
+    },
+    {
+        "id": 185,
+        "title": "Condo in Dallas",
+        "type": "Condo",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 2232995,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful condo located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/condo185.jpg"
+        ]
+    },
+    {
+        "id": 186,
+        "title": "Penthouse in Chicago",
+        "type": "Penthouse",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 7238455,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse186.jpg"
+        ]
+    },
+    {
+        "id": 187,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 3400657,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse187.jpg"
+        ]
+    },
+    {
+        "id": 188,
+        "title": "Apartment in Los Angeles",
+        "type": "Apartment",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Beverly Hills",
+        "price": 4725423,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful apartment located in Beverly Hills, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment188.jpg"
+        ]
+    },
+    {
+        "id": 189,
+        "title": "Duplex in Chicago",
+        "type": "Duplex",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Lincoln Park",
+        "price": 1972181,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful duplex located in Lincoln Park, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex189.jpg"
+        ]
+    },
+    {
+        "id": 190,
+        "title": "Condo in Miami",
+        "type": "Condo",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Coral Gables",
+        "price": 961315,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful condo located in Coral Gables, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/condo190.jpg"
+        ]
+    },
+    {
+        "id": 191,
+        "title": "Villa in New York",
+        "type": "Villa",
+        "city": "New York",
+        "state": "New York",
+        "district": "Manhattan",
+        "price": 7901868,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful villa located in Manhattan, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/villa191.jpg"
+        ]
+    },
+    {
+        "id": 192,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 1986776,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful penthouse located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse192.jpg"
+        ]
+    },
+    {
+        "id": 193,
+        "title": "Apartment in New York",
+        "type": "Apartment",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 1150420,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful apartment located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/apartment193.jpg"
+        ]
+    },
+    {
+        "id": 194,
+        "title": "Duplex in Chicago",
+        "type": "Duplex",
+        "city": "Chicago",
+        "state": "Illinois",
+        "district": "Downtown",
+        "price": 3590794,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful duplex located in Downtown, Chicago with modern amenities.",
+        "images": [
+            "https://example.com/images/duplex194.jpg"
+        ]
+    },
+    {
+        "id": 195,
+        "title": "Villa in Los Angeles",
+        "type": "Villa",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 5527344,
+        "features": [
+            "Swimming Pool",
+            "Garage",
+            "Garden"
+        ],
+        "description": "A beautiful villa located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/villa195.jpg"
+        ]
+    },
+    {
+        "id": 196,
+        "title": "Villa in Miami",
+        "type": "Villa",
+        "city": "Miami",
+        "state": "Florida",
+        "district": "Little Havana",
+        "price": 6526705,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Little Havana, Miami with modern amenities.",
+        "images": [
+            "https://example.com/images/villa196.jpg"
+        ]
+    },
+    {
+        "id": 197,
+        "title": "Villa in Dallas",
+        "type": "Villa",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Uptown",
+        "price": 2035999,
+        "features": [
+            "Private Beach",
+            "Tennis Court",
+            "Rooftop Patio"
+        ],
+        "description": "A beautiful villa located in Uptown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/villa197.jpg"
+        ]
+    },
+    {
+        "id": 198,
+        "title": "Penthouse in Los Angeles",
+        "type": "Penthouse",
+        "city": "Los Angeles",
+        "state": "California",
+        "district": "Santa Monica",
+        "price": 7175067,
+        "features": [
+            "Fireplace",
+            "Gym Access",
+            "Security System"
+        ],
+        "description": "A beautiful penthouse located in Santa Monica, Los Angeles with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse198.jpg"
+        ]
+    },
+    {
+        "id": 199,
+        "title": "Penthouse in Dallas",
+        "type": "Penthouse",
+        "city": "Dallas",
+        "state": "Texas",
+        "district": "Downtown",
+        "price": 555199,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Downtown, Dallas with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse199.jpg"
+        ]
+    },
+    {
+        "id": 200,
+        "title": "Penthouse in New York",
+        "type": "Penthouse",
+        "city": "New York",
+        "state": "New York",
+        "district": "Brooklyn",
+        "price": 3898502,
+        "features": [
+            "Balcony",
+            "Elevator Access",
+            "City View"
+        ],
+        "description": "A beautiful penthouse located in Brooklyn, New York with modern amenities.",
+        "images": [
+            "https://example.com/images/penthouse200.jpg"
+        ]
+    }
+]

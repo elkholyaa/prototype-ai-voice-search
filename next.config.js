@@ -16,6 +16,10 @@ const nextConfig = {
       },
     ],
   },
-}
+  i18n: {
+    locales: ['en', 'ar'], // Supported languages
+    defaultLocale: 'ar',    // Default language is Arabic
+  },
+};
 
-module.exports = nextConfig; 
+module.exports = nextConfig;

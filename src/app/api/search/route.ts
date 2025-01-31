@@ -1,46 +1,31 @@
-import { NextRequest, NextResponse } from 'next/server';
-// Temporarily commenting out API middleware for local development
-// import { withApiMiddleware } from '@/utils/api-middleware';
-import { z } from 'zod';
-// Commenting out embeddings search in favor of simple text search
-// import { findSimilarProperties } from '@/utils/embeddings';
-import { searchProperties } from '@/utils/search';
+import { searchProperties } from "@/utils/search";
+import { NextResponse } from "next/server";
 
-// Remove limit validation, only keep query requirement
-const searchSchema = z.object({
-  query: z.string(),
-  // Removed limit validation to allow unlimited results
-});
+/**
+ * 📌 API Route: Search Properties
+ * -------------------------------------
+ * - Handles search requests and returns results based on user queries.
+ * - Loads the correct dataset (`properties-ar.json` or `properties-en.json`) based on `lang` parameter.
+ * - Supports **Arabic price filtering (`اقل من`, `تحت`, `ما يزيد`)**.
+ * - Ensures **bilingual dataset separation** (Arabic searches do not return English properties and vice versa).
+ *
+ * 🔹 Used in:
+ * - `page.tsx` → Calls this API when the user enters a search query.
+ * - `search.test.ts` → Tests search logic for correctness.
+ */
 
-export async function POST(req: NextRequest) {
-  try {
-    const body = await req.json();
-    // Only destructure query since limit is removed
-    const { query } = searchSchema.parse(body);
-    
-    // Pass undefined as limit to get all results
-    const results = searchProperties(query);
-    
-    return NextResponse.json({ results });
-    
-  } catch (error) {
-    if (error instanceof z.ZodError) {
-      return NextResponse.json(
-        { error: 'Invalid request data', details: error.errors },
-        { status: 400 }
-      );
-    }
-    console.error('Search error:', error);
-    return NextResponse.json(
-      { error: 'Failed to process search request' },
-      { status: 500 }
-    );
+export async function GET(request: Request) {
+  const { searchParams } = new URL(request.url);
+  const query = searchParams.get("query") || "";
+  const language = searchParams.get("lang") || "ar"; // Default to Arabic
+
+  // Ensure only valid language values are accepted
+  if (!["ar", "en"].includes(language)) {
+    return NextResponse.json({ error: "Invalid language parameter" }, { status: 400 });
   }
-}
 
-// Temporarily disabling API middleware
-// const handler = withApiMiddleware({
-//   POST: handlePost,
-// });
-// 
-// export const POST = handler.POST; 
+  // Fetch search results from the correct dataset
+  const results = searchProperties(query, language);
+
+  return NextResponse.json(results);
+}
