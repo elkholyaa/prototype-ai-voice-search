@@ -1,4 +1,7 @@
+'use client';
+
 import React, { createContext, useState, useContext, ReactNode } from 'react';
+import type { Language } from '@/config/languages';
 
 /**
  * 📌 Language Context
@@ -12,11 +15,14 @@ import React, { createContext, useState, useContext, ReactNode } from 'react';
  * - `page.tsx` → Allows UI elements to update based on language.
  */
 
-type Language = 'en' | 'ar';
+type LanguageContextType = {
+  language: Language;
+  toggleLanguage: () => void;
+};
 
-const LanguageContext = createContext<{ language: Language; toggleLanguage: () => void }>({
-  language: 'ar', // Default language is Arabic
-  toggleLanguage: () => {}, // Placeholder function
+const LanguageContext = createContext<LanguageContextType>({
+  language: 'ar',
+  toggleLanguage: () => {},
 });
 
 /**
@@ -25,16 +31,19 @@ const LanguageContext = createContext<{ language: Language; toggleLanguage: () =
  * Wraps the application and provides **language state management**.
  * 
  * @param children - The React components inside the provider.
+ * @param defaultLanguage - The default language to initialize the state.
  */
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguage] = useState<Language>('ar');
+export function LanguageProvider({ children, defaultLanguage }: { children: ReactNode; defaultLanguage: Language }) {
+  const [language, setLanguage] = useState<Language>(defaultLanguage);
 
   /**
    * 🔄 Toggle Language Function
    * - Switches between **English (`en`)** and **Arabic (`ar`)**.
    */
   const toggleLanguage = () => {
-    setLanguage((prev) => (prev === 'ar' ? 'en' : 'ar'));
+    const newLang = language === 'ar' ? 'en' : 'ar';
+    setLanguage(newLang);
+    window.location.href = `/${newLang}`;
   };
 
   return (

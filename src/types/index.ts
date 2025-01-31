@@ -13,5 +13,5 @@ export interface Property {
 }
 
 export interface PropertyWithEmbedding extends Property {
-  embedding: number[];  // Required in this interface
+  embedding: number[];
 } 
