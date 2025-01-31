@@ -1,6 +1,12 @@
 # Real Estate Search Application
 
 ## Recent Updates (2024)
+- Implemented bilingual support (Arabic/English)
+- Added language-specific property data files
+- Enhanced routing with language-based middleware
+- Improved property card display with responsive design
+- Added automatic language detection and redirection
+- Implemented RTL/LTR layout switching
 - Enhanced natural language property search with room-specific filtering
 - Updated property structure with separate city and district fields
 - Standardized price formatting (English numerals with commas)
@@ -12,6 +18,16 @@
 - Enhanced test cases for room-specific searches
 
 ## Features
+- Bilingual Support
+  - Arabic (RTL) and English (LTR) interfaces
+  - Language-specific property data
+  - Automatic language detection
+  - Easy language switching
+- Property Display
+  - Responsive property cards
+  - Optimized image loading
+  - RTL/LTR layout support
+  - Consistent formatting across languages
 - Verified Natural Language Search
   - Direct city and district search
   - Feature combinations
@@ -158,22 +174,29 @@ The project follows Next.js 13+ best practices with all source code under the `/
 
 ```
 /src
-├── __tests__/              # Global test files
 ├── app/                    # Next.js app directory
-│   ├── page.tsx           # Main page component
-│   ├── layout.tsx         # App layout
-│   └── globals.css        # Global styles
-├── data/                  # Data files
-│   └── properties.ts      # Property data
-├── types/                 # TypeScript types
-│   └── index.ts          # Shared type definitions
-└── utils/                # Utility functions
-    ├── __tests__/        # Utility-specific tests
-    └── format.ts         # Formatting utilities
+│   ├── page.tsx           # Root redirect page
+│   ├── layout.tsx         # Root layout
+│   ├── ar/                # Arabic version
+│   │   ├── page.tsx      # Arabic homepage
+│   │   └── layout.tsx    # Arabic layout
+│   ├── en/               # English version
+│   │   ├── page.tsx     # English homepage
+│   │   └── layout.tsx   # English layout
+│   └── globals.css       # Global styles
+├── data/                 # Data files
+│   └── static/          # Static data
+│       ├── properties-ar.json  # Arabic properties
+│       └── properties-en.json  # English properties
+├── middleware.ts        # Language routing middleware
+├── types/              # TypeScript types
+│   └── index.ts       # Shared type definitions
+└── utils/             # Utility functions
+    └── format.ts      # Formatting utilities
 ```
 
 Root directory contains:
-- Configuration files (tsconfig.json, next.config.mjs, etc.)
+- Configuration files (tsconfig.json, next.config.js, etc.)
 - Documentation (README.md, CHANGELOG.md, SESSION.md)
 - Package management (package.json, package-lock.json)
 - Static assets (public/)

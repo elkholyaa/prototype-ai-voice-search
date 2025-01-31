@@ -22,7 +22,7 @@ export default function EnglishHome() {
           {properties.map((property) => (
             <div key={property.id} className="bg-white rounded-lg shadow-md overflow-hidden">
               <img 
-                src={property.image} 
+                src={property.images[0]} 
                 alt={property.title}
                 className="w-full h-48 object-cover"
               />
@@ -31,7 +31,7 @@ export default function EnglishHome() {
                 <p className="text-gray-600 mb-2">{property.description}</p>
                 <div className="flex justify-between items-center">
                   <span className="text-green-600 font-semibold">AED {property.price}</span>
-                  <span className="text-gray-500">{property.location}</span>
+                  <span className="text-gray-500">{property.city}, {property.district}</span>
                 </div>
               </div>
             </div>

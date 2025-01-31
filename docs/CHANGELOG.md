@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased] - 2025-02-01
+### Added
+- Installed Playwright for end-to-end testing
+- Added initial test configuration
+- Set up test environment
+- Added homepage redirection tests
+- Added content verification tests
+
+### Changed
+- Upgraded Next.js to latest version
+- Updated project dependencies
+
 ## [Unreleased]
 ### Added
 - Room-specific filtering in search queries
@@ -35,6 +47,14 @@
 - Updated query display format from single line to two columns
 - Improved visual separation of search criteria
 - Enhanced readability with color-coded labels and values
+- Language switching functionality between Arabic and English
+- Separate property data files for Arabic and English content
+- Basic property listing pages for both languages
+- Middleware for language-based routing
+- Automatic redirect from root to Arabic version
+- Responsive property cards with image display
+- RTL support for Arabic content
+- LTR support for English content
 
 ### Changed
 - Updated property structure with separate city and district fields
@@ -54,6 +74,21 @@
 - Removed search result limits
 - Updated location display format to "city، حي district"
 - Added fallback handling for undefined values
+- Simplified routing structure for better maintainability
+- Updated property data structure to use separate language files
+- Improved property card layout and styling
+- Enhanced middleware to handle language-specific routes
+- Optimized image loading in property cards
+
+### Fixed
+- Image container height and positioning issues
+- Grid layout responsiveness
+- TypeScript strict mode compatibility
+- Arabic text processing edge cases
+- Language-specific routing issues
+- Property card layout in RTL/LTR modes
+- Image display in property cards
+- Root page redirect functionality
 
 ### Upcoming
 - Frontend integration with search API
