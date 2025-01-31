@@ -1,7 +1,8 @@
 'use client';
 
-import React, { createContext, useState, useContext, ReactNode } from 'react';
-import type { Language } from '@/config/languages';
+import React, { createContext, useContext, useState } from 'react';
+
+type Language = 'en' | 'ar';
 
 /**
  * 📌 Language Context
@@ -15,15 +16,12 @@ import type { Language } from '@/config/languages';
  * - `page.tsx` → Allows UI elements to update based on language.
  */
 
-type LanguageContextType = {
+interface LanguageContextType {
   language: Language;
   toggleLanguage: () => void;
-};
+}
 
-const LanguageContext = createContext<LanguageContextType>({
-  language: 'ar',
-  toggleLanguage: () => {},
-});
+const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 /**
  * 🎛️ Language Provider Component
@@ -33,7 +31,7 @@ const LanguageContext = createContext<LanguageContextType>({
  * @param children - The React components inside the provider.
  * @param defaultLanguage - The default language to initialize the state.
  */
-export function LanguageProvider({ children, defaultLanguage }: { children: ReactNode; defaultLanguage: Language }) {
+export function LanguageProvider({ children, defaultLanguage = 'ar' }: { children: React.ReactNode, defaultLanguage: Language }) {
   const [language, setLanguage] = useState<Language>(defaultLanguage);
 
   /**
@@ -41,9 +39,7 @@ export function LanguageProvider({ children, defaultLanguage }: { children: Reac
    * - Switches between **English (`en`)** and **Arabic (`ar`)**.
    */
   const toggleLanguage = () => {
-    const newLang = language === 'ar' ? 'en' : 'ar';
-    setLanguage(newLang);
-    window.location.href = `/${newLang}`;
+    setLanguage(prev => prev === 'en' ? 'ar' : 'en');
   };
 
   return (
@@ -57,4 +53,8 @@ export function LanguageProvider({ children, defaultLanguage }: { children: Reac
  * 🔹 Custom Hook: `useLanguage()`
  * - Allows **easy access** to the current language and toggle function.
  */
-export const useLanguage = () => useContext(LanguageContext);
+export function useLanguage() {
+  const context = useContext(LanguageContext);
+  if (!context) throw new Error('useLanguage must be used within LanguageProvider');
+  return context;
+}

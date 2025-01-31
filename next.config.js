@@ -16,9 +16,14 @@ const nextConfig = {
       },
     ],
   },
-  i18n: {
-    locales: ['en', 'ar'], // Supported languages
-    defaultLocale: 'ar',    // Default language is Arabic
+  async redirects() {
+    return [
+      {
+        source: '/',
+        destination: '/ar',
+        permanent: true,
+      },
+    ]
   },
 };
 
