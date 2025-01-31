@@ -176,7 +176,7 @@ export default function Home() {
       <div className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-6">
           <h1 className="text-3xl font-bold text-right">
-            عقاري
+            jعقاري
           </h1>
         </div>
       </div>
