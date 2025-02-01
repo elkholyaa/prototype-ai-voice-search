@@ -1,0 +1,4052 @@
+[
+  {
+    "id": "1",
+    "title": "Apartment in Manhattan",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 212345,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "2",
+    "title": "Villa in Brooklyn",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 1546912,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "3",
+    "title": "Mansion in Queens",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Queens",
+    "price": 3103701,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "4",
+    "title": "Duplex in Bronx",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 682712,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "5",
+    "title": "Apartment in Staten Island",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 261725,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "6",
+    "title": "Villa in Harlem",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 1640736,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "7",
+    "title": "Mansion in Chelsea",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 3241969,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "8",
+    "title": "Duplex in SoHo",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 865424,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "9",
+    "title": "Apartment in Upper East Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 311105,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "10",
+    "title": "Villa in Upper West Side",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 1734560,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "11",
+    "title": "Mansion in Midtown",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 3380237,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "12",
+    "title": "Duplex in Manhattan",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 1048136,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "13",
+    "title": "Apartment in Brooklyn",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 360485,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "14",
+    "title": "Villa in Queens",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Queens",
+    "price": 1828384,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "15",
+    "title": "Mansion in Bronx",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 3518505,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "16",
+    "title": "Duplex in Staten Island",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 1230848,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "17",
+    "title": "Apartment in Harlem",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 409865,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "18",
+    "title": "Villa in Chelsea",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 1922208,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "19",
+    "title": "Mansion in SoHo",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 3656773,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "20",
+    "title": "Duplex in Upper East Side",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 1413560,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "21",
+    "title": "Apartment in Upper West Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 459245,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "22",
+    "title": "Villa in Midtown",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 2016032,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "23",
+    "title": "Mansion in Manhattan",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 3795041,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "24",
+    "title": "Duplex in Brooklyn",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 596272,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "25",
+    "title": "Apartment in Queens",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Queens",
+    "price": 508625,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "26",
+    "title": "Villa in Bronx",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 2109856,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "27",
+    "title": "Mansion in Staten Island",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 3933309,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "28",
+    "title": "Duplex in Harlem",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 778984,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "29",
+    "title": "Apartment in Chelsea",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 558005,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "30",
+    "title": "Villa in SoHo",
+    "type": "Villa",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 2203680,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "31",
+    "title": "Mansion in Upper East Side",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 4071577,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "32",
+    "title": "Duplex in Upper West Side",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 961696,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "33",
+    "title": "Apartment in Midtown",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 607385,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "34",
+    "title": "Villa in Manhattan",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 2297504,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "35",
+    "title": "Mansion in Brooklyn",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 4209845,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "36",
+    "title": "Duplex in Queens",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Queens",
+    "price": 1144408,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "37",
+    "title": "Apartment in Bronx",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 656765,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "38",
+    "title": "Villa in Staten Island",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 2391328,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "39",
+    "title": "Mansion in Harlem",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 4348113,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "40",
+    "title": "Duplex in Chelsea",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 1327120,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "41",
+    "title": "Apartment in SoHo",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 706145,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "42",
+    "title": "Villa in Upper East Side",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 2485152,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "43",
+    "title": "Mansion in Upper West Side",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 4486381,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "44",
+    "title": "Duplex in Midtown",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 509832,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "45",
+    "title": "Apartment in Manhattan",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 755525,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "46",
+    "title": "Villa in Brooklyn",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 2578976,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "47",
+    "title": "Mansion in Queens",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Queens",
+    "price": 4624649,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "48",
+    "title": "Duplex in Bronx",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 692544,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "49",
+    "title": "Apartment in Staten Island",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 204905,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "50",
+    "title": "Villa in Harlem",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 2672800,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "51",
+    "title": "Mansion in Chelsea",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 4762917,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "52",
+    "title": "Duplex in SoHo",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 875256,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "53",
+    "title": "Apartment in Upper East Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 254285,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "54",
+    "title": "Villa in Upper West Side",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 2766624,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "55",
+    "title": "Mansion in Midtown",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 4901185,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "56",
+    "title": "Duplex in Manhattan",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 1057968,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "57",
+    "title": "Apartment in Brooklyn",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 303665,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "58",
+    "title": "Villa in Queens",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Queens",
+    "price": 2860448,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "59",
+    "title": "Mansion in Bronx",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 5039453,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "60",
+    "title": "Duplex in Staten Island",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 1240680,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "61",
+    "title": "Apartment in Harlem",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 353045,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "62",
+    "title": "Villa in Chelsea",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 2954272,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "63",
+    "title": "Mansion in SoHo",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 5177721,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "64",
+    "title": "Duplex in Upper East Side",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 1423392,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "65",
+    "title": "Apartment in Upper West Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 402425,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "66",
+    "title": "Villa in Midtown",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 1548096,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "67",
+    "title": "Mansion in Manhattan",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 5315989,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "68",
+    "title": "Duplex in Brooklyn",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 606104,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "69",
+    "title": "Apartment in Queens",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Queens",
+    "price": 451805,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "70",
+    "title": "Villa in Bronx",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 1641920,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "71",
+    "title": "Mansion in Staten Island",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 5454257,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "72",
+    "title": "Duplex in Harlem",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 788816,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "73",
+    "title": "Apartment in Chelsea",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 501185,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "74",
+    "title": "Villa in SoHo",
+    "type": "Villa",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 1735744,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "75",
+    "title": "Mansion in Upper East Side",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 5592525,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "76",
+    "title": "Duplex in Upper West Side",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 971528,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "77",
+    "title": "Apartment in Midtown",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 550565,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "78",
+    "title": "Villa in Manhattan",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 1829568,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "79",
+    "title": "Mansion in Brooklyn",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 5730793,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "80",
+    "title": "Duplex in Queens",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Queens",
+    "price": 1154240,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "81",
+    "title": "Apartment in Bronx",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 599945,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "82",
+    "title": "Villa in Staten Island",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 1923392,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "83",
+    "title": "Mansion in Harlem",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 5869061,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "84",
+    "title": "Duplex in Chelsea",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 1336952,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "85",
+    "title": "Apartment in SoHo",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 649325,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "86",
+    "title": "Villa in Upper East Side",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 2017216,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "87",
+    "title": "Mansion in Upper West Side",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 6007329,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "88",
+    "title": "Duplex in Midtown",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 519664,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "89",
+    "title": "Apartment in Manhattan",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 698705,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "90",
+    "title": "Villa in Brooklyn",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 2111040,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "91",
+    "title": "Mansion in Queens",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Queens",
+    "price": 6145597,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "92",
+    "title": "Duplex in Bronx",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 702376,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "93",
+    "title": "Apartment in Staten Island",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 748085,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "94",
+    "title": "Villa in Harlem",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 2204864,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "95",
+    "title": "Mansion in Chelsea",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 6283865,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "96",
+    "title": "Duplex in SoHo",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 885088,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "97",
+    "title": "Apartment in Upper East Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 797465,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "98",
+    "title": "Villa in Upper West Side",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 2298688,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "99",
+    "title": "Mansion in Midtown",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 6422133,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "100",
+    "title": "Duplex in Manhattan",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 1067800,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "101",
+    "title": "Apartment in Brooklyn",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 246845,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "102",
+    "title": "Villa in Queens",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Queens",
+    "price": 2392512,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "103",
+    "title": "Mansion in Bronx",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 6560401,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "104",
+    "title": "Duplex in Staten Island",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 1250512,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "105",
+    "title": "Apartment in Harlem",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 296225,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "106",
+    "title": "Villa in Chelsea",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 2486336,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "107",
+    "title": "Mansion in SoHo",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 6698669,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "108",
+    "title": "Duplex in Upper East Side",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 1433224,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "109",
+    "title": "Apartment in Upper West Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 345605,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "110",
+    "title": "Villa in Midtown",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 2580160,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "111",
+    "title": "Mansion in Manhattan",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 6836937,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "112",
+    "title": "Duplex in Brooklyn",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 615936,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "113",
+    "title": "Apartment in Queens",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Queens",
+    "price": 394985,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "114",
+    "title": "Villa in Bronx",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 2673984,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "115",
+    "title": "Mansion in Staten Island",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 6975205,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "116",
+    "title": "Duplex in Harlem",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 798648,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "117",
+    "title": "Apartment in Chelsea",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 444365,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "118",
+    "title": "Villa in SoHo",
+    "type": "Villa",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 2767808,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "119",
+    "title": "Mansion in Upper East Side",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 7113473,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "120",
+    "title": "Duplex in Upper West Side",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 981360,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "121",
+    "title": "Apartment in Midtown",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 493745,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "122",
+    "title": "Villa in Manhattan",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 2861632,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "123",
+    "title": "Mansion in Brooklyn",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 7251741,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "124",
+    "title": "Duplex in Queens",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Queens",
+    "price": 1164072,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "125",
+    "title": "Apartment in Bronx",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 543125,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "126",
+    "title": "Villa in Staten Island",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 2955456,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "127",
+    "title": "Mansion in Harlem",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 7390009,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "128",
+    "title": "Duplex in Chelsea",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 1346784,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "129",
+    "title": "Apartment in SoHo",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 592505,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "130",
+    "title": "Villa in Upper East Side",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 1549280,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "131",
+    "title": "Mansion in Upper West Side",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 7528277,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "132",
+    "title": "Duplex in Midtown",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 529496,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "133",
+    "title": "Apartment in Manhattan",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 641885,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "134",
+    "title": "Villa in Brooklyn",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 1643104,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "135",
+    "title": "Mansion in Queens",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Queens",
+    "price": 7666545,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "136",
+    "title": "Duplex in Bronx",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 712208,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "137",
+    "title": "Apartment in Staten Island",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 691265,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "138",
+    "title": "Villa in Harlem",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 1736928,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "139",
+    "title": "Mansion in Chelsea",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 7804813,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "140",
+    "title": "Duplex in SoHo",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 894920,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "141",
+    "title": "Apartment in Upper East Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 740645,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "142",
+    "title": "Villa in Upper West Side",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 1830752,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "143",
+    "title": "Mansion in Midtown",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 7943081,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "144",
+    "title": "Duplex in Manhattan",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 1077632,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "145",
+    "title": "Apartment in Brooklyn",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 790025,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "146",
+    "title": "Villa in Queens",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Queens",
+    "price": 1924576,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "147",
+    "title": "Mansion in Bronx",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 3081349,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "148",
+    "title": "Duplex in Staten Island",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 1260344,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "149",
+    "title": "Apartment in Harlem",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 239405,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "150",
+    "title": "Villa in Chelsea",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 2018400,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "151",
+    "title": "Mansion in SoHo",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 3219617,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "152",
+    "title": "Duplex in Upper East Side",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 1443056,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "153",
+    "title": "Apartment in Upper West Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 288785,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "154",
+    "title": "Villa in Midtown",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 2112224,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "155",
+    "title": "Mansion in Manhattan",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 3357885,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "156",
+    "title": "Duplex in Brooklyn",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 625768,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "157",
+    "title": "Apartment in Queens",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Queens",
+    "price": 338165,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "158",
+    "title": "Villa in Bronx",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 2206048,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "159",
+    "title": "Mansion in Staten Island",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 3496153,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "160",
+    "title": "Duplex in Harlem",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 808480,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "161",
+    "title": "Apartment in Chelsea",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 387545,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "162",
+    "title": "Villa in SoHo",
+    "type": "Villa",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 2299872,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "163",
+    "title": "Mansion in Upper East Side",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 3634421,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "164",
+    "title": "Duplex in Upper West Side",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 991192,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "165",
+    "title": "Apartment in Midtown",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 436925,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "166",
+    "title": "Villa in Manhattan",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 2393696,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "167",
+    "title": "Mansion in Brooklyn",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 3772689,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "168",
+    "title": "Duplex in Queens",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Queens",
+    "price": 1173904,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "169",
+    "title": "Apartment in Bronx",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 486305,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "170",
+    "title": "Villa in Staten Island",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 2487520,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "171",
+    "title": "Mansion in Harlem",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 3910957,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "172",
+    "title": "Duplex in Chelsea",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 1356616,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "173",
+    "title": "Apartment in SoHo",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 535685,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "174",
+    "title": "Villa in Upper East Side",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 2581344,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "175",
+    "title": "Mansion in Upper West Side",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 4049225,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "176",
+    "title": "Duplex in Midtown",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 539328,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "177",
+    "title": "Apartment in Manhattan",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 585065,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "178",
+    "title": "Villa in Brooklyn",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 2675168,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "179",
+    "title": "Mansion in Queens",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Queens",
+    "price": 4187493,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "180",
+    "title": "Duplex in Bronx",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 722040,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "181",
+    "title": "Apartment in Staten Island",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 634445,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "182",
+    "title": "Villa in Harlem",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 2768992,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "183",
+    "title": "Mansion in Chelsea",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 4325761,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "184",
+    "title": "Duplex in SoHo",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 904752,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "185",
+    "title": "Apartment in Upper East Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 683825,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "186",
+    "title": "Villa in Upper West Side",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 2862816,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "187",
+    "title": "Mansion in Midtown",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 4464029,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "188",
+    "title": "Duplex in Manhattan",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 1087464,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "189",
+    "title": "Apartment in Brooklyn",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 733205,
+    "features": [
+      "1 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 1 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  },
+  {
+    "id": "190",
+    "title": "Villa in Queens",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Queens",
+    "price": 2956640,
+    "features": [
+      "4 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 4 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Queens, New York."
+  },
+  {
+    "id": "191",
+    "title": "Mansion in Bronx",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Bronx",
+    "price": 4602297,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Bronx, New York."
+  },
+  {
+    "id": "192",
+    "title": "Duplex in Staten Island",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Staten Island",
+    "price": 1270176,
+    "features": [
+      "2 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 2 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Staten Island, New York."
+  },
+  {
+    "id": "193",
+    "title": "Apartment in Harlem",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Harlem",
+    "price": 782585,
+    "features": [
+      "2 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 2 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Harlem, New York."
+  },
+  {
+    "id": "194",
+    "title": "Villa in Chelsea",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Chelsea",
+    "price": 1550464,
+    "features": [
+      "5 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 5 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Chelsea, New York."
+  },
+  {
+    "id": "195",
+    "title": "Mansion in SoHo",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "SoHo",
+    "price": 4740565,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in SoHo, New York."
+  },
+  {
+    "id": "196",
+    "title": "Duplex in Upper East Side",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Upper East Side",
+    "price": 1452888,
+    "features": [
+      "3 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 3 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Upper East Side, New York."
+  },
+  {
+    "id": "197",
+    "title": "Apartment in Upper West Side",
+    "type": "Apartment",
+    "city": "New York",
+    "district": "Upper West Side",
+    "price": 231965,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Apartment with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Upper West Side, New York."
+  },
+  {
+    "id": "198",
+    "title": "Villa in Midtown",
+    "type": "Villa",
+    "city": "New York",
+    "district": "Midtown",
+    "price": 1644288,
+    "features": [
+      "3 bedrooms",
+      "2 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Villa with 3 bedrooms, 2 bathrooms, a modern kitchen and a spacious living room, located in Midtown, New York."
+  },
+  {
+    "id": "199",
+    "title": "Mansion in Manhattan",
+    "type": "Mansion",
+    "city": "New York",
+    "district": "Manhattan",
+    "price": 4878833,
+    "features": [
+      "8 bedrooms",
+      "4 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Mansion with 8 bedrooms, 4 bathrooms, a modern kitchen and a spacious living room, located in Manhattan, New York."
+  },
+  {
+    "id": "200",
+    "title": "Duplex in Brooklyn",
+    "type": "Duplex",
+    "city": "New York",
+    "district": "Brooklyn",
+    "price": 635600,
+    "features": [
+      "4 bedrooms",
+      "1 bathrooms",
+      "Kitchen",
+      "Living Room",
+      "Parking",
+      "Balcony"
+    ],
+    "images": [
+      "https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800"
+    ],
+    "description": "Duplex with 4 bedrooms, 1 bathrooms, a modern kitchen and a spacious living room, located in Brooklyn, New York."
+  }
+]

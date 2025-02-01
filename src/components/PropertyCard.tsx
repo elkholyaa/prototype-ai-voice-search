@@ -2,12 +2,21 @@ import Image from "next/image";
 import { Property } from '@/types';
 import { formatPrice } from '@/utils/format';
 
+/*
+  PropertyCard.tsx
+  =====================
+  Purpose: Displays a single property card in the UI.
+  Relation: Used in pages to show property listings.
+  Workflow: Receives a property object and renders its image, title, type, price, and features.
+  Note: Supports bilingual display by relying on unified property attributes.
+        Context-specific attributes (e.g., 'majlis' in Arabic vs 'Living Room' in English) are handled by the data files.
+*/
+
 interface PropertyCardProps {
   property: Property;
   priority?: boolean;
 }
 
-// Add a fallback image
 const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1613977257363-707ba9348227?q=80&w=800';
 
 export default function PropertyCard({ property, priority = false }: PropertyCardProps) {
@@ -15,7 +24,7 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
     <article className="bg-white rounded-xl shadow overflow-hidden group hover:shadow-lg transition-shadow duration-300">
       <div className="relative w-full h-[300px]">
         <Image
-          src={property.images?.[0] || FALLBACK_IMAGE}
+          src={property.images && property.images.length > 0 ? property.images[0] : FALLBACK_IMAGE}
           alt={property.title || 'Property Image'}
           fill
           priority={priority}
@@ -34,7 +43,7 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
         </div>
         <div className="space-y-3 text-right">
           <p className="text-2xl font-bold text-blue-600 mt-2">
-            {formatPrice(property.price)} ريال
+            {formatPrice(property.price)} {property.type === "Apartment" ? "USD" : "ريال"}
           </p>
         </div>
         <div className="flex flex-wrap gap-2 justify-end mt-4">
@@ -50,4 +59,4 @@ export default function PropertyCard({ property, priority = false }: PropertyCar
       </div>
     </article>
   );
-} 
+}

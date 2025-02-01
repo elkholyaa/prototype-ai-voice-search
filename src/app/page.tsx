@@ -184,8 +184,8 @@ export default function Home() {
       <div className="container mx-auto px-4 py-6">
         <div className="bg-white rounded-xl shadow p-6 mb-8">
           <div className="mb-6">
-            <input
-              type="text"
+        <input
+          type="text"
               id="search"
               name="search"
               placeholder="ابحث عن العقارات..."
@@ -288,7 +288,7 @@ export default function Home() {
               />
             ))}
           </Suspense>
-        </div>
+      </div>
 
         {/* Development Mode: Show Similarity Scores */}
         {process.env.NODE_ENV === 'development' && searchResults.length > 0 && (
@@ -307,4 +307,4 @@ export default function Home() {
       </div>
     </div>
   );
-} 
+}
