@@ -1,8 +1,33 @@
-// src/components/ClientLocalePage.tsx
+/**
+ * src/components/ClientLocalePage.tsx
+ * =============================================
+ * Purpose:
+ *   This client component renders the bilingual property listing page.
+ *   It displays a search input, calls the text-based search function, and updates
+ *   the property list in real time. Additionally, it shows the structured query
+ *   (extracted from the search input) below the search box.
+ *
+ * Role & Relation:
+ *   - Integrates with the search utilities (text search and the new structured query extraction).
+ *   - Uses data from the server (property list) and updates via client-side state.
+ *
+ * Workflow:
+ *   1. On mount, it displays all properties.
+ *   2. As the user types in the search input, the handleSearchChange function is invoked.
+ *   3. It calls the text-based search function to filter properties.
+ *   4. Simultaneously, the new `extractStructuredQuery` function is called to update the structured query display.
+ *
+ * Educational Comments:
+ *   - We removed the old inline structured query logic and replaced it with a dedicated utility.
+ *   - This modular approach improves clarity, reusability, and maintainability.
+ */
+
 'use client';
 
 import { useState, useCallback, useEffect } from 'react';
 import dynamic from 'next/dynamic';
+// Import the new structured query extractor
+import { extractStructuredQuery } from '@/utils/structuredQuery';
 
 // Dynamically load the PropertyCard component to reduce initial bundle size.
 const PropertyCard = dynamic(() => import('@/components/PropertyCard'), {
@@ -22,6 +47,7 @@ export default function ClientLocalePage({ locale, propertyList }: ClientLocaleP
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [searchResults, setSearchResults] = useState<any[]>([]);
+  const [structuredQueryHtml, setStructuredQueryHtml] = useState<string>('');
 
   // On component mount, show all properties by default.
   useEffect(() => {
@@ -33,9 +59,7 @@ export default function ClientLocalePage({ locale, propertyList }: ClientLocaleP
     setSearchResults(allResults);
   }, [propertyList]);
 
-  // Rapid PoC: Temporarily disable API use.
-  // Here we dynamically import and call the local text-based search function.
-  // To re-enable API calls, comment out the block below and uncomment the API fetch block.
+  // Handle search functionality using the text-based search function.
   const handleSearch = useCallback(async (query: string) => {
     setIsLoading(true);
     setError(null);
@@ -45,22 +69,6 @@ export default function ClientLocalePage({ locale, propertyList }: ClientLocaleP
       const { searchProperties } = await import('@/utils/search');
       const results = searchProperties(query).map(r => ({ ...r, id: r.id.toString() }));
       setSearchResults(results);
-
-      // To re-enable API usage, comment out the above block and uncomment the code below:
-      /*
-      const response = await fetch('/api/search', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query }),
-      });
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Search failed');
-      }
-      const data = await response.json();
-      const results = data.results.map((r: any) => ({ ...r, id: r.id.toString() }));
-      setSearchResults(results);
-      */
     } catch (err: any) {
       setError(err.message || 'An error occurred while searching');
       setSearchResults([]);
@@ -69,10 +77,13 @@ export default function ClientLocalePage({ locale, propertyList }: ClientLocaleP
     }
   }, []);
 
-  // Debounce the search input to reduce rapid requests.
+  // Debounce search input and update structured query in real time.
   const handleSearchChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const query = e.target.value;
     setSearchQuery(query);
+
+    // Update the structured query display using our new extractor
+    setStructuredQueryHtml(extractStructuredQuery(query));
 
     if (!query.trim()) {
       handleSearch('');
@@ -85,67 +96,6 @@ export default function ClientLocalePage({ locale, propertyList }: ClientLocaleP
 
     return () => clearTimeout(timeoutId);
   }, [handleSearch]);
-
-  // Generate a structured query display from the user's query.
-  // This helps users understand how their natural language query is being parsed.
-  const getStructuredQuery = (query: string): string => {
-    const parts: string[] = [];
-
-    // Check for property type keywords.
-    if (query.includes('فيلا') || query.includes('فله')) {
-      parts.push('<div><span class="text-red-500">النوع</span>: <span class="text-blue-500">فيلا</span></div>');
-    } else if (query.includes('دوبلكس') || query.includes('دبلوكس')) {
-      parts.push('<div><span class="text-red-500">النوع</span>: <span class="text-blue-500">دوبلكس</span></div>');
-    } else if (query.includes('شقة')) {
-      parts.push('<div><span class="text-red-500">النوع</span>: <span class="text-blue-500">شقة</span></div>');
-    } else if (query.includes('قصر')) {
-      parts.push('<div><span class="text-red-500">النوع</span>: <span class="text-blue-500">قصر</span></div>');
-    }
-
-    // Check for district keywords.
-    if (query.includes('النرجس')) {
-      parts.push('<div><span class="text-red-500">الحي</span>: <span class="text-blue-500">النرجس</span></div>');
-    } else if (query.includes('الملقا')) {
-      parts.push('<div><span class="text-red-500">الحي</span>: <span class="text-blue-500">الملقا</span></div>');
-    } else if (query.includes('الياسمين')) {
-      parts.push('<div><span class="text-red-500">الحي</span>: <span class="text-blue-500">الياسمين</span></div>');
-    }
-
-    // Check for room count keywords.
-    if (query.includes('6 غرف') || query.includes('٦ غرف') || query.includes('ست غرف')) {
-      parts.push('<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">6 غرف</span></div>');
-    }
-
-    // Check for other features.
-    if (query.includes('مسبح')) {
-      parts.push('<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">مسبح</span></div>');
-    }
-    if (query.includes('مجلس')) {
-      parts.push('<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">مجلس</span></div>');
-    }
-    if (query.includes('حديقة')) {
-      parts.push('<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">حديقة</span></div>');
-    }
-
-    // Extract price-related information.
-    const priceMatch = query.match(/([٢٣]|2|3)\s*(?:مليون)/);
-    if (priceMatch) {
-      const price = priceMatch[1].replace('٢', '2').replace('٣', '3');
-      parts.push(`<div><span class="text-red-500">الحد الأقصى للسعر</span>: <span class="text-blue-500">${price} مليون</span></div>`);
-    }
-
-    // Split the parts into two columns for display.
-    const midPoint = Math.ceil(parts.length / 2);
-    const column1 = parts.slice(0, midPoint);
-    const column2 = parts.slice(midPoint);
-
-    return `
-      <div class="grid grid-cols-2 gap-2 text-right">
-        <div>${column1.join('')}</div>
-        <div>${column2.join('')}</div>
-      </div>
-    `;
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -170,7 +120,8 @@ export default function ClientLocalePage({ locale, propertyList }: ClientLocaleP
               <div
                 className="mt-2 text-sm"
                 dir="rtl"
-                dangerouslySetInnerHTML={{ __html: getStructuredQuery(searchQuery) }}
+                // Use the structured query HTML generated from the extractor
+                dangerouslySetInnerHTML={{ __html: structuredQueryHtml }}
               />
             )}
           </div>

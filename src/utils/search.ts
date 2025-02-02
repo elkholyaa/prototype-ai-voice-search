@@ -157,8 +157,8 @@ export function searchProperties(query: string): SearchResult[] {
       criteria.districts &&
       criteria.districts.length > 0 &&
       !criteria.districts.includes(property.district)
-    ) {
-      return false;
+      ) {
+        return false;
     }
     if (criteria.features && criteria.features.length > 0) {
       for (const feature of criteria.features) {
