@@ -1,24 +1,29 @@
 // src/app/[locale]/layout.tsx
+//
+// Educational Note:
+// In Next.js 15+, dynamic route parameters (props.params) might be asynchronous.
+// Therefore, before using any property (like params.locale), you must await the params.
+// One way to fix this is to declare params as a Promise in our type and then await it
+// inside the async component. This allows Next.js to resolve the dynamic params first.
+
 import '../globals.css';
 import { notFound } from 'next/navigation';
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
-  params: { locale: string };
+  // Declare that params will resolve to an object with a locale string.
+  params: Promise<{ locale: string }>;
 }
 
-export default function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  // Destructure locale from params (server component – async/await is allowed)
-  const { locale } = params;
-
-  // Only allow supported locales; if not, trigger a notFound page.
+export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
+  // Await the params before destructuring.
+  const { locale } = await params;
+  
+  // Validate that the locale is one of the supported ones.
   if (!['ar', 'en'].includes(locale)) {
     notFound();
   }
-
-  return (
-    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
-      <body>{children}</body>
-    </html>
-  );
+  
+  // Render the children.
+  return <>{children}</>;
 }
