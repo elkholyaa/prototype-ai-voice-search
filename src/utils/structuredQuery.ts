@@ -2,170 +2,185 @@
  * src/utils/structuredQuery.ts
  * ============================================
  * Purpose:
- *   This file provides the function `extractStructuredQuery` which parses a raw
- *   search input string and extracts all property attributes into a structured
- *   HTML display. The attributes include property type, city, district, price info,
- *   and all additional features mentioned by the user.
+ *   Provides the function `extractStructuredQuery` that parses a raw search input
+ *   string and extracts property attributes into a structured HTML display.
+ *   Extracted attributes include property type, city, district, features (such as room counts
+ *   and other property features), and price information.
+ *   The output is formatted into two columns with attribute labels in red and their values in blue.
  *
  * Role & Relation:
- *   - This file is used by the search UI component (ClientLocalePage.tsx) to show the
- *     structured query below the search input in real time.
- *   - It integrates with our overall search functionality by mapping natural language
- *     expressions to predefined attributes.
+ *   - Used by the client-side search UI component (ClientLocalePage.tsx) to show a structured
+ *     representation of the user's query beneath the search box.
+ *   - Leverages standardized keyword mappings imported from "keywordMappings.ts" for consistency.
  *
  * Workflow:
- *   1. The function scans the entire search input string.
- *   2. It uses comprehensive dictionaries (for types, cities, districts, features, and price)
- *      to map input text to attribute values.
- *   3. Returns an HTML string that displays the structured query in two columns.
+ *   1. Normalize the input query (trim and lowercase).
+ *   2. Extract attributes (type, city, district, price info, features) using the imported mappings.
+ *   3. For price, a regex extracts the numeral, converts Arabic digits to English, and appends " مليون".
+ *      The regex now supports phrases like "ما تطلع فوق", "ما يزيد سعرها عن", and "اقل من".
+ *   4. For features, we scan the query for each mapping key and record its first occurrence so that the
+ *      features are displayed in the same order as in the search text.
+ *   5. If no room count is found from the mappings, a fallback regex is used to detect numeric or word-based
+ *      room counts (such as “سته غرف”) and add it.
+ *   6. Builds and returns an HTML string with a two‑column grid using Tailwind CSS classes.
  *
- * Educational Notes:
- *   - We use a unified parsing approach to handle free-form text in an order-agnostic way.
- *   - The keyword dictionaries include variations to account for colloquial language and dialects.
- *   - This design avoids repetitive loops and ensures that all attributes are extracted in one pass.
+ * Educational Comments:
+ *   - This design decouples the mapping definitions from the extraction logic (they reside in keywordMappings.ts).
+ *   - Recording the index of each found feature and then sorting preserves the order in which features are mentioned.
  */
 
+import { typeMapping, cityMapping, districtMapping, featureMapping } from "./keywordMappings";
+
+/**
+ * Converts Arabic digits in a string to English digits.
+ * @param input - The string that may contain Arabic digits.
+ * @returns The string with Arabic digits replaced by their English equivalents.
+ */
+function convertArabicDigits(input: string): string {
+  const arabicDigits = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
+  let output = "";
+  for (const char of input) {
+    const index = arabicDigits.indexOf(char);
+    output += index !== -1 ? index.toString() : char;
+  }
+  return output;
+}
+
+// Updated regular expression to match price phrases.
+// Now includes "اقل من" along with "تحت", "ما يتجاوز", "ما يزيد ... عن", and "ما تطلع فوق".
+// This should capture queries like "اقل من 2 مليون".
+const pricePattern = /(?:تحت|ما(?:\s*يتجاوز)?|ما\s+يزيد(?:\s+\S+)*?\s+عن|ما\s+تطلع\s+فوق|اقل\s+من)\s*([٠-٩\d]+(?:\.\d+)?)(?:\s*(?:مليون|م))?/i;
+
 export interface StructuredQuery {
-    type?: string;
-    city?: string;
-    district?: string;
-    priceInfo?: string;
-    features: string[];
-    others: string[];
+  type?: string;
+  city?: string;
+  district?: string;
+  priceInfo?: string;
+  features: string[];
+  others: string[];
+}
+
+/**
+ * Extracts a structured query from a raw search input and returns an HTML string
+ * that displays the extracted attributes in two columns with attribute labels in red
+ * and their values in blue.
+ * @param query - The raw search input.
+ * @returns An HTML string representing the structured query.
+ */
+export function extractStructuredQuery(query: string): string {
+  // Normalize the query.
+  const normalized = query.trim().toLowerCase();
+  const structured: StructuredQuery = { features: [], others: [] };
+
+  // --- Extract simple attributes using the mappings ---
+
+  // Property type.
+  for (const key in typeMapping) {
+    if (normalized.includes(key)) {
+      structured.type = typeMapping[key];
+      break;
+    }
   }
-  
-  const typeMapping: { [key: string]: string } = {
-    "بيوت فخمه": "فيلا",
-    "فيلا": "فيلا",
-    "فله": "فيلا",
-    "فلة": "فيلا",
-    "شقة": "شقة",
-    "دوبلكس": "دوبلكس",
-    "دبلوكس": "دوبلكس",
-    "قصر": "قصر",
-  };
-  
-  const cityMapping: { [key: string]: string } = {
-    "الرياض": "الرياض",
-    "جده": "جدة",
-    "جدة": "جدة",
-    "مكة": "مكة",
-    "مكه": "مكة",
-    "الدمام": "الدمام",
-  };
-  
-  const districtMapping: { [key: string]: string } = {
-    "النرجس": "النرجس",
-    "الياسمين": "الياسمين",
-    "الملقا": "الملقا",
-    "العليا": "العليا",
-  };
-  
-  const featureMapping: { [key: string]: string } = {
-    "حوض سباحه": "مسبح",
-    "حمام سباحه": "مسبح",
-    "مسبح": "مسبح",
-    "مجلس كبير": "مجلس",
-    "مجلس": "مجلس",
-    "حديقه": "حديقة",
-    "جنينة": "حديقة",
-    // Include room counts and bathroom counts as raw strings
-    "ست غرف": "6 غرف",
-    "٦ غرف": "6 غرف",
-    "ستة غرف": "6 غرف",
-    "6 غرف": "6 غرف",
-    "4 غرف": "4 غرف",
-    "٤ غرف": "4 غرف",
-    // You can add more mappings as needed.
-  };
-  
-  const pricePattern = /(?:تحت|ما(?:\s*يتجاوز)?|ما\s+يزيد\s+عن)\s*([٠-٩\d]+(?:\.\d+)?)(?:\s*(?:مليون|م))?/i;
-  
-  /**
-   * Extracts a structured query from a raw search input.
-   * @param query The raw search input string.
-   * @returns An HTML string representing the structured query with all extracted attributes.
-   */
-  export function extractStructuredQuery(query: string): string {
-    // Normalize query by trimming whitespace and converting to lower-case.
-    const normalized = query.trim().toLowerCase();
-    const structured: StructuredQuery = { features: [], others: [] };
-  
-    // Extract property type
-    for (const key in typeMapping) {
-      if (normalized.includes(key)) {
-        structured.type = typeMapping[key];
-        break;
-      }
+
+  // City.
+  for (const key in cityMapping) {
+    if (normalized.includes(key)) {
+      structured.city = cityMapping[key];
+      break;
     }
-  
-    // Extract city
-    for (const key in cityMapping) {
-      if (normalized.includes(key)) {
-        structured.city = cityMapping[key];
-        break;
-      }
+  }
+
+  // District.
+  for (const key in districtMapping) {
+    if (normalized.includes(key)) {
+      structured.district = districtMapping[key];
+      break;
     }
-  
-    // Extract district
-    for (const key in districtMapping) {
-      if (normalized.includes(key)) {
-        structured.district = districtMapping[key];
-        break;
-      }
-    }
-  
-    // Extract price info using regex
-    const priceMatch = normalized.match(pricePattern);
-    if (priceMatch) {
-      structured.priceInfo = priceMatch[0].trim();
-    }
-  
-    // Extract features: iterate over featureMapping and check if each key is in the query.
-    for (const key in featureMapping) {
-      if (normalized.includes(key)) {
-        const mapped = featureMapping[key];
-        if (!structured.features.includes(mapped)) {
-          structured.features.push(mapped);
+  }
+
+  // Price info.
+  const priceMatch = normalized.match(pricePattern);
+  if (priceMatch) {
+    const arabicNumber = priceMatch[1].trim();
+    const englishNumber = convertArabicDigits(arabicNumber);
+    structured.priceInfo = `${englishNumber} مليون`;
+  }
+
+  // --- Extract features preserving the order in the search text ---
+  // We'll scan for each feature key from featureMapping, record its index, and then sort.
+  interface FeatureOccurrence {
+    index: number;
+    value: string;
+  }
+  const featureOccurrences: FeatureOccurrence[] = [];
+
+  for (const key in featureMapping) {
+    const idx = normalized.indexOf(key);
+    if (idx !== -1) {
+      const standardized = featureMapping[key];
+      // If already recorded, update the index if found earlier.
+      const existing = featureOccurrences.find((item) => item.value === standardized);
+      if (existing) {
+        if (idx < existing.index) {
+          existing.index = idx;
         }
+      } else {
+        featureOccurrences.push({ index: idx, value: standardized });
       }
     }
-  
-    // Optionally, add any unmatched parts as "others"
-    // (This can be enhanced to capture additional free-form attributes.)
-    // For now, we leave others empty.
-  
-    // Format the structured query into HTML in two columns.
-    const parts: string[] = [];
-    if (structured.type) {
-      parts.push(`<div><span class="text-red-500">النوع</span>: <span class="text-blue-500">${structured.type}</span></div>`);
-    }
-    if (structured.city) {
-      parts.push(`<div><span class="text-red-500">المدينة</span>: <span class="text-blue-500">${structured.city}</span></div>`);
-    }
-    if (structured.district) {
-      parts.push(`<div><span class="text-red-500">الحي</span>: <span class="text-blue-500">${structured.district}</span></div>`);
-    }
-    if (structured.priceInfo) {
-      parts.push(`<div><span class="text-red-500">السعر</span>: <span class="text-blue-500">${structured.priceInfo}</span></div>`);
-    }
-    structured.features.forEach(feature => {
-      parts.push(`<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">${feature}</span></div>`);
-    });
-    structured.others.forEach(other => {
-      parts.push(`<div><span class="text-red-500">أخرى</span>: <span class="text-blue-500">${other}</span></div>`);
-    });
-  
-    // Split parts into two columns for a cleaner display
-    const midPoint = Math.ceil(parts.length / 2);
-    const column1 = parts.slice(0, midPoint);
-    const column2 = parts.slice(midPoint);
-  
-    return `
-      <div class="grid grid-cols-2 gap-2 text-right">
-        <div>${column1.join('')}</div>
-        <div>${column2.join('')}</div>
-      </div>
-    `;
   }
   
+  // --- Fallback for room count ---
+  // If no feature containing "غرف" was found, try numeric pattern first.
+  if (!featureOccurrences.some(item => item.value.includes("غرف"))) {
+    const roomPattern = /([٠-٩\d]+)\s*غرف/;
+    const roomMatch = normalized.match(roomPattern);
+    if (roomMatch && roomMatch.index !== undefined) {
+      const roomNumber = convertArabicDigits(roomMatch[1]);
+      featureOccurrences.push({ index: roomMatch.index, value: `${roomNumber} غرف` });
+    } else {
+      // Fallback for spelled-out room numbers (e.g., "ستة", "سته", or "ست").
+      const roomWordPattern = /\b(ستة|سته|ست)\s*غرف\b/;
+      const roomWordMatch = normalized.match(roomWordPattern);
+      if (roomWordMatch && roomWordMatch.index !== undefined) {
+        featureOccurrences.push({ index: roomWordMatch.index, value: "6 غرف" });
+      }
+    }
+  }
+  
+  // Sort the features by the order they appear in the query.
+  featureOccurrences.sort((a, b) => a.index - b.index);
+  structured.features = featureOccurrences.map(item => item.value);
+
+  // --- Build the HTML parts ---
+  const parts: string[] = [];
+  if (structured.type) {
+    parts.push(`<div><span class="text-red-500">النوع</span>: <span class="text-blue-500">${structured.type}</span></div>`);
+  }
+  if (structured.city) {
+    parts.push(`<div><span class="text-red-500">المدينة</span>: <span class="text-blue-500">${structured.city}</span></div>`);
+  }
+  if (structured.district) {
+    parts.push(`<div><span class="text-red-500">الحي</span>: <span class="text-blue-500">${structured.district}</span></div>`);
+  }
+  structured.features.forEach((feature) => {
+    parts.push(`<div><span class="text-red-500">ميزة</span>: <span class="text-blue-500">${feature}</span></div>`);
+  });
+  if (structured.priceInfo) {
+    parts.push(`<div><span class="text-red-500">الحد الأقصى للسعر</span>: <span class="text-blue-500">${structured.priceInfo}</span></div>`);
+  }
+
+  if (parts.length === 0) {
+    return "";
+  }
+
+  // Split the parts into two columns.
+  const midPoint = Math.ceil(parts.length / 2);
+  const column1 = parts.slice(0, midPoint);
+  const column2 = parts.slice(midPoint);
+
+  return `<div class="grid grid-cols-2 gap-2 text-right">
+            <div>${column1.join("")}</div>
+            <div>${column2.join("")}</div>
+          </div>`;
+}
