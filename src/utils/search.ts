@@ -2,17 +2,24 @@
  * src/utils/search.ts
  * ================================
  * Purpose:
- *   Provides a text‑based search function that filters property data based on a query.
- *   It now accepts an optional locale parameter so that it uses the English dataset when locale === "en"
- *   and the Arabic dataset otherwise.
+ *   Provides a text‑based search function that filters property data based on a natural language query.
+ *   It supports bilingual search by selecting the English dataset when locale === "en" and the Arabic dataset otherwise.
  *
  * Role & Relation:
- *   - Used by both the API route and the client-side search components.
- *   - Returns an array of SearchResult objects (which extend the Property type) with a similarityScore field.
+ *   - This module is used both by the API route (to process POST requests) and by client‑side search components.
+ *   - It returns an array of SearchResult objects (which extend the Property type) with a default similarityScore.
+ *
+ * Workflow & Design Decisions:
+ *   - The function extractSearchCriteria parses the query for property type, city, district, features, and price.
+ *   - The price extraction has been enhanced to correctly handle units such as "thousand" (or "k"), "million" (or "m"),
+ *     as well as defaulting to dollars when no unit is specified.
+ *   - This update fixes the issue where a query like "less than 3 thousands dollars" was previously interpreted as 3 dollars.
  *
  * Educational Comments:
- *   - The search function uses simple keyword matching to filter properties.
- *   - Extraction logic is simplified for this PoC.
+ *   - Using a flexible regular expression to capture both numeric values and an optional unit allows us to scale the price
+ *     appropriately based on the unit. For example, if the unit is "thousand" or "k" we multiply by 1,000, and for "million"
+ *     or "m" we multiply by 1,000,000.
+ *   - All extracted text is normalized to lowercase for consistency in comparisons.
  */
 
 import { Property } from "@/types";
@@ -26,7 +33,7 @@ export interface SearchResult extends Property {
  * Extracts simple search criteria from the query.
  * (This implementation is simplified for the PoC.)
  * @param query The search query.
- * @returns An object containing extracted criteria.
+ * @returns An object containing the extracted criteria.
  */
 function extractSearchCriteria(query: string): {
   type?: string;
@@ -44,7 +51,7 @@ function extractSearchCriteria(query: string): {
     maxPrice?: number;
   } = {};
 
-  // Extract property type.
+  // --- Extract property type ---
   if (normalized.includes("duplex")) {
     criteria.type = "Duplex";
   } else if (normalized.includes("apartment")) {
@@ -55,7 +62,7 @@ function extractSearchCriteria(query: string): {
     criteria.type = "Mansion";
   }
 
-  // Extract district if mentioned.
+  // --- Extract district if mentioned ---
   if (normalized.includes("queens")) {
     criteria.districts = ["Queens"];
   } else if (normalized.includes("upper east side")) {
@@ -68,13 +75,26 @@ function extractSearchCriteria(query: string): {
     criteria.districts = ["Staten Island"];
   }
 
-  // Price extraction.
-  const priceMatch = normalized.match(/(?:under|less than|below|no more than|not exceeding)\s*([0-9\.]+)/);
+  // --- Price extraction ---
+  // Updated regex to capture a number and an optional unit:
+  // Supports units: "thousand", "k", "million", "m", "dollar", "dollars".
+  const priceMatch = normalized.match(
+    /(?:under|less than|below|no more than|not exceeding)\s*([0-9]+(?:\.[0-9]+)?)\s*(thousand|k|million|m|dollar|dollars)?/i
+  );
   if (priceMatch) {
-    criteria.maxPrice = parseFloat(priceMatch[1]) * 1000000;
+    const value = parseFloat(priceMatch[1]);
+    const unit = priceMatch[2] ? priceMatch[2].toLowerCase() : "";
+    // Multiply value based on the extracted unit.
+    if (unit === "thousand" || unit === "k") {
+      criteria.maxPrice = value * 1000;
+    } else if (unit === "million" || unit === "m") {
+      criteria.maxPrice = value * 1000000;
+    } else if (unit === "dollar" || unit === "dollars" || unit === "") {
+      criteria.maxPrice = value;
+    }
   }
 
-  // Extract features (basic extraction).
+  // --- Extract features (basic extraction) ---
   criteria.features = [];
   if (normalized.includes("2 bedroms") || normalized.includes("2 bedrooms") || normalized.includes("2 bdrms")) {
     criteria.features.push("2 bedrooms");
@@ -91,6 +111,7 @@ function extractSearchCriteria(query: string): {
   if (normalized.includes("living room")) {
     criteria.features.push("living room");
   }
+  // Check for room count if "6" and "bed" are mentioned.
   if (normalized.includes("6") && normalized.includes("bed")) {
     if (!criteria.features.includes("6 bedrooms")) {
       criteria.features.push("6 bedrooms");
@@ -103,11 +124,12 @@ function extractSearchCriteria(query: string): {
  * Searches for properties matching the query in the dataset corresponding to the locale.
  * @param query The search query.
  * @param locale Optional; if "en", uses the English dataset; default is "ar".
- * @returns An array of SearchResult.
+ * @returns An array of SearchResult objects with a default similarityScore of 1.
  */
 export function searchProperties(query: string, locale: string = "ar"): SearchResult[] {
   const dataset: Property[] = locale === "en" ? propertiesEnData : propertiesArData;
 
+  // If the query is empty, return all properties.
   if (!query.trim()) {
     return dataset.map((property) => ({
       id: property.id,
@@ -123,8 +145,10 @@ export function searchProperties(query: string, locale: string = "ar"): SearchRe
     }));
   }
 
+  // Extract criteria from the query.
   const criteria = extractSearchCriteria(query);
 
+  // Filter dataset based on extracted criteria.
   const filtered = dataset.filter((property) => {
     if (criteria.type && property.type.toLowerCase() !== criteria.type.toLowerCase()) {
       return false;
@@ -150,6 +174,7 @@ export function searchProperties(query: string, locale: string = "ar"): SearchRe
     return true;
   });
 
+  // Map the filtered properties into SearchResult objects.
   return filtered.map((property) => ({
     id: property.id,
     title: property.title,
