@@ -1,3 +1,16 @@
+/*
+  tsconfig.json
+  =====================
+  Purpose:
+    This file configures the TypeScript compiler for our bilingual real‑estate search POC.
+    It specifies compiler options and tells the compiler which files to include or exclude.
+  Role & Relation:
+    - Used by Next.js and Vercel during build.
+    - Excludes test-related files (such as those for Playwright) so that production builds don’t fail.
+  Workflow:
+    - Only files in "include" are compiled.
+    - Files in "exclude" (like "playwright.config.ts") are ignored.
+*/
 {
   "compilerOptions": {
     "target": "es2015",
@@ -23,6 +36,15 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "tests",
+    "playwright.config.ts"
+  ]
 }
